@@ -105,11 +105,53 @@ async function scrapeAll(existingMap) {
     let consecutiveDuplicates = 0;
     const DUPLICATE_THRESHOLD = 3;
 
+    const launchArgs = ['--no-sandbox', '--disable-setuid-sandbox'];
+    let proxyUrl = null;
+
+    if (process.env.QUASARPLAY_PROXY) {
+        try {
+            proxyUrl = new URL(process.env.QUASARPLAY_PROXY);
+            launchArgs.push(`--proxy-server=${proxyUrl.protocol}//${proxyUrl.host}`);
+            console.log(`Using Proxy: ${proxyUrl.protocol}//${proxyUrl.host}`);
+        } catch (e) {
+            console.error('Invalid QUASARPLAY_PROXY URL:', e.message);
+        }
+    }
+
     const browser = await puppeteer.launch({
         headless: "new",
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: launchArgs
     });
     const page = await browser.newPage();
+
+    // Authenticate proxy if needed
+    if (proxyUrl && proxyUrl.username && proxyUrl.password) {
+        await page.authenticate({
+            username: decodeURIComponent(proxyUrl.username),
+            password: decodeURIComponent(proxyUrl.password)
+        });
+    }
+
+    // Set cookies if provided
+    if (process.env.QUASARPLAY_COOKIE) {
+        const cookieStr = process.env.QUASARPLAY_COOKIE;
+        const cookies = cookieStr.split(';')
+            .map(part => part.trim())
+            .filter(part => part.includes('='))
+            .map(part => {
+                const [name, ...valueParts] = part.split('=');
+                return {
+                    name: name.trim(),
+                    value: valueParts.join('=').trim(),
+                    domain: '.quasarplay.com'
+                };
+            });
+
+        if (cookies.length > 0) {
+            await page.setCookie(...cookies);
+            console.log(`Loaded ${cookies.length} cookies from env.`);
+        }
+    }
 
     // Set a realistic viewport
     await page.setViewport({ width: 1920, height: 1080 });

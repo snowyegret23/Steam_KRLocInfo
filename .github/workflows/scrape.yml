@@ -54,6 +54,9 @@ jobs:
         
       - name: Run quasarplay scraper
         if: github.event.inputs.scraper == 'all' || github.event.inputs.scraper == 'quasarplay' || github.event_name == 'schedule'
+        env:
+          QUASARPLAY_PROXY: ${{ secrets.QUASARPLAY_PROXY }}
+          QUASARPLAY_COOKIE: ${{ secrets.QUASARPLAY_COOKIE }}
         run: npm run scrape:quasarplay
         continue-on-error: true
         
