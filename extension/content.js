@@ -61,7 +61,7 @@
         if (hasDbInfo) {
             // User rule: User Patch Info O, Type Official -> "공식 추정"
             if (isDbOfficial) {
-                return { label: '공식 (추정)', cssClass: 'official', color: '#4c9a2a' };
+                return { label: '공식지원 추정', cssClass: 'official', color: '#4c9a2a' };
             }
             // User rule: User Patch Info O, Type User -> "유저패치"
             return { label: '유저패치', cssClass: 'user', color: '#B921FF' };
@@ -172,7 +172,11 @@
                 });
                 contentHtml += '</div>';
             } else if (isOfficial) {
-                contentHtml = '<div class="kr-patch-official-text">공식으로 한국어를 지원하는 게임입니다.</div>';
+                if (patchTypeInfo.label === '공식지원 추정') {
+                    contentHtml = '<div class="kr-patch-official-text">공식으로 한국어를 지원하는 것으로 추정되는 게임입니다.<br>(한글패치 사이트에 한국어 버전이 존재한다고 제보된 게임)</div>';
+                } else {
+                    contentHtml = '<div class="kr-patch-official-text">공식으로 한국어를 지원하는 게임입니다.</div>';
+                }
             } else if (patchTypeInfo.cssClass === 'none') {
                 contentHtml = '<div class="kr-patch-none-text">현재 데이터베이스에 등록된 한국어 패치 정보가 없습니다.</div>';
             } else {
