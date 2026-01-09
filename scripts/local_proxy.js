@@ -40,8 +40,8 @@ server.listen(PORT, () => {
     console.log(`   Local Proxy Server running on port ${PORT}`);
     console.log(`=============================================`);
     console.log(`\nTo expose this to GitHub Actions:`);
-    console.log(`1. Install ngrok (https://ngrok.com/download)`);
-    console.log(`2. Run: ngrok http ${PORT}`);
-    console.log(`3. Copy the Forwarding URL (e.g. https://xxxx.ngrok-free.app)`);
+    console.log(`1. Download cloudflared (https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)`);
+    console.log(`2. Run: cloudflared tunnel --url http://localhost:${PORT}`);
+    console.log(`3. Copy the URL ending in .trycloudflare.com`);
     console.log(`4. Set QUASARPLAY_PROXY secret in GitHub to that URL.`);
 });
