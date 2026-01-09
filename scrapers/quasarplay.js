@@ -186,27 +186,51 @@ function parseDetailInfo(infoHtml) {
     const $ = cheerio.load(infoHtml);
     let currentDesc = '';
 
-    // Traverse elements within the body
-    $('body').children().each((_, el) => {
+    // Traverse contents (includes text nodes) within the body
+    $('body').contents().each((_, el) => {
         const $el = $(el);
-        const text = $el.text().trim();
 
-        // Skip empty text unless it's a break or contains a link
-        if (!text && !$el.find('a').length) return;
+        // Handle Text Nodes
+        if (el.type === 'text') {
+            const text = $el.text().trim();
+            if (text) {
+                if (!currentDesc) currentDesc = text;
+                else currentDesc += ' ' + text;
+            }
+            return;
+        }
 
-        const $link = $el.find('a[href^="http"]');
-        const href = $link.attr('href');
+        // Handle Element Nodes (recursively get text if not a link)
+        let $link = $el.is('a[href^="http"]') ? $el : $el.find('a[href^="http"]');
 
-        if (href) {
-            // Found a link! Pair it with the current accumulated description.
-            patches.push({ desc: currentDesc.trim(), link: href });
-            currentDesc = ''; // Reset for next pair
-        } else if (text && !text.startsWith('링크:')) {
-            // Accumulate text as description (avoiding boilerplate prefixes like "링크:")
-            if (!currentDesc) {
-                currentDesc = text;
-            } else {
-                currentDesc += ' ' + text;
+        if ($link.length) {
+            const href = $link.attr('href');
+            if (href) {
+                const textBeforeArr = [];
+                // Capture text nodes before the link within this element, if any
+                $el.contents().each((i, subEl) => {
+                    if (subEl === $link[0]) return false; // Stop at link
+                    if (subEl.type === 'text') textBeforeArr.push($(subEl).text().trim());
+                });
+
+                let combinedDesc = currentDesc;
+                if (textBeforeArr.length > 0) {
+                    const beforeText = textBeforeArr.join(' ').trim();
+                    if (beforeText) combinedDesc = combinedDesc ? combinedDesc + ' ' + beforeText : beforeText;
+                }
+
+                patches.push({ desc: combinedDesc.trim(), link: href });
+                currentDesc = ''; // Reset
+            }
+        } else {
+            // It's an element but not a link (e.g. <p>Description</p>)
+            const text = $el.text().trim();
+            if (text && !text.startsWith('링크:')) {
+                if (!currentDesc) {
+                    currentDesc = text;
+                } else {
+                    currentDesc += ' ' + text;
+                }
             }
         }
     });
@@ -289,14 +313,39 @@ async function scrapePage(page, pageNum, captchaService) {
                 for (const patch of detailPatches) {
                     if (patch.link) {
                         patchLinks.push(patch.link);
-                        patchDescriptions.push(patch.desc || '');
+
+                        let finalDesc = patch.desc || '';
+                        if (!finalDesc && producer) {
+                            finalDesc = producer;
+                        }
+                        patchDescriptions.push(finalDesc);
                     }
                 }
             }
 
             if (patchLinks.length === 0 && mainPatchLink) {
                 patchLinks.push(mainPatchLink);
-                patchDescriptions.push(''); // Default to empty as requested by user
+
+                // Use the description found in detail section if available
+                // If parseDetailInfo found only text but no links, it puts it in entries with link=''
+                // We need to capture that "orphan" description
+
+                let orphanDesc = '';
+                const $detailRow = $(`#kr_detail_${korId}`);
+                if ($detailRow.length) {
+                    const infoHtml = $detailRow.find('td.info').html() || '';
+                    const parsed = parseDetailInfo(infoHtml);
+                    // Find entry with empty link but has description
+                    const orphan = parsed.find(p => !p.link && p.desc);
+                    if (orphan) orphanDesc = orphan.desc;
+                }
+
+                if (orphanDesc) {
+                    patchDescriptions.push(orphanDesc);
+                } else {
+                    // Fallback to producer
+                    patchDescriptions.push(producer || '');
+                }
             }
 
             if (gameTitle) {
