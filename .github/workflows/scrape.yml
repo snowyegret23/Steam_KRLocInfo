@@ -43,17 +43,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
+          
       - name: Install dependencies
-        run: |
-          npm install
-          pip install -r requirements.txt
+        run: npm install
         
       - name: Run steamapp scraper
         if: github.event.inputs.scraper == 'all' || github.event.inputs.scraper == 'steamapp' || github.event_name == 'schedule'
