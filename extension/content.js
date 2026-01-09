@@ -72,12 +72,6 @@
         return desc.replace(/\n/g, ' // ').trim();
     }
 
-    function formatDescriptions(descs) {
-        if (!descs || descs.length === 0) return '';
-        const formatted = descs.map(d => formatSingleDescription(d)).filter(Boolean);
-        return formatted.join('\n');
-    }
-
     function injectPatchInfo(info, initialHasOfficialKorean) {
         const hasOfficialKorean = checkOfficialKoreanSupport() || initialHasOfficialKorean;
 
@@ -124,77 +118,26 @@
             let contentHtml = '';
             const linksWithDescs = [];
 
-            if (info) {
+            if (info && info.links) {
                 const siteUrls = info.source_site_urls || {};
+                const links = info.links || [];
                 const patchSources = info.patch_sources || [];
-                const sourcesWithLinks = info.sources_with_links || [];
+                const patchDescriptions = info.patch_descriptions || [];
 
-                const hasLinksFromSource = (source) => {
-                    return sourcesWithLinks.includes(source) || patchSources.includes(source);
-                };
+                for (let i = 0; i < links.length; i++) {
+                    const source = patchSources[i];
+                    if (!isSourceEnabled(source)) continue;
 
-                if (isSourceEnabled('steamapp') && siteUrls.steamapp) {
-                    const hasLinks = hasLinksFromSource('steamapp');
-                    const isRedundant = isOfficialGame && !hasLinks;
+                    const labelPrefix = source === 'stove' ? 'STOVE' :
+                        source === 'directg' ? '다이렉트게임즈' :
+                            source === 'quasarplay' ? 'quasarplay' : 'steamapp';
 
-                    if (!isRedundant) {
-                        const descs = patchSources.map((s, i) => s === 'steamapp' ? info.patch_descriptions[i] : null).filter(Boolean);
-
-                        linksWithDescs.push({
-                            url: siteUrls.steamapp,
-                            name: 'steamapp',
-                            label: 'steamapp 연결',
-                            desc: formatDescriptions(descs) || formatSingleDescription(info.description) || ''
-                        });
-                    }
-                }
-
-                if (isSourceEnabled('quasarplay') && siteUrls.quasarplay) {
-                    const hasLinks = hasLinksFromSource('quasarplay');
-                    const isRedundant = isOfficialGame && !hasLinks;
-
-                    if (!isRedundant) {
-                        const descs = patchSources.map((s, i) => s === 'quasarplay' ? info.patch_descriptions[i] : null).filter(Boolean);
-
-                        linksWithDescs.push({
-                            url: siteUrls.quasarplay,
-                            name: 'quasarplay',
-                            label: 'quasarplay 연결',
-                            desc: formatDescriptions(descs) || ''
-                        });
-                    }
-                }
-
-                if (isSourceEnabled('stove') && info.sources.includes('stove')) {
-                    const stoveSiteUrl = siteUrls.stove;
-                    const links = info.links || [];
-                    for (let i = 0; i < links.length; i++) {
-                        if (patchSources[i] === 'stove') {
-                            linksWithDescs.push({
-                                url: stoveSiteUrl || links[i],
-                                name: 'stove',
-                                label: 'STOVE 연결',
-                                desc: formatSingleDescription(info.patch_descriptions[i] || '')
-                            });
-                            if (stoveSiteUrl) break;
-                        }
-                    }
-                }
-
-                if (isSourceEnabled('directg') && info.sources.includes('directg')) {
-                    const dgSiteUrl = siteUrls.directg;
-                    const links = info.links || [];
-                    for (let i = 0; i < links.length; i++) {
-                        if (patchSources[i] === 'directg') {
-                            linksWithDescs.push({
-                                url: dgSiteUrl || links[i],
-                                name: 'directg',
-                                label: '다이렉트게임즈 연결',
-                                desc: formatSingleDescription(info.patch_descriptions[i] || '')
-                            });
-                            if (dgSiteUrl) break;
-                        }
-                    }
+                    linksWithDescs.push({
+                        url: siteUrls[source] || links[i],
+                        name: source,
+                        label: `${labelPrefix} 연결`,
+                        desc: formatSingleDescription(patchDescriptions[i] || '')
+                    });
                 }
             }
 
@@ -204,12 +147,10 @@
             if (hasLinks) {
                 contentHtml = '<div class="kr-patch-links-list">';
                 linksWithDescs.forEach((item, index) => {
-                    const label = SOURCE_LABELS[item.name] || item.name;
-
                     contentHtml += `
                         <div class="kr-patch-link-item">
                             <div class="kr-patch-link-header">
-                                <span class="kr-patch-link-label">링크 ${index + 1}: ${label}</span>
+                                <span class="kr-patch-link-label">링크 ${index + 1}:</span>
                                 <a href="${item.url}" target="_blank" rel="noopener" class="kr-patch-link-text">[ ${item.label} ]</a>
                             </div>
                             ${item.desc ? `<div class="kr-patch-link-description">${item.desc}</div>` : ''}
