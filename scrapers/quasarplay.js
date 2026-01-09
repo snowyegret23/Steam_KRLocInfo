@@ -105,67 +105,111 @@ function extractSteamAppId(onclickAttr) {
     return match ? match[1] : null;
 }
 
+async function findSiteKey(page) {
+    // Strategy 1: Look for Cloudflare Turnstile explicitly
+    try {
+        const siteKey = await page.evaluate(() => {
+            const el = document.querySelector('.cf-turnstile, .g-recaptcha');
+            if (el) return el.getAttribute('data-sitekey');
+
+            // Check global turnstile object
+            // Cloudflare Turnstile often exposes window.turnstile
+            try {
+                // This is a heuristic that works on some implementations
+                // But usually the widget is rendered with a config object.
+                // We might need to intercept the render call, but that's hard post-load.
+            } catch (e) { }
+
+            return null;
+        });
+        if (siteKey) return siteKey;
+    } catch (e) { }
+
+    // Strategy 2: Look into iframes
+    const frames = page.frames();
+    for (const frame of frames) {
+        try {
+            const src = frame.url();
+            if (src.includes('challenges.cloudflare.com') || src.includes('recaptcha')) {
+                const url = new URL(src);
+                const key = url.searchParams.get('sitekey') || url.searchParams.get('k');
+                if (key) return key;
+            }
+        } catch (e) { }
+    }
+
+    return null;
+}
+
 async function handleCaptcha(page, service) {
     if (!service) return false;
 
-    // Detect Cloudflare Turnstile
-    try {
-        const turnstileFrame = await page.$('iframe[src*="challenges.cloudflare.com"]');
-        if (turnstileFrame) {
-            console.log('Detailed Cloudflare Turnstile detected.');
-            // Attempt to extract sitekey from the iframe src or surrounding elements?
-            // Usually simpler to find the .cf-turnstile element or similar in the main frame.
+    console.log('Attempting to detect and solve CAPTCHA...');
 
-            // Evaluated strategy: Look for the Turnstile container
-            const siteKey = await page.evaluate(() => {
-                const el = document.querySelector('.cf-turnstile') || document.querySelector('[data-sitekey]');
-                return el ? el.getAttribute('data-sitekey') : null;
-            });
+    // Wait a moment for things to render
+    await delay(2000);
 
-            // If sitekey found, solve it
-            if (siteKey) {
-                console.log(`Found SiteKey: ${siteKey}`);
-                const token = await service.solve('TurnstileTaskProxyless', page.url(), siteKey);
-                if (token) {
-                    console.log('Injecting Turnstile token...');
-                    await page.evaluate((token) => {
-                        // Common Cloudflare Turnstile injection
-                        const inputs = document.querySelectorAll('input[name="cf-turnstile-response"]');
-                        inputs.forEach(input => { input.value = token; });
+    const siteKey = await findSiteKey(page);
 
-                        // Sometimes need to trigger callback?
-                        // For now, let's try submitting the form if it exists
-                        // Or cloudflare might auto-detect the value change? rarely.
-                    }, token);
+    if (siteKey) {
+        console.log(`Found SiteKey: ${siteKey}`);
 
-                    // Click the verify button/checkbox frame?
-                    // Often just clicking the checkbox is enough if we are not truly blocked, 
-                    // but if we are blocked we need the token.
-                }
-            } else {
-                // Fallback: finding key inside iframe src URL
-                const frameSrc = await page.evaluate(el => el.src, turnstileFrame);
-                const urlParams = new URLSearchParams(new URL(frameSrc).search);
-                const key = urlParams.get('sitekey');
-                if (key) {
-                    console.log(`Found SiteKey from iframe: ${key}`);
-                    const token = await service.solve('TurnstileTaskProxyless', page.url(), key);
-                    if (token) {
-                        // Inject? Cloudflare turnstile is tricky to inject purely.
-                        // Usually 2captcha docs suggest navigating/clicking. 
-                        // But let's assume standard injection for now.
+        // Determine type - default to Turnstile for Cloudflare, but could be Recaptcha
+        const isTurnstile = await page.evaluate(() => !!document.querySelector('.cf-turnstile') || window.turnstile);
+        const taskType = isTurnstile ? 'TurnstileTaskProxyless' : 'RecaptchaV2TaskProxyless';
+
+        console.log(`Solving ${taskType}...`);
+        const token = await service.solve(taskType, page.url(), siteKey);
+
+        if (token) {
+            console.log('Token obtained. Injecting...');
+
+            await page.evaluate((token) => {
+                // Determine target elements
+                const turnstileInput = document.querySelector('input[name="cf-turnstile-response"]');
+                const challengeInput = document.querySelector('input[name="cf-challenge-response"]');
+                const recaptchaInput = document.querySelector('input[name="g-recaptcha-response"]');
+
+                if (turnstileInput) turnstileInput.value = token;
+                if (challengeInput) challengeInput.value = token;
+                if (recaptchaInput) recaptchaInput.value = token;
+
+                // Trigger events (Cloudflare often listens for change)
+                [turnstileInput, challengeInput, recaptchaInput].forEach(el => {
+                    if (el) {
+                        el.dispatchEvent(new Event('change', { bubbles: true }));
+                        el.dispatchEvent(new Event('input', { bubbles: true }));
                     }
-                }
-            }
+                });
+
+            }, token);
+
+            // Wait to see if redirection happens automatically
+            console.log('Waiting for redirection...');
+            await delay(5000);
+
+            // If still on the same page (same title), try finding a form to submit?
+            // Usually the challenge page is a form that posts to itself.
+            /*
+            await page.evaluate(() => {
+                const form = document.querySelector('form');
+                if (form) form.submit();
+            });
+            */
+
+            return true;
+        } else {
+            console.log('Failed to get token from 2Captcha.');
         }
-    } catch (e) {
-        console.log('Error detecting/solving captcha', e);
+    } else {
+        console.log('Could not find SiteKey on the page.');
+        // Debug: Log all iframes
+        const frames = page.frames();
+        console.log(`Debug: Found ${frames.length} frames.`);
+        frames.forEach(f => console.log(`- Frame: ${f.url()}`));
     }
 
-    // Naive fallback: if 2captcha api key acts up or we prefer simple stealth
-    // We just wait? No, the user explicitly asked for 2captcha.
     return false;
-
 }
 
 async function scrapePage(page, pageNum, captchaService) {
@@ -175,35 +219,17 @@ async function scrapePage(page, pageNum, captchaService) {
     try {
         await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
 
-        const title = await page.title();
+        let title = await page.title();
         console.log(`Page Title: ${title}`);
 
-        // Check for Cloudflare Block / Challenge
-        // Titles like "Attention Required! | Cloudflare" or "Just a moment..."
-        if (title.includes('Cloudflare') || title.includes('Attention Required')) {
-            console.log('Cloudflare challenge detected!');
+        if (title.includes('Cloudflare') || title.includes('Attention Required') || title.includes('Just a moment')) {
+            console.log('Cloudflare challenge detected! initiating solver...');
+            await handleCaptcha(page, captchaService);
 
-            if (captchaService) {
-                // Try to solve Turnstile
-                // Note: Cloudflare often rotates keys or uses concealed challenges.
-                // We'll try to find a sitekey.
-                const siteKey = await page.evaluate(() => {
-                    // Try generic selectors
-                    const e = document.querySelector('[data-sitekey]');
-                    if (e) return e.getAttribute('data-sitekey');
-                    // Check logic for finding sitekey in scripts? Too complex for this snippet.
-                    return '0x4AAAAAAADnPIDROrmt1Wwj'; // Sample/Common? No, site specific.
-                });
-
-                // If we can't find a sitekey easily, we might be stuck.
-                // But let's look for the standard turnstile container specifically.
-                const cloudflareSiteKey = await page.evaluate(() => {
-                    return window.turnstile?.render?.arguments?.[1]?.sitekey;
-                }).catch(() => null);
-
-                // Taking a screenshot to debug what kind of captcha it is
-                await page.screenshot({ path: path.join(DATA_DIR, 'challenge_screenshot.png') });
-            }
+            // Check again after solving
+            await delay(5000);
+            title = await page.title();
+            console.log(`Page Title after solve attempt: ${title}`);
         }
 
         try {
