@@ -18,12 +18,7 @@ Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필
 
 ## 설치 방법
 
-1. [Releases](https://github.com/snowyegret23/KOSTEAM/releases)에서 최신 버전 다운로드
-2. 압축 해제
-3. Chrome에서 `chrome://extensions` 접속
-4. 우측 상단 **개발자 모드** 활성화
-5. 좌측 상단 **압축해제된 확장 프로그램 로드** 클릭
-6. `extension` 폴더 선택
+[Chrome 웹 스토어](https://chromewebstore.google.com/detail/steamdb/cbcganplchikpgchgppklcblpjibhnnc)에서 **Chrome에 추가**
 
 ## 사용 방법
 

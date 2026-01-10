@@ -86,16 +86,6 @@
             background: #66c0f4;
         }
 
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: #c7d5e0;
-            border: 1px solid #4a90d9;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
         .status {
             text-align: center;
             font-size: 12px;
@@ -121,11 +111,27 @@
         }
 
         .footer a {
-            color: #66c0f4;
+            color: #4a90d9;
             text-decoration: none;
         }
 
         .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer2 {
+            padding-top: 6px;
+            font-size: 12px;
+            color: #66c0f4;
+            text-align: center;
+        }
+
+        .footer2 a {
+            color: #66c0f4;
+            text-decoration: none;
+        }
+
+        .footer2 a:hover {
             text-decoration: underline;
         }
 
@@ -213,15 +219,13 @@
         데이터 새로고침
     </button>
 
-    <button class="btn btn-secondary" id="githubBtn">
-        GitHub 저장소
-    </button>
-
     <div class="status" id="status"></div>
 
     <div class="footer">
-        데이터 출처: 스팀앱, 퀘이사플레이,<br>다이렉트 게임즈, 스토브<br>
-        <a href="https://github.com/snowyegret23/KOSTEAM" target="_blank">GitHub</a>
+        데이터 출처: <a href="https://steamapp.net/hangul" target="_blank">스팀앱</a>, <a href="https://quasarplay.com/bbs/qp_korean" target="_blank">퀘이사플레이</a>,<br><a href="https://directg.net/game/game_search_thumb.html?exclusive_korean=Y" target="_blank">다이렉트 게임즈</a>, <a href="https://store.onstove.com/ko/store/search?direction=LATEST&features=99" target="_blank">스토브</a>
+    </div>
+	<div class="footer2">
+        <a href="https://chromewebstore.google.com/detail/steamdb/cbcganplchikpgchgppklcblpjibhnnc" target="_blank">chrome 웹 스토어</a> | <a href="https://github.com/snowyegret23/KOSTEAM" target="_blank">GitHub</a>
     </div>
 
     <script src="popup.js"></script>

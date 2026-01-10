@@ -168,7 +168,7 @@
                 contentHtml += '</div>';
             } else if (isOfficial) {
                 if (patchTypeInfo.label === '공식지원 추정') {
-                    contentHtml = '<div class="kr-patch-official-text">한국어를 공식 지원하는 것으로 추정되는 게임입니다.<br>(패치 정보 사이트에 한국어 버전이 존재한다고 제보된 게임)</div>';
+                    contentHtml = '<div class="kr-patch-official-text">한국어를 공식 지원하는 것으로 추정되는 게임입니다.<br>(패치 정보 사이트에 한국어 번역이 존재한다고 보고된 게임)</div>';
                 } else {
                     contentHtml = '<div class="kr-patch-official-text">한국어를 공식 지원하는 게임입니다.</div>';
                 }

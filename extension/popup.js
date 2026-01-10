@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lastUpdateEl = document.getElementById('lastUpdate');
     const statusEl = document.getElementById('status');
     const refreshBtn = document.getElementById('refreshBtn');
-    const githubBtn = document.getElementById('githubBtn');
 
     const sourceIds = ['source_steamapp', 'source_quasarplay', 'source_directg', 'source_stove'];
     const sources = sourceIds.map(id => document.getElementById(id));
@@ -66,10 +65,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         refreshBtn.disabled = false;
         refreshBtn.textContent = '데이터 새로고침';
-    });
-
-    githubBtn.addEventListener('click', () => {
-        chrome.tabs.create({ url: 'https://github.com/snowyegret23/KOSTEAM' });
     });
 
     async function loadSettings() {
