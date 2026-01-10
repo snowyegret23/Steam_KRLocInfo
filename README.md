@@ -82,4 +82,4 @@ Steam 스토어에서 한국어 패치 정보를 표시하고, 언어 필터를 
 
 ## 라이선스
 
-MIT License
+Apache-2.0 license
