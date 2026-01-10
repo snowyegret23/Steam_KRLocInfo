@@ -30,14 +30,21 @@
     }
 
     function getPatchTypeInfo(info, hasOfficialKorean) {
-        const hasUserPatches = info && info.links && info.links.length > 0;
-        const sources = info ? (info.sources || []) : [];
+        const hasDbInfo = !!info;
         const type = info ? info.type : null;
+        const isDbOfficial = type === 'official';
 
+        const links = info ? (info.links || []) : [];
+        const patchSources = info ? (info.patch_sources || []) : [];
+        const excludedUserSources = ['directg', 'stove'];
+        const hasUserPatches = links.some((_, i) => {
+            const src = patchSources[i] || '';
+            return !excludedUserSources.includes(src);
+        });
+
+        const sources = info ? (info.sources || []) : [];
         const hasDirectG = sources.includes('directg');
         const hasStove = sources.includes('stove');
-        const hasDbInfo = !!info;
-        const isDbOfficial = type === 'official';
 
         if (hasOfficialKorean) {
             if (hasUserPatches) {
@@ -139,11 +146,58 @@
                 }
             }
 
-            const isOfficial = patchTypeInfo.label.includes('공식');
             const hasLinks = linksBySource.size > 0;
 
+            const finalPatchTypeInfo = Object.assign({}, patchTypeInfo);
+
+            let descriptionsIndicate = false;
+
             if (hasLinks) {
-                contentHtml = '<div class="kr-patch-links-list">';
+                const keys = Array.from(linksBySource.keys());
+                const hasStoveLink = keys.includes('stove');
+                const hasDirectGLink = keys.includes('directg');
+
+                const quasarDescs = (linksBySource.get('quasarplay') || {}).descriptions || [];
+                const steamappDescs = (linksBySource.get('steamapp') || {}).descriptions || [];
+                const combinedDescs = quasarDescs.concat(steamappDescs).map(d => (d || '').toLowerCase());
+
+                const keywordsStove = ['스토브', 'stove'];
+                const keywordsDirect = ['direct', '다렉', '다이렉트'];
+
+                const descsContain = (keywords) => combinedDescs.some(d => keywords.some(k => d.includes(k)));
+
+                descriptionsIndicate = descsContain(keywordsStove) || descsContain(keywordsDirect);
+
+                if (hasOfficialKorean) {
+                    if ((hasStoveLink && descsContain(keywordsStove)) || (hasDirectGLink && descsContain(keywordsDirect))) {
+                        finalPatchTypeInfo.label = '공식';
+                        finalPatchTypeInfo.cssClass = 'official-steam';
+                        finalPatchTypeInfo.color = '#4c9a2a';
+                    }
+                } else {
+                    // Prefer stove if both indicators exist
+                    if (hasStoveLink && descsContain(keywordsStove)) {
+                        finalPatchTypeInfo.label = '스토브';
+                        finalPatchTypeInfo.cssClass = 'official-stove';
+                        finalPatchTypeInfo.color = '#FF8126';
+                    } else if (hasDirectGLink && descsContain(keywordsDirect)) {
+                        finalPatchTypeInfo.label = '다이렉트 게임즈';
+                        finalPatchTypeInfo.cssClass = 'official-directg';
+                        finalPatchTypeInfo.color = '#0C7CED';
+                    }
+                }
+            }
+
+            const isOfficial = finalPatchTypeInfo.label.includes('공식');
+            const onlyExcludedLinkSources = hasLinks && Array.from(linksBySource.keys()).every(s => ['directg', 'stove'].includes(s));
+
+            if (hasLinks) {
+                let prefaceHtml = '';
+                if (hasOfficialKorean && (onlyExcludedLinkSources || descriptionsIndicate)) {
+                    prefaceHtml = '<div class="kr-patch-official-text">공식으로 한국어를 지원하는 게임이며, 타 플랫폼에서도 한국어를 공식으로 지원합니다.</div>';
+                }
+
+                contentHtml = prefaceHtml + '<div class="kr-patch-links-list">';
                 let index = 1;
                 linksBySource.forEach((data, source) => {
                     const labelPrefix = source === 'stove' ? '스토브' :
@@ -179,8 +233,8 @@
 
             banner.innerHTML = `
                 <div class="kr-patch-content">
-                    <div class="kr-patch-type-label ${patchTypeInfo.cssClass}" style="background-color: ${patchTypeInfo.color}">
-                        ${patchTypeInfo.label}
+                    <div class="kr-patch-type-label ${finalPatchTypeInfo.cssClass}" style="background-color: ${finalPatchTypeInfo.color}">
+                        ${finalPatchTypeInfo.label}
                     </div>
                     <div class="kr-patch-data-area">
                         ${contentHtml}
