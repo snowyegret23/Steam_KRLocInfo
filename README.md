@@ -41,17 +41,17 @@ Steam 스토어에서 한국어 패치 정보를 표시하고, 언어 필터를 
 | ![#4c9a2a](https://placehold.co/15x15/4c9a2a/4c9a2a.png) 공식 | Steam 공식 한국어 지원 |
 | ![#4c9a2a](https://placehold.co/15x15/4c9a2a/4c9a2a.png) 공식(유저패치 존재) | 공식 지원 + 추가 유저패치 있음 |
 | ![#40f3b7](https://placehold.co/15x15/40f3b7/40f3b7.png) 공식지원 추정 | 공식적으로 한국어를 지원할 것으로 추정 |
-| ![#0C7CED](https://placehold.co/15x15/0C7CED/0C7CED.png) 다이렉트 게임즈 | DirectG에서 한국어 버전 판매 |
-| ![#FF8126](https://placehold.co/15x15/FF8126/FF8126.png) 스토브 | STOVE에서 한국어 버전 판매 |
+| ![#0C7CED](https://placehold.co/15x15/0C7CED/0C7CED.png) 다이렉트 게임즈 | 다이렉트게임즈에서 한국어 버전 판매 |
+| ![#FF8126](https://placehold.co/15x15/FF8126/FF8126.png) 스토브 | 스토브에서 한국어 버전 판매 |
 | ![#B921FF](https://placehold.co/15x15/B921FF/B921FF.png) 유저패치 | 커뮤니티 한글패치 존재 |
-| ![#e74c3c](https://placehold.co/15x15/e74c3c/e74c3c.png) 한국어 없음 | 한국어 정보 없음 |
+| ![#e74c3c](https://placehold.co/15x15/e74c3c/e74c3c.png) 한국어 없음 | 데이터베이스에 등록된 한국어 패치 정보 없음 |
 
 ## 데이터 출처
 
-- [SteamApp](https://steamapp.net)
-- [QuasarPlay](https://quasarplay.com)
-- [DirectG](https://directg.net)
-- [STOVE](https://store.onstove.com)
+- [스팀앱](https://steamapp.net)
+- [퀘이사플레이](https://quasarplay.com)
+- [다이렉트게임즈](https://directg.net)
+- [스토브](https://store.onstove.com)
 
 
 ## 면책 조항 (Disclaimer)
