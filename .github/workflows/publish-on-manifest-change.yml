@@ -7,15 +7,22 @@ on:
       - 'extension/**'
       - 'extension_ff/manifest.json'
       - 'extension_ff/**'
+  workflow_dispatch:
+    inputs:
+      force_release:
+        description: '태그가 존재해도 강제로 릴리즈 수행'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '18'
 
@@ -29,7 +36,11 @@ jobs:
         id: tag_check
         run: |
           TAG_NAME="v${{ env.VERSION }}"
-          if git fetch origin tag "$TAG_NAME" --no-tags --quiet; then
+          # Check if manual trigger and force_release is true
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ inputs.force_release }}" == "true" ]; then
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Force release requested via manual trigger."
+          elif git fetch origin tag "$TAG_NAME" --no-tags --quiet; then
             echo "exists=true" >> $GITHUB_OUTPUT
             echo "Tag $TAG_NAME already exists. Skipping release."
           else
