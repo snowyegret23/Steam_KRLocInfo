@@ -1,0 +1,56 @@
+name: Publish extension on manifest change
+
+on:
+  push:
+    paths:
+      - 'extension/manifest.json'
+      - 'extension/**'
+      - 'extension_ff/manifest.json'
+      - 'extension_ff/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Read manifest version
+        id: get_version
+        run: |
+          echo "VERSION=$(node -p \"require('./extension/manifest.json').version\")" >> $GITHUB_ENV
+
+      - name: Check if tag exists
+        id: tag_check
+        run: |
+          TAG_NAME="v${{ env.VERSION }}"
+          if git fetch origin tag "$TAG_NAME" --no-tags --quiet; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Tag $TAG_NAME already exists. Skipping release."
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "New version $TAG_NAME detected. Proceeding with release."
+          fi
+
+      - name: Zip extensions
+        if: steps.tag_check.outputs.exists == 'false'
+        run: |
+          zip -r kosteam-chrome-v${{ env.VERSION }}.zip extension -x '*.DS_Store'
+          zip -r kosteam-firefox-v${{ env.VERSION }}.zip extension_ff -x '*.DS_Store'
+
+      - name: Create GitHub release and upload zips
+        if: steps.tag_check.outputs.exists == 'false'
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v${{ env.VERSION }}
+          allowUpdates: true
+          files: |
+            kosteam-chrome-v${{ env.VERSION }}.zip
+            kosteam-firefox-v${{ env.VERSION }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

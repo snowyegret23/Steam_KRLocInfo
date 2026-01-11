@@ -1,18 +1,20 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "KOSTEAM",
   "version": "1.2.4",
   "description": "Steam 상점 페이지에서 한국어 패치 정보를 확인하세요",
   "permissions": [
     "storage",
-    "alarms"
-  ],
-  "host_permissions": [
+    "alarms",
     "https://store.steampowered.com/*",
     "https://raw.githubusercontent.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": [
+      "ff_shim.js",
+      "background.js"
+    ],
+    "persistent": true
   },
   "content_scripts": [
     {
@@ -20,6 +22,7 @@
         "https://store.steampowered.com/app/*"
       ],
       "js": [
+        "ff_shim.js",
         "content.js"
       ],
       "css": [
@@ -32,12 +35,13 @@
         "https://store.steampowered.com/*"
       ],
       "js": [
+        "ff_shim.js",
         "search_bypass.js"
       ],
       "run_at": "document_start"
     }
   ],
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -49,5 +53,10 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "kosteam@example.com"
+    }
   }
 }

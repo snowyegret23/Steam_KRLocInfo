@@ -1,3 +1,5 @@
+// `ff_shim.js` is loaded via manifest `background.scripts` for MV2
+
 const REMOTE_BASE_URL = 'https://raw.githubusercontent.com/snowyegret23/KOSTEAM/refs/heads/main/data';
 const VERSION_URL = `${REMOTE_BASE_URL}/version.json`;
 const DATA_URL = `${REMOTE_BASE_URL}/lookup.json`;
@@ -180,7 +182,7 @@ chrome.runtime.onInstalled.addListener(async () => {
     fetchData();
 });
 
-chrome.alarms.create('checkUpdates', { periodInMinutes: 360 });
+try { chrome.alarms.create('checkUpdates', { periodInMinutes: 360 }); } catch (e) { }
 
 chrome.alarms.onAlarm.addListener(alarm => {
     if (alarm.name === 'checkUpdates') {

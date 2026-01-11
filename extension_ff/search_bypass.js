@@ -1,8 +1,25 @@
 (function () {
-    chrome.storage.local.get(['bypass_language_filter'], (settings) => {
-        // Default to true if not set
-        const isBypassEnabled = settings.bypass_language_filter !== false;
-        if (!isBypassEnabled) return;
+    // Use browser.storage in Firefox, fallback to chrome.storage
+    const storage = (typeof browser !== 'undefined' && browser.storage) ? browser.storage : chrome.storage;
+
+    // Firefox returns Promise, Chrome uses callbacks
+    const storageGet = storage.local.get(['bypass_language_filter']);
+
+    // Handle both Promise and callback styles
+    if (storageGet && typeof storageGet.then === 'function') {
+        // Promise-based (Firefox native)
+        storageGet.then(settings => {
+            processSettings(settings);
+        });
+    } else {
+        // Callback-based (Chrome or wrapped)
+        storage.local.get(['bypass_language_filter'], (settings) => {
+            processSettings(settings);
+        });
+    }
+
+    function processSettings(settings) {
+        if (!settings.bypass_language_filter) return;
 
         const url = new URL(window.location.href);
         const path = url.pathname;
@@ -18,7 +35,7 @@
         if (path.startsWith('/category/') || path.startsWith('/genre/') || path.startsWith('/tags/')) {
             removeKoreanFilter();
         }
-    });
+    }
 
     function removeKoreanFilter() {
         let attempts = 0;
