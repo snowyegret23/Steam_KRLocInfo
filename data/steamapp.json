@@ -17317,7 +17317,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : Lure Of Passion"
+      "제작자 : 레트로겜보이"
     ]
   },
   {
@@ -67788,6 +67788,32 @@
     "patch_descriptions": [
       "누구야 님 제작",
       ""
+    ]
+  },
+  {
+    "app_id": "1275550",
+    "game_title": "Arctic Awakening",
+    "steam_link": "https://store.steampowered.com/app/1275550",
+    "source_site_url": "https://steamapp.net/app/1275550",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "1069160",
+    "game_title": "SKALD: Against the Black Priory",
+    "steam_link": "https://store.steampowered.com/app/1069160",
+    "source_site_url": "https://steamapp.net/app/1069160",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : r35"
     ]
   }
 ]
