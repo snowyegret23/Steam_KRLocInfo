@@ -21,11 +21,18 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build extensions
+        run: npm run build
 
       - name: Read manifest version
         id: get_version
         run: |
-          VERSION=$(jq -r .version extension/manifest.json)
+          VERSION=$(jq -r .version dist/chrome/manifest.json)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Check if tag exists
@@ -36,7 +43,7 @@ jobs:
           if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ inputs.force_release }}" == "true" ]; then
             echo "exists=false" >> $GITHUB_OUTPUT
             echo "Force release requested via manual trigger."
-          elif git fetch origin tag "$TAG_NAME" --no-tags --quiet; then
+          elif git fetch origin tag "$TAG_NAME" --no-tags --quiet 2>/dev/null; then
             echo "exists=true" >> $GITHUB_OUTPUT
             echo "Tag $TAG_NAME already exists. Skipping release."
           else
@@ -47,8 +54,8 @@ jobs:
       - name: Zip extensions
         if: steps.tag_check.outputs.exists == 'false'
         run: |
-          (cd extension && zip -r ../kosteam-chrome-v${{ env.VERSION }}.zip . -x '*.DS_Store')
-          (cd extension_ff && zip -r ../kosteam-firefox-v${{ env.VERSION }}.zip . -x '*.DS_Store')
+          (cd dist/chrome && zip -r ../../kosteam-chrome-v${{ env.VERSION }}.zip .)
+          (cd dist/firefox && zip -r ../../kosteam-firefox-v${{ env.VERSION }}.zip .)
 
       - name: Create GitHub release and upload zips
         if: steps.tag_check.outputs.exists == 'false'
@@ -59,4 +66,3 @@ jobs:
           artifacts: "kosteam-chrome-v${{ env.VERSION }}.zip,kosteam-firefox-v${{ env.VERSION }}.zip"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

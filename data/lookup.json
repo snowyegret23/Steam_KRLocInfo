@@ -58092,24 +58092,6 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
-  "1069160": {
-    "type": "user",
-    "sources": [
-      "steamapp"
-    ],
-    "links": [
-      "exist"
-    ],
-    "patch_descriptions": [
-      "제작자 : r35"
-    ],
-    "patch_sources": [
-      "steamapp"
-    ],
-    "source_site_urls": {
-      "steamapp": "https://steamapp.net/app/1069160"
-    }
-  },
   "1069210": {
     "type": "official",
     "sources": [
@@ -67995,23 +67977,18 @@
   "1275550": {
     "type": "user",
     "sources": [
-      "steamapp",
       "quasarplay"
     ],
     "links": [
-      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : 으잌",
       "한무테"
     ],
     "patch_sources": [
-      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
-      "steamapp": "https://steamapp.net/app/1275550",
       "quasarplay": "https://quasarplay.com/bbs/qp_korean?game_name=Arctic%20Awakening"
     }
   },
@@ -106269,7 +106246,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : 레트로겜보이"
+      "제작자 : Lure Of Passion"
     ],
     "patch_sources": [
       "steamapp"
@@ -106930,7 +106907,7 @@
     }
   },
   "_meta": {
-    "generated_at": "2026-01-12T09:04:29.047Z",
-    "total": 7078
+    "generated_at": "2026-01-11T06:25:00.111Z",
+    "total": 7077
   }
 }

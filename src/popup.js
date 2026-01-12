@@ -1,46 +1,48 @@
-const api = (typeof browser !== 'undefined') ? browser : chrome;
+/**
+ * KOSTEAM Popup Script
+ * Manages extension popup UI and user settings
+ */
+
+import { sendMessage, storageGet, storageSet } from './shared/api.js';
+import { formatTimeAgo } from './shared/time-utils.js';
+import { CACHE_KEY, MSG_CHECK_UPDATE_STATUS, MSG_REFRESH_DATA } from './shared/constants.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // DOM element references
     const gameCountEl = document.getElementById('gameCount');
     const remoteUpdateEl = document.getElementById('remoteUpdate');
     const dbStatusEl = document.getElementById('dbStatus');
     const statusEl = document.getElementById('status');
     const refreshBtn = document.getElementById('refreshBtn');
-    const githubBtn = document.getElementById('githubBtn');
 
+    // Source checkboxes
     const sourceIds = ['source_steamapp', 'source_quasarplay', 'source_directg', 'source_stove'];
     const sources = sourceIds.map(id => document.getElementById(id));
     const bypassCheckbox = document.getElementById('bypass_language_filter');
 
-    function formatTimeAgo(dateString) {
-        if (!dateString) return '-';
-        const date = new Date(dateString);
-        const now = new Date();
-        const diff = now - date;
-
-        if (diff < 60000) return '방금 전';
-        if (diff < 3600000) return Math.floor(diff / 60000) + '분 전';
-        if (diff < 86400000) return Math.floor(diff / 3600000) + '시간 전';
-        if (diff < 604800000) return Math.floor(diff / 86400000) + '일 전';
-        return date.toLocaleDateString('ko-KR');
-    }
-
+    /**
+     * Load and display game count statistics
+     */
     async function loadStats() {
         try {
-            const result = await api.storage.local.get(['kr_patch_data']);
+            const result = await storageGet([CACHE_KEY]);
 
-            if (result.kr_patch_data) {
-                const count = Object.keys(result.kr_patch_data).length - 1;
+            if (result[CACHE_KEY]) {
+                // Filter out _meta key when counting games
+                const count = Object.keys(result[CACHE_KEY]).filter(k => k !== '_meta').length;
                 gameCountEl.textContent = count.toLocaleString() + '개';
             }
         } catch (err) {
-            console.error('Failed to load stats:', err);
+            console.error('[KOSTEAM] Failed to load stats:', err);
         }
     }
 
+    /**
+     * Check and display update status
+     */
     async function checkUpdateStatus() {
         try {
-            const response = await api.runtime.sendMessage({ type: 'CHECK_UPDATE_STATUS' });
+            const response = await sendMessage({ type: MSG_CHECK_UPDATE_STATUS });
 
             if (response && response.success) {
                 if (response.remoteVersion && response.remoteVersion.generated_at) {
@@ -59,12 +61,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 dbStatusEl.className = 'stat-value';
             }
         } catch (err) {
-            console.error('Failed to check update status:', err);
+            console.error('[KOSTEAM] Failed to check update status:', err);
             dbStatusEl.textContent = '확인 실패';
             dbStatusEl.className = 'stat-value';
         }
     }
 
+    /**
+     * Handle refresh button click
+     */
     refreshBtn.addEventListener('click', async () => {
         refreshBtn.disabled = true;
         refreshBtn.textContent = '업데이트 중...';
@@ -72,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         statusEl.className = 'status';
 
         try {
-            const response = await api.runtime.sendMessage({ type: 'REFRESH_DATA' });
+            const response = await sendMessage({ type: MSG_REFRESH_DATA });
 
             if (response && response.success) {
                 statusEl.textContent = '데이터가 업데이트되었습니다';
@@ -83,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 throw new Error('Update failed');
             }
         } catch (err) {
-            console.error(err);
+            console.error('[KOSTEAM] Refresh failed:', err);
             statusEl.textContent = '✗ 업데이트 실패. 나중에 다시 시도해주세요.';
             statusEl.className = 'status error';
         }
@@ -92,33 +97,37 @@ document.addEventListener('DOMContentLoaded', async () => {
         refreshBtn.textContent = '데이터 새로고침';
     });
 
-    if (githubBtn) {
-        githubBtn.addEventListener('click', () => {
-            api.tabs.create({ url: 'https://github.com/snowyegret23/KOSTEAM' });
-        });
-    }
-
+    /**
+     * Load and initialize user settings
+     */
     async function loadSettings() {
         try {
-            const settings = await api.storage.local.get([...sourceIds, 'bypass_language_filter']);
+            const settings = await storageGet([...sourceIds, 'bypass_language_filter']);
 
+            // Initialize source checkboxes
             sources.forEach(checkbox => {
+                if (!checkbox) return;
+
                 checkbox.checked = settings[checkbox.id] !== false;
 
                 checkbox.addEventListener('change', () => {
-                    api.storage.local.set({ [checkbox.id]: checkbox.checked });
+                    storageSet({ [checkbox.id]: checkbox.checked });
                 });
             });
 
-            bypassCheckbox.checked = settings.bypass_language_filter !== false;
-            bypassCheckbox.addEventListener('change', () => {
-                api.storage.local.set({ bypass_language_filter: bypassCheckbox.checked });
-            });
+            // Initialize bypass checkbox
+            if (bypassCheckbox) {
+                bypassCheckbox.checked = settings.bypass_language_filter !== false;
+                bypassCheckbox.addEventListener('change', () => {
+                    storageSet({ bypass_language_filter: bypassCheckbox.checked });
+                });
+            }
         } catch (err) {
-            console.error('Failed to load settings:', err);
+            console.error('[KOSTEAM] Failed to load settings:', err);
         }
     }
 
+    // Initialize popup
     await loadStats();
     await loadSettings();
     await checkUpdateStatus();
