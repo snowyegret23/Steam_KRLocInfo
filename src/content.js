@@ -117,6 +117,7 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constan
         return SOURCE_LABELS[source] || source;
     }
 
+
     /**
      * Inject the patch info banner into the page
      * @param {Object|null} info - Patch info from database
@@ -214,15 +215,13 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constan
                             if (linksBySource.has(source)) continue;
 
                             let url = siteUrls[source];
+
+                            // Generate URL dynamically if not in source_site_urls
                             if (!url) {
                                 if (source === 'steamapp') {
                                     url = `https://steamapp.net/app/${appId}`;
-                                } else if (source === 'quasarplay') {
-                                    const gameNameEl = document.getElementById('appHubAppName') || document.querySelector('.apphub_AppName');
-                                    if (gameNameEl) {
-                                        const gameName = gameNameEl.textContent.trim();
-                                        url = `https://quasarplay.com/bbs/qp_korean?game_name=${encodeURIComponent(gameName)}`;
-                                    }
+                                } else if (source === 'quasarplay' && info.qp_appid) {
+                                    url = `https://quasarplay.com/bbs/qp_korean?gameId=${info.qp_appid}`;
                                 }
                             }
 

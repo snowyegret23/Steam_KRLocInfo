@@ -86,13 +86,18 @@ async function main() {
                     if (siteUrl && (entry.patch_type !== 'official' || hasLinksFromSource)) {
                         existing.source_site_urls[source] = siteUrl;
                     }
+
+                    // Preserve qp_appid from quasarplay source
+                    if (source === 'quasarplay' && entry.qp_appid) {
+                        existing.qp_appid = entry.qp_appid;
+                    }
                 } else {
                     const entryLinks = entry.patch_links || [];
                     const hasLinks = entryLinks.length > 0;
                     const siteUrl = entry.source_site_url || entry.stove_url || entry.directg_url;
                     const shouldIncludeSiteUrl = siteUrl && (entry.patch_type !== 'official' || hasLinks);
 
-                    mergedByAppId.set(appId, {
+                    const newEntry = {
                         app_id: appId,
                         game_title: entry.game_title,
                         steam_link: entry.steam_link || `https://store.steampowered.com/app/${appId}`,
@@ -102,7 +107,14 @@ async function main() {
                         patch_sources: entryLinks.map(() => source),
                         source_site_urls: shouldIncludeSiteUrl ? { [source]: siteUrl } : {},
                         sources: [source]
-                    });
+                    };
+
+                    // Add qp_appid if available from quasarplay source
+                    if (source === 'quasarplay' && entry.qp_appid) {
+                        newEntry.qp_appid = entry.qp_appid;
+                    }
+
+                    mergedByAppId.set(appId, newEntry);
                 }
             } else {
                 const titleKey = entry.game_title.toLowerCase().trim();
@@ -235,7 +247,7 @@ async function main() {
     };
 
     for (const game of withSteamLink) {
-        lookupByAppId[game.app_id] = {
+        const lookupEntry = {
             type: game.patch_type,
             sources: game.sources,
             links: game.patch_links,
@@ -243,6 +255,13 @@ async function main() {
             patch_sources: game.patch_sources || [],
             source_site_urls: game.source_site_urls || {}
         };
+
+        // Include qp_appid if available
+        if (game.qp_appid) {
+            lookupEntry.qp_appid = game.qp_appid;
+        }
+
+        lookupByAppId[game.app_id] = lookupEntry;
     }
 
     const lookupPath = path.join(DATA_DIR, 'lookup.json');

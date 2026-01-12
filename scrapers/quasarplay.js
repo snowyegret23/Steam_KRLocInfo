@@ -298,6 +298,9 @@ async function scrapePage(page, pageNum, captchaService) {
 
             const steamLink = steamAppId ? `https://store.steampowered.com/app/${steamAppId}` : '';
 
+            // Extract quasarplay game ID from data-appid attribute
+            const quasarplayGameId = $row.attr('data-appid') || '';
+
             const rowId = $row.attr('id');
             const korId = rowId ? rowId.replace('kr_', '') : '';
             const $detailRow = $(`#kr_detail_${korId}`);
@@ -342,15 +345,27 @@ async function scrapePage(page, pageNum, captchaService) {
             }
 
             if (gameTitle) {
-                games.push({
+                // Use gameId if available, otherwise fallback to game_name
+                const sourceSiteUrl = quasarplayGameId
+                    ? `${BASE_URL}?gameId=${quasarplayGameId}`
+                    : `${BASE_URL}?game_name=${encodeURIComponent(gameTitle)}`;
+
+                const gameData = {
                     app_id: steamAppId,
                     game_title: gameTitle,
                     steam_link: steamLink,
-                    source_site_url: `${BASE_URL}?game_name=${encodeURIComponent(gameTitle)}`,
+                    source_site_url: sourceSiteUrl,
                     patch_type: patchType,
                     patch_links: patchLinks,
                     patch_descriptions: patchDescriptions
-                });
+                };
+
+                // Add qp_appid if available
+                if (quasarplayGameId) {
+                    gameData.qp_appid = quasarplayGameId;
+                }
+
+                games.push(gameData);
             }
         });
 
