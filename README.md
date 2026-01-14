@@ -2,7 +2,7 @@
 
 Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필터를 우회하는 Chrome 확장 프로그램
 
-[![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnn) [![Firefox](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ko/firefox/addon/kosteam/)
+[![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnnc) [![Firefox](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ko/firefox/addon/kosteam/)
 
 ## 주요 기능
 
