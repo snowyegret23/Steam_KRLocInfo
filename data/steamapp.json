@@ -14168,7 +14168,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : 레트로겜보이"
+      "제작자 : 레트로겜보이 2022.3.19.19314 에만 적용 가능"
     ]
   },
   {
@@ -25300,7 +25300,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "2024-05-01 기준 최신 업데이트 대응 및 개선판",
+      "2024.5.14 기준 최신 업데이트 대응 및 개선판",
       "팀 왈도 제작 기존 한글패치"
     ]
   },
@@ -67814,6 +67814,71 @@
     ],
     "patch_descriptions": [
       "제작자 : r35"
+    ]
+  },
+  {
+    "app_id": "2799930",
+    "game_title": "灵境·修仙界",
+    "steam_link": "https://store.steampowered.com/app/2799930",
+    "source_site_url": "https://steamapp.net/app/2799930",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : Pixel4a 버전 롤백 필요"
+    ]
+  },
+  {
+    "app_id": "3603100",
+    "game_title": "Lost Luminosity",
+    "steam_link": "https://store.steampowered.com/app/3603100",
+    "source_site_url": "https://steamapp.net/app/3603100",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "2698470",
+    "game_title": "Kemono Teatime",
+    "steam_link": "https://store.steampowered.com/app/2698470",
+    "source_site_url": "https://steamapp.net/app/2698470",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 햇"
+    ]
+  },
+  {
+    "app_id": "571310",
+    "game_title": "SteamWorld Dig 2",
+    "steam_link": "https://store.steampowered.com/app/571310",
+    "source_site_url": "https://steamapp.net/app/571310",
+    "patch_type": "official",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "(이제 공식 한글화 되어서 유저 패치를 안 해도 됩니다) 제작자 : r35"
+    ]
+  },
+  {
+    "app_id": "3983920",
+    "game_title": "Hollowbrook - Apartments",
+    "steam_link": "https://store.steampowered.com/app/3983920",
+    "source_site_url": "https://steamapp.net/app/3983920",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
     ]
   }
 ]
