@@ -95,7 +95,16 @@ export function onStartup(callback) {
  * @param {Object} alarmInfo - Alarm configuration
  */
 export function createAlarm(name, alarmInfo) {
-    api.alarms.create(name, alarmInfo);
+    // Check if the alarm API exists
+    if (api.alarms && api.alarms.create) {
+        try {
+            api.alarms.create(name, alarmInfo);
+        } catch (e) {
+            console.debug('[KOSTEAM] Alarms API failed:', e);
+        }
+    } else {
+        console.debug('[KOSTEAM] Alarms API not supported in this environment.');
+    }
 }
 
 /**
@@ -103,7 +112,14 @@ export function createAlarm(name, alarmInfo) {
  * @param {Function} callback - Callback function (alarm) => void
  */
 export function onAlarm(callback) {
-    api.alarms.onAlarm.addListener(callback);
+    // Check if the alarm listener API exists
+    if (api.alarms && api.alarms.onAlarm) {
+        try {
+            api.alarms.onAlarm.addListener(callback);
+        } catch (e) {
+            console.debug('[KOSTEAM] Alarms listener failed:', e);
+        }
+    }
 }
 
 /**
