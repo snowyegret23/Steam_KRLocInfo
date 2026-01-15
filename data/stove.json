@@ -3660,11 +3660,11 @@
     "stove_url": "https://store.onstove.com/ko/games/72"
   },
   {
-    "app_id": null,
+    "app_id": "3067890",
     "stove_game_no": "12996",
     "stove_product_no": "102898",
     "game_title": "스타 파이어: 이터널 사이클 (Star Fire: Eternal Cycle)",
-    "steam_link": "",
+    "steam_link": "https://store.steampowered.com/app/3067890",
     "patch_type": "official",
     "patch_links": [
       "exist"
