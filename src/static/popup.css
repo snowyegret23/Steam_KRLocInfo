@@ -1,0 +1,178 @@
+/**
+ * KOSTEAM Popup Styles
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 320px;
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+    background: #1B2838;
+    color: #c7d5e0;
+    padding: 16px;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    color: #66c0f4 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #4a90d9;
+}
+
+.header-icon {
+    font-size: 28px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.stats {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-label {
+    color: #8f98a0;
+}
+
+.stat-value {
+    color: #66c0f4;
+    font-weight: bold;
+}
+
+.stat-value.needs-update {
+    color: #f0ad4e;
+}
+
+.stat-value.up-to-date {
+    color: #4caf50;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.btn-primary {
+    background: #4a90d9;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #66c0f4;
+}
+
+.status {
+    text-align: center;
+    font-size: 12px;
+    color: #8f98a0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.status.success {
+    color: #4caf50;
+}
+
+.status.error {
+    color: #e74c3c;
+}
+
+.settings-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 6px 0 10px 0;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.source-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.source-options.single-column {
+    grid-template-columns: 1fr;
+}
+
+.source-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    color: #c7d5e0;
+}
+
+.source-item input {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: #66c0f4;
+}
+
+.footer,
+.footer2 {
+    text-align: center;
+    font-size: 11px;
+    color: #8f98a0;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer2 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 12px;
+}

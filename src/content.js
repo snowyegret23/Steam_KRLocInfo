@@ -5,7 +5,7 @@
 
 import { sendMessage, storageGet, onStorageChanged } from './shared/api.js';
 import { isValidUrl } from './shared/url-validator.js';
-import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constants.js';
+import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from './shared/constants.js';
 
 (function () {
     // Extract appId from URL
@@ -13,6 +13,10 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constan
     if (!appIdMatch) return;
 
     const appId = appIdMatch[1];
+
+    // Cache for Korean support check result
+    let cachedKoreanSupport = null;
+
     const initialHasOfficialKorean = checkOfficialKoreanSupport();
 
     // Request patch info from background
@@ -25,9 +29,14 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constan
 
     /**
      * Check if the game has official Korean language support on Steam
+     * @param {boolean} [forceRefresh=false] - Force re-check even if cached
      * @returns {boolean}
      */
-    function checkOfficialKoreanSupport() {
+    function checkOfficialKoreanSupport(forceRefresh = false) {
+        if (!forceRefresh && cachedKoreanSupport !== null) {
+            return cachedKoreanSupport;
+        }
+
         const rows = document.querySelectorAll('.game_language_options tr');
 
         for (const row of rows) {
@@ -36,17 +45,19 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constan
             const firstCell = row.querySelector('td.ellipsis');
             if (!firstCell) continue;
 
-            const text = firstCell.textContent.trim();
-            if (text === '한국어' || text === 'Korean') {
+            const text = firstCell.textContent?.trim() || '';
+            if (KOREAN_LABELS.includes(text)) {
                 const checks = row.querySelectorAll('td.checkcol');
                 for (const check of checks) {
-                    if (check.textContent.includes('✔') || check.querySelector('span')) {
+                    if (check.textContent?.includes('✔') || check.querySelector('span')) {
+                        cachedKoreanSupport = true;
                         return true;
                     }
                 }
             }
         }
 
+        cachedKoreanSupport = false;
         return false;
     }
 
@@ -217,11 +228,16 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO } from './shared/constan
                             let url = siteUrls[source];
 
                             // Generate URL dynamically if not in source_site_urls
+                            // appId is already validated by URL regex pattern /\/app\/(\d+)/
                             if (!url) {
                                 if (source === 'steamapp') {
-                                    url = `https://steamapp.net/app/${appId}`;
+                                    url = `https://steamapp.net/app/${encodeURIComponent(appId)}`;
                                 } else if (source === 'quasarplay' && info.qp_appid) {
-                                    url = `https://quasarplay.com/bbs/qp_korean?category=&gameId=${info.qp_appid}`;
+                                    // Validate qp_appid is numeric before using
+                                    const qpAppId = String(info.qp_appid);
+                                    if (/^\d+$/.test(qpAppId)) {
+                                        url = `https://quasarplay.com/bbs/qp_korean?category=&gameId=${encodeURIComponent(qpAppId)}`;
+                                    }
                                 }
                             }
 

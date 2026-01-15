@@ -50,6 +50,9 @@ export const MSG_GET_PATCH_INFO = 'GET_PATCH_INFO';
 export const MSG_REFRESH_DATA = 'REFRESH_DATA';
 export const MSG_CHECK_UPDATE_STATUS = 'CHECK_UPDATE_STATUS';
 
+// Korean language labels for detection
+export const KOREAN_LABELS = ['Korean', '한국어'];
+
 // Retry configuration for search bypass
 export const SEARCH_BYPASS_MAX_ATTEMPTS = 50;
 export const SEARCH_BYPASS_RETRY_DELAY = 100;

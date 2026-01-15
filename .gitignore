@@ -3,6 +3,7 @@ node_modules/
 *.log
 .env
 _legacy/
+tmp*cwd
 
 # Build output
 dist/

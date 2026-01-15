@@ -127,8 +127,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Initialize popup
-    await loadStats();
-    await loadSettings();
-    await checkUpdateStatus();
+    // Initialize popup - run independent operations in parallel
+    await Promise.all([
+        loadStats(),
+        loadSettings(),
+        checkUpdateStatus()
+    ]);
 });

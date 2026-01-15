@@ -71,11 +71,7 @@ async function checkForUpdates() {
         const local = await storageGet([CACHE_VERSION_KEY]);
         const localVersion = local[CACHE_VERSION_KEY];
 
-        const needsUpdate = !localVersion ||
-            localVersion.generated_at !== remoteVersion.generated_at ||
-            localVersion.alias_updated_at !== remoteVersion.alias_updated_at;
-
-        if (needsUpdate) {
+        if (checkNeedsUpdate(localVersion, remoteVersion)) {
             console.log('[KOSTEAM] New version detected, updating...');
             return await fetchData(remoteVersion);
         }
@@ -133,11 +129,68 @@ async function getData() {
     };
 }
 
+/**
+ * Validate message format and required fields
+ * @param {Object} message - Message object
+ * @param {string[]} requiredFields - Required field names
+ * @returns {{valid: boolean, error?: string}}
+ */
+function validateMessage(message, requiredFields = []) {
+    if (!message || typeof message !== 'object') {
+        return { valid: false, error: 'Invalid message format' };
+    }
+    if (typeof message.type !== 'string') {
+        return { valid: false, error: 'Invalid message type' };
+    }
+    for (const field of requiredFields) {
+        if (message[field] === undefined || message[field] === null) {
+            return { valid: false, error: `Missing required field: ${field}` };
+        }
+    }
+    return { valid: true };
+}
+
+/**
+ * Validate appId format (should be numeric string or number)
+ * @param {*} appId - App ID to validate
+ * @returns {boolean}
+ */
+function isValidAppId(appId) {
+    if (typeof appId === 'number') return Number.isInteger(appId) && appId > 0;
+    if (typeof appId === 'string') return /^\d+$/.test(appId);
+    return false;
+}
+
+/**
+ * Check if update is needed by comparing versions
+ * @param {Object|null} localVersion - Local version info
+ * @param {Object} remoteVersion - Remote version info
+ * @returns {boolean}
+ */
+function checkNeedsUpdate(localVersion, remoteVersion) {
+    return !localVersion ||
+        localVersion.generated_at !== remoteVersion.generated_at ||
+        localVersion.alias_updated_at !== remoteVersion.alias_updated_at;
+}
+
 // Message handler
 onMessage((message, sender, sendResponse) => {
+    // Basic message validation
+    const baseValidation = validateMessage(message);
+    if (!baseValidation.valid) {
+        sendResponse({ success: false, error: baseValidation.error });
+        return false;
+    }
+
     if (message.type === MSG_GET_PATCH_INFO) {
+        // Validate appId
+        if (!isValidAppId(message.appId)) {
+            sendResponse({ success: false, error: 'Invalid appId format' });
+            return false;
+        }
+
         getData().then(({ data, alias }) => {
-            const appId = message.appId;
+            const appId = String(message.appId);
             const targetId = alias[appId] || appId;
             const info = data[targetId] || null;
             sendResponse({ success: true, info });
@@ -174,9 +227,7 @@ onMessage((message, sender, sendResponse) => {
                 }
 
                 const localVersion = local[CACHE_VERSION_KEY];
-                const needsUpdate = !localVersion ||
-                    localVersion.generated_at !== remoteVersion.generated_at ||
-                    localVersion.alias_updated_at !== remoteVersion.alias_updated_at;
+                const needsUpdate = checkNeedsUpdate(localVersion, remoteVersion);
 
                 sendResponse({
                     success: true,
