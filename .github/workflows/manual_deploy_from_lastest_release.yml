@@ -1,0 +1,51 @@
+name: Manual Deploy from Latest Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-store:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Latest Release Assets
+        uses: robinraju/release-downloader@v1.12
+        with:
+          latest: true
+          fileName: "*.zip"
+          
+      - name: Identify Extension Files
+        id: files
+        run: |
+          CHROME_FILE=$(find . -maxdepth 1 -name "*chrome*.zip" | head -n 1)
+          
+          FIREFOX_FILE=$(find . -maxdepth 1 -name "*firefox*.zip" | head -n 1)
+          
+          echo "Found Chrome File: $CHROME_FILE"
+          echo "Found Firefox File: $FIREFOX_FILE"
+          
+          if [ -z "$CHROME_FILE" ] || [ -z "$FIREFOX_FILE" ]; then
+            echo "Error: Could not distinguish chrome/firefox files."
+            exit 1
+          fi
+          
+          echo "chrome_path=$CHROME_FILE" >> $GITHUB_OUTPUT
+          echo "firefox_path=$FIREFOX_FILE" >> $GITHUB_OUTPUT
+
+      - name: Upload to Chrome Web Store
+        uses: mnao305/chrome-extension-upload@v5.0.0
+        with:
+          file-path: ${{ steps.files.outputs.chrome_path }}
+          extension-id: ${{ secrets.EXTENSION_ID }}
+          client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
+          client-secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          publish: true
+
+      - name: Sign & Upload to Firefox Add-ons
+        uses: wdzeng/firefox-addon@v1
+        with:
+          addon-guid: 'alevo0918@gmail.com'
+          xpi-path: ${{ steps.files.outputs.firefox_path }}
+          jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
+          channel: listed
