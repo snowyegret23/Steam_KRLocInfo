@@ -14506,10 +14506,12 @@
     "source_site_url": "https://steamapp.net/app/504230",
     "patch_type": "official",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "한글 패치 제작: 바람 번역단 - LSW 번역: LSW, 갓벨, Khepherd, 카오스形 검수: LSW"
+      "한글 패치 제작: 바람 번역단 - LSW 번역: LSW, 갓벨, Khepherd, 카오스形 검수: LSW",
+      "(공식 한글 개선 패치) 제작자 : DM다이아"
     ]
   },
   {
@@ -18219,12 +18221,12 @@
     "game_title": "Leaf it Alone",
     "steam_link": "https://store.steampowered.com/app/3981100",
     "source_site_url": "https://steamapp.net/app/3981100",
-    "patch_type": "user",
+    "patch_type": "official",
     "patch_links": [
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : 으잌"
+      "(이제 공식 한글화 되어서 유저 패치를 안 해도 됩니다) 제작자 : 으잌"
     ]
   },
   {
@@ -32337,9 +32339,11 @@
     "patch_type": "user",
     "patch_links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : salgu1",
       "",
       ""
     ]
@@ -51524,8 +51528,12 @@
     "steam_link": "https://store.steampowered.com/app/8930",
     "source_site_url": "https://steamapp.net/app/8930",
     "patch_type": "official",
-    "patch_links": [],
-    "patch_descriptions": []
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "(공식 한글 개선 패치) 제작자 : 복2"
+    ]
   },
   {
     "app_id": "65980",
@@ -67879,6 +67887,80 @@
     ],
     "patch_descriptions": [
       "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "1839810",
+    "game_title": "아웃 오브 핸즈",
+    "steam_link": "https://store.steampowered.com/app/1839810",
+    "source_site_url": "https://steamapp.net/app/1839810",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "3446680",
+    "game_title": "태국에서의 심장 박동",
+    "steam_link": "https://store.steampowered.com/app/3446680",
+    "source_site_url": "https://steamapp.net/app/3446680",
+    "patch_type": "official",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "공식 한글 개선 패치 제작자 : 미인이많군요"
+    ]
+  },
+  {
+    "app_id": "333640",
+    "game_title": "Caves of Qud",
+    "steam_link": "https://store.steampowered.com/app/333640",
+    "source_site_url": "https://steamapp.net/app/333640",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : qudkorean"
+    ]
+  },
+  {
+    "app_id": "2362420",
+    "game_title": "Mass Effect 2 (2010) Edition",
+    "steam_link": "https://store.steampowered.com/app/2362420",
+    "source_site_url": "https://steamapp.net/app/2362420",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 누렁이"
+    ]
+  },
+  {
+    "app_id": "2399160",
+    "game_title": "Soulash 2",
+    "steam_link": "https://store.steampowered.com/app/2399160",
+    "source_site_url": "https://steamapp.net/app/2399160",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 도시드워프"
+    ]
+  },
+  {
+    "app_id": "2235430",
+    "game_title": "Holstin",
+    "steam_link": "https://store.steampowered.com/app/2235430",
+    "source_site_url": "https://steamapp.net/app/2235430",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "데모판 한글화 제작자 : eaubita"
     ]
   }
 ]
