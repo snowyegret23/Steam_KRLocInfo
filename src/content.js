@@ -16,16 +16,74 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
 
     // Cache for Korean support check result
     let cachedKoreanSupport = null;
-
-    const initialHasOfficialKorean = checkOfficialKoreanSupport();
+    let patchInfoData = null;
+    let observerCleanup = null;
 
     // Request patch info from background
     sendMessage({ type: MSG_GET_PATCH_INFO, appId })
         .then(response => {
-            const info = response?.info;
-            injectPatchInfo(info, initialHasOfficialKorean);
+            patchInfoData = response?.info;
+            startLanguageTableWatcher();
         })
         .catch(err => console.debug('[KOSTEAM] Message error:', err));
+
+    /**
+     * Start watching for language table and periodically check for updates
+     */
+    function startLanguageTableWatcher() {
+        let lastKoreanSupport = null;
+        let pollInterval = null;
+
+        // MutationObserver to detect when language table is added to DOM
+        const observer = new MutationObserver((mutations) => {
+            const table = document.querySelector('.game_language_options');
+            if (table) {
+                // Table found, check Korean support
+                const currentSupport = checkOfficialKoreanSupport(true);
+                if (currentSupport !== lastKoreanSupport) {
+                    lastKoreanSupport = currentSupport;
+                    injectPatchInfo(patchInfoData, currentSupport);
+                }
+            }
+        });
+
+        // Start observing DOM changes
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
+        // Polling interval to continuously check (every 100ms)
+        pollInterval = setInterval(() => {
+            const currentSupport = checkOfficialKoreanSupport(true);
+            if (currentSupport !== lastKoreanSupport) {
+                lastKoreanSupport = currentSupport;
+                injectPatchInfo(patchInfoData, currentSupport);
+            }
+        }, 100);
+
+        // Initial check
+        const initialSupport = checkOfficialKoreanSupport();
+        lastKoreanSupport = initialSupport;
+        injectPatchInfo(patchInfoData, initialSupport);
+
+        // Cleanup function
+        observerCleanup = () => {
+            observer.disconnect();
+            if (pollInterval) {
+                clearInterval(pollInterval);
+            }
+        };
+
+        // Stop polling after 10 seconds (language table should be loaded by then)
+        setTimeout(() => {
+            if (pollInterval) {
+                clearInterval(pollInterval);
+                pollInterval = null;
+            }
+            // Keep MutationObserver running in case of dynamic changes
+        }, 10000);
+    }
 
     /**
      * Check if the game has official Korean language support on Steam
@@ -132,11 +190,9 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
     /**
      * Inject the patch info banner into the page
      * @param {Object|null} info - Patch info from database
-     * @param {boolean} cachedHasOfficialKorean - Cached Korean support status
+     * @param {boolean} hasOfficialKorean - Korean support status
      */
-    function injectPatchInfo(info, cachedHasOfficialKorean) {
-        // Re-check in case DOM changed
-        const hasOfficialKorean = checkOfficialKoreanSupport() || cachedHasOfficialKorean;
+    function injectPatchInfo(info, hasOfficialKorean) {
 
         storageGet(['source_steamapp', 'source_quasarplay', 'source_directg', 'source_stove'])
             .then(settings => {
@@ -335,11 +391,19 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
                 sendMessage({ type: MSG_GET_PATCH_INFO, appId })
                     .then(response => {
                         if (response && response.success) {
-                            injectPatchInfo(response.info, initialHasOfficialKorean);
+                            const currentSupport = checkOfficialKoreanSupport();
+                            injectPatchInfo(response.info, currentSupport);
                         }
                     })
                     .catch(err => console.debug('[KOSTEAM] Re-render error:', err));
             }
+        }
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', () => {
+        if (observerCleanup) {
+            observerCleanup();
         }
     });
 })();
