@@ -5,7 +5,7 @@
 
 import { sendMessage, storageGet, onStorageChanged } from './shared/api.js';
 import { isValidUrl } from './shared/url-validator.js';
-import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from './shared/constants.js';
+import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS, UI_STRINGS } from './shared/constants.js';
 
 (function () {
     // Extract appId from URL
@@ -41,15 +41,12 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
 
         // Function to find and scroll to curator review
         const scrollToCuratorReview = () => {
-            // Look for curator review heading (English or Korean)
-            const headings = document.querySelectorAll('h2, .page_header_ctn');
+            // Look for curator review section by class
+            const curatorSection = document.querySelector('.referring_curator_ctn');
 
-            for (const heading of headings) {
-                const text = heading.textContent?.trim() || '';
-                if (text === 'CURATOR REVIEW' || text === '큐레이터 평가') {
-                    heading.scrollIntoView({ behavior: 'auto', block: 'start' });
-                    return true;
-                }
+            if (curatorSection) {
+                curatorSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+                return true;
             }
             return false;
         };
@@ -358,7 +355,7 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
                         const itemDiv = createElement('div', 'kr-patch-link-item');
                         const headerDiv = createElement('div', 'kr-patch-link-header');
 
-                        const labelSpan = createElement('span', 'kr-patch-link-label', `링크 ${index++}:`);
+                        const labelSpan = createElement('span', 'kr-patch-link-label', `${UI_STRINGS.LINK_PREFIX} ${index++}:`);
                         headerDiv.appendChild(labelSpan);
 
                         const linkAnchor = createElement('a', 'kr-patch-link-text', `[ ${getSourceLabel(source)} ]`);
@@ -390,9 +387,9 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
                 // OFFICIAL_ESTIMATED: Show explanation text first, then links
                 if (isOfficialEstimated) {
                     const msgDiv = createElement('div', 'kr-patch-official-text');
-                    msgDiv.textContent = '한국어를 공식 지원하는 것으로 추정되는 게임입니다.';
+                    msgDiv.textContent = UI_STRINGS.OFFICIAL_ESTIMATED_TEXT;
                     msgDiv.appendChild(document.createElement('br'));
-                    msgDiv.appendChild(document.createTextNode('(패치 정보 사이트에 한국어 번역이 존재한다고 보고된 게임)'));
+                    msgDiv.appendChild(document.createTextNode(UI_STRINGS.OFFICIAL_ESTIMATED_SUBTEXT));
                     dataArea.appendChild(msgDiv);
 
                     // Show links below the explanation
@@ -408,12 +405,12 @@ import { PATCH_TYPES, SOURCE_LABELS, MSG_GET_PATCH_INFO, KOREAN_LABELS } from '.
                 } else if (isOfficial) {
                     // Official types without links
                     const msgDiv = createElement('div', 'kr-patch-official-text');
-                    msgDiv.textContent = '한국어를 공식 지원하는 게임입니다.';
+                    msgDiv.textContent = UI_STRINGS.OFFICIAL_SUPPORT_TEXT;
                     dataArea.appendChild(msgDiv);
                 } else if (patchTypeInfo.cssClass === 'none') {
-                    dataArea.appendChild(createElement('div', 'kr-patch-none-text', '현재 데이터베이스에 등록된 한국어 패치 정보가 없습니다.'));
+                    dataArea.appendChild(createElement('div', 'kr-patch-none-text', UI_STRINGS.NO_PATCH_INFO_TEXT));
                 } else {
-                    dataArea.appendChild(createElement('div', 'kr-patch-none-text', '해당 게임의 패치 정보 사이트로 연결되는 링크를 찾을 수 없습니다.'));
+                    dataArea.appendChild(createElement('div', 'kr-patch-none-text', UI_STRINGS.NO_LINK_TEXT));
                 }
 
                 // Insert banner into page
