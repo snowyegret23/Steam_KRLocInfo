@@ -17350,19 +17350,24 @@
   "333640": {
     "type": "user",
     "sources": [
-      "steamapp"
+      "steamapp",
+      "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : qudkorean"
+      "제작자 : qudkorean",
+      "유저 한글 패치 - qudkorean"
     ],
     "patch_sources": [
-      "steamapp"
+      "steamapp",
+      "quasarplay"
     ],
     "source_site_urls": {
-      "steamapp": "https://steamapp.net/app/333640"
+      "steamapp": "https://steamapp.net/app/333640",
+      "quasarplay": "https://store.steampowered.com/app/333640/?curator_clanid=30894603"
     }
   },
   "333980": {
@@ -46536,7 +46541,7 @@
     "patch_descriptions": [
       "제작자 : salgu1",
       "",
-      "유저 한국어 패치 - booksky1991, Rob “RheViDoS 님,\n \n유저 한국어 패치 - 글쓰는남자 JH, prina1414 님"
+      "유저 한글 패치 - salgu\n유저 한글 패치 - booksky1991"
     ],
     "patch_sources": [
       "steamapp",
@@ -90633,19 +90638,24 @@
   "2399160": {
     "type": "user",
     "sources": [
-      "steamapp"
+      "steamapp",
+      "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : 도시드워프"
+      "제작자 : 도시드워프",
+      "유저 한글 패치 - 도시드워프"
     ],
     "patch_sources": [
-      "steamapp"
+      "steamapp",
+      "quasarplay"
     ],
     "source_site_urls": {
-      "steamapp": "https://steamapp.net/app/2399160"
+      "steamapp": "https://steamapp.net/app/2399160",
+      "quasarplay": "https://store.steampowered.com/app/2399160/?curator_clanid=30894603"
     }
   },
   "2399330": {
@@ -94050,7 +94060,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "유저 한글 패치 - koko"
+      "유저 한글 패치 - Pixel4a\n유저 한글 패치 - 타바노\n유저 한글 패치 - koko"
     ],
     "patch_sources": [
       "quasarplay"
@@ -100279,6 +100289,24 @@
       "quasarplay": "https://store.steampowered.com/app/3150480/?curator_clanid=30894603"
     }
   },
+  "3151270": {
+    "type": "user",
+    "sources": [
+      "quasarplay"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "유저 한글 패치 - koori"
+    ],
+    "patch_sources": [
+      "quasarplay"
+    ],
+    "source_site_urls": {
+      "quasarplay": "https://store.steampowered.com/app/3151270/?curator_clanid=30894603"
+    }
+  },
   "3156770": {
     "type": "user",
     "sources": [
@@ -105482,7 +105510,7 @@
     }
   },
   "_meta": {
-    "generated_at": "2026-01-18T21:05:24.136Z",
-    "total": 7057
+    "generated_at": "2026-01-21T21:10:23.270Z",
+    "total": 7058
   }
 }

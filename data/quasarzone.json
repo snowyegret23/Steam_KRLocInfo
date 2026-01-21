@@ -2,9 +2,30 @@
   "curator_id": 30894603,
   "curator_name": "Curator #30894603",
   "curator_url": "https://store.steampowered.com/curator/30894603/",
-  "total_games": 566,
-  "exported_at": "2026-01-18T21:05:08.964183",
+  "total_games": 569,
+  "exported_at": "2026-01-21T21:10:06.907389",
   "games": [
+    {
+      "url": "https://store.steampowered.com/app/2399160/Soulash_2/",
+      "appid": "2399160",
+      "curator_url": "https://store.steampowered.com/app/2399160/?curator_clanid=30894603",
+      "review": "\"유저 한글 패치 - 도시드워프\nhttps://gall.dcinside.com/rlike/508752\"",
+      "type": "recommended"
+    },
+    {
+      "url": "https://store.steampowered.com/app/333640/Caves_of_Qud/",
+      "appid": "333640",
+      "curator_url": "https://store.steampowered.com/app/333640/?curator_clanid=30894603",
+      "review": "\"유저 한글 패치 - qudkorean\nhttps://github.com/qudkorean/qud_korean_localization\"",
+      "type": "recommended"
+    },
+    {
+      "url": "https://store.steampowered.com/app/3151270/One_Turn_Kill/",
+      "appid": "3151270",
+      "curator_url": "https://store.steampowered.com/app/3151270/?curator_clanid=30894603",
+      "review": "\"유저 한글 패치 - koori\nhttps://cafe.naver.com/hansicgu/32159\"",
+      "type": "recommended"
+    },
     {
       "url": "https://store.steampowered.com/app/3446680/Heartbeat_in_Thailand/",
       "appid": "3446680",
@@ -16,7 +37,7 @@
       "url": "https://store.steampowered.com/app/2646320/WindStop_Strategy/",
       "appid": "2646320",
       "curator_url": "https://store.steampowered.com/app/2646320/?curator_clanid=30894603",
-      "review": "\"유저 한글 패치 - koko\nhttps://cafe.naver.com/beemu/72056\"",
+      "review": "\"유저 한글 패치 - Pixel4a\nhttps://cafe.naver.com/beemu/72068\n\n유저 한글 패치 - 타바노\nhttps://cafe.naver.com/beemu/72069\n\n유저 한글 패치 - koko\nhttps://cafe.naver.com/beemu/72056\"",
       "type": "recommended"
     },
     {
