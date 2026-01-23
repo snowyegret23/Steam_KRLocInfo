@@ -4512,9 +4512,11 @@
     "source_site_url": "https://steamapp.net/app/1203620",
     "patch_type": "official",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "공식 한글 개선 패치",
       "공식 한글 개선 패치"
     ]
   },
@@ -22433,10 +22435,12 @@
     "source_site_url": "https://steamapp.net/app/1481080",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : Neidhardt"
+      "제작자 : Neidhardt",
+      "제작자 : togainu20th"
     ]
   },
   {
@@ -51683,9 +51687,13 @@
     "game_title": "SimCity™ 4 Deluxe Edition",
     "steam_link": "https://store.steampowered.com/app/24780",
     "source_site_url": "https://steamapp.net/app/24780",
-    "patch_type": "official",
-    "patch_links": [],
-    "patch_descriptions": []
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
   },
   {
     "app_id": "1351500",
@@ -56024,9 +56032,11 @@
     "source_site_url": "https://steamapp.net/app/852910",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작 기여: 체리(Hora)번역, 익명A(패치제작), 익명B (OP,ED악곡번역)",
       "Neidhardt: 패치 제작, 이미지, OP무비, 라이너노트 번역 Hora: 전체 스토리 번역, 검수, 테스트 익명: 검수, 테스트 きた: OP가사 번역"
     ]
   },
@@ -61587,10 +61597,12 @@
     "source_site_url": "https://steamapp.net/app/1174400",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "크레딧 Hora 시나리오 번역 (공통, 케이스케, 모토미, 시키) 나이트하르트 @668glass 패치 제작, 이미지/무비 편집, 라이너노트, 시나리오 번역(린, ???), 콘솔판 연출 추가"
+      "크레딧 Hora 시나리오 번역 (공통, 케이스케, 모토미, 시키) 나이트하르트 @668glass 패치 제작, 이미지/무비 편집, 라이너노트, 시나리오 번역(린, ???), 콘솔판 연출 추가",
+      "제작자 : togainu20th"
     ]
   },
   {
@@ -67818,10 +67830,12 @@
     "source_site_url": "https://steamapp.net/app/1069160",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : r35"
+      "제작자 : r35",
+      "제작자 : 에디"
     ]
   },
   {
@@ -67961,6 +67975,302 @@
     ],
     "patch_descriptions": [
       "데모판 한글화 제작자 : eaubita"
+    ]
+  },
+  {
+    "app_id": "3176560",
+    "game_title": "[Southern Fjords] Newspaper Day",
+    "steam_link": "https://store.steampowered.com/app/3176560",
+    "source_site_url": "https://steamapp.net/app/3176560",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 막셋"
+    ]
+  },
+  {
+    "app_id": "3757210",
+    "game_title": "利用規約に同意したい",
+    "steam_link": "https://store.steampowered.com/app/3757210",
+    "source_site_url": "https://steamapp.net/app/3757210",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바나나우유"
+    ]
+  },
+  {
+    "app_id": "3676850",
+    "game_title": "心动恋旅：樱花篇",
+    "steam_link": "https://store.steampowered.com/app/3676850",
+    "source_site_url": "https://steamapp.net/app/3676850",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ]
+  },
+  {
+    "app_id": "2646320",
+    "game_title": "息风谷战略",
+    "steam_link": "https://store.steampowered.com/app/2646320",
+    "source_site_url": "https://steamapp.net/app/2646320",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "3376990",
+    "game_title": "카부토 파크",
+    "steam_link": "https://store.steampowered.com/app/3376990",
+    "source_site_url": "https://steamapp.net/app/3376990",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "1628610",
+    "game_title": "파크렛의 토끼굴 모험",
+    "steam_link": "https://store.steampowered.com/app/1628610",
+    "source_site_url": "https://steamapp.net/app/1628610",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "2474030",
+    "game_title": "An English Haunting",
+    "steam_link": "https://store.steampowered.com/app/2474030",
+    "source_site_url": "https://steamapp.net/app/2474030",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "데모판 한글화 제작자 : 에디"
+    ]
+  },
+  {
+    "app_id": "40800",
+    "game_title": "Super Meat Boy",
+    "steam_link": "https://store.steampowered.com/app/40800",
+    "source_site_url": "https://steamapp.net/app/40800",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 행복한나라"
+    ]
+  },
+  {
+    "app_id": "3211490",
+    "game_title": "DYSTHANASIA",
+    "steam_link": "https://store.steampowered.com/app/3211490",
+    "source_site_url": "https://steamapp.net/app/3211490",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 동화약품"
+    ]
+  },
+  {
+    "app_id": "22180",
+    "game_title": "Penumbra Overture",
+    "steam_link": "https://store.steampowered.com/app/22180",
+    "source_site_url": "https://steamapp.net/app/22180",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "271360",
+    "game_title": "Industry Giant 2",
+    "steam_link": "https://store.steampowered.com/app/271360",
+    "source_site_url": "https://steamapp.net/app/271360",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "이전 버전으로 롤백시 한글패치 가능 제작자 : Damien.Lee"
+    ]
+  },
+  {
+    "app_id": "3942480",
+    "game_title": "The NOexistenceN of Morphean Paradox : The Forest of Silver Shallots",
+    "steam_link": "https://store.steampowered.com/app/3942480",
+    "source_site_url": "https://steamapp.net/app/3942480",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : sus2040"
+    ]
+  },
+  {
+    "app_id": "3741860",
+    "game_title": "Vital Shell",
+    "steam_link": "https://store.steampowered.com/app/3741860",
+    "source_site_url": "https://steamapp.net/app/3741860",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "2633500",
+    "game_title": "Dragon Throne: Battle of Red Cliffs",
+    "steam_link": "https://store.steampowered.com/app/2633500",
+    "source_site_url": "https://steamapp.net/app/2633500",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 색종이"
+    ]
+  },
+  {
+    "app_id": "579760",
+    "game_title": "The Journey Down: Chapter Three",
+    "steam_link": "https://store.steampowered.com/app/579760",
+    "source_site_url": "https://steamapp.net/app/579760",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ]
+  },
+  {
+    "app_id": "262850",
+    "game_title": "The Journey Down: Chapter Two",
+    "steam_link": "https://store.steampowered.com/app/262850",
+    "source_site_url": "https://steamapp.net/app/262850",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ]
+  },
+  {
+    "app_id": "220090",
+    "game_title": "The Journey Down: Chapter One",
+    "steam_link": "https://store.steampowered.com/app/220090",
+    "source_site_url": "https://steamapp.net/app/220090",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ]
+  },
+  {
+    "app_id": "2463220",
+    "game_title": "Lone Fungus: Melody of Spores",
+    "steam_link": "https://store.steampowered.com/app/2463220",
+    "source_site_url": "https://steamapp.net/app/2463220",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "3074840",
+    "game_title": "Utawarerumono: ZAN",
+    "steam_link": "https://store.steampowered.com/app/3074840",
+    "source_site_url": "https://steamapp.net/app/3074840",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 레트로겜보이"
+    ]
+  },
+  {
+    "app_id": "3904990",
+    "game_title": "Love Love Mystery Club",
+    "steam_link": "https://store.steampowered.com/app/3904990",
+    "source_site_url": "https://steamapp.net/app/3904990",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 희망의가위"
+    ]
+  },
+  {
+    "app_id": "3151270",
+    "game_title": "One Turn Kill",
+    "steam_link": "https://store.steampowered.com/app/3151270",
+    "source_site_url": "https://steamapp.net/app/3151270",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : koori"
+    ]
+  },
+  {
+    "app_id": "1783560",
+    "game_title": "The Last Caretaker",
+    "steam_link": "https://store.steampowered.com/app/1783560",
+    "source_site_url": "https://steamapp.net/app/1783560",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 저무"
+    ]
+  },
+  {
+    "app_id": "3278760",
+    "game_title": "The Happyhills Homicide",
+    "steam_link": "https://store.steampowered.com/app/3278760",
+    "source_site_url": "https://steamapp.net/app/3278760",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 아강"
+    ]
+  },
+  {
+    "app_id": "1161580",
+    "game_title": "Hardspace: Shipbreaker",
+    "steam_link": "https://store.steampowered.com/app/1161580",
+    "source_site_url": "https://steamapp.net/app/1161580",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : Kheeman"
     ]
   }
 ]

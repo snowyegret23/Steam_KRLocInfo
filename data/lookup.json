@@ -2649,18 +2649,23 @@
   "22180": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치 -"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/22180",
       "quasarplay": "https://store.steampowered.com/app/22180/?curator_clanid=42788178"
     }
   },
@@ -2925,21 +2930,25 @@
     }
   },
   "24780": {
-    "type": "official",
+    "type": "user",
     "sources": [
       "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/24780",
       "quasarplay": "https://store.steampowered.com/app/24780/?curator_clanid=42788178"
     }
   },
@@ -4154,6 +4163,24 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "40800": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 행복한나라"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/40800"
+    }
   },
   "40950": {
     "type": "user",
@@ -8101,6 +8128,24 @@
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/219990",
       "quasarplay": "https://store.steampowered.com/app/219990/?curator_clanid=42788178"
+    }
+  },
+  "220090": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/220090"
     }
   },
   "220160": {
@@ -12247,6 +12292,24 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
+  "262850": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/262850"
+    }
+  },
   "263280": {
     "type": "user",
     "sources": [
@@ -12777,6 +12840,24 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "271360": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "이전 버전으로 롤백시 한글패치 가능 제작자 : Damien.Lee"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/271360"
+    }
   },
   "271590": {
     "type": "official",
@@ -33785,6 +33866,24 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
+  "579760": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/579760"
+    }
+  },
   "580170": {
     "type": "official",
     "sources": [
@@ -47878,13 +47977,16 @@
     ],
     "links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작 기여: 체리(Hora)번역, 익명A(패치제작), 익명B (OP,ED악곡번역)",
       "Neidhardt: 패치 제작, 이미지, OP무비, 라이너노트 번역 Hora: 전체 스토리 번역, 검수, 테스트 익명: 검수, 테스트 きた: OP가사 번역",
       "유저 한글 패치 - Neidhardt, Hora, きた 님"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -57453,13 +57555,16 @@
     ],
     "links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
       "제작자 : r35",
+      "제작자 : 에디",
       "유저 한글 패치 - r35"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -62025,18 +62130,23 @@
   "1161580": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : Kheeman",
       "유저 한글 패치 - Kheeman"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/1161580",
       "quasarplay": "https://store.steampowered.com/app/1161580/?curator_clanid=30894603"
     }
   },
@@ -62736,13 +62846,16 @@
     ],
     "links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
       "크레딧 Hora 시나리오 번역 (공통, 케이스케, 모토미, 시키) 나이트하르트 @668glass 패치 제작, 이미지/무비 편집, 라이너노트, 시나리오 번역(린, ???), 콘솔판 연출 추가",
+      "제작자 : togainu20th",
       "유저 한글 패치 - Hora, 나이트하르트 님 외"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -74052,13 +74165,16 @@
     ],
     "links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
       "제작자 : Neidhardt",
+      "제작자 : togainu20th",
       "유저 한글 패치 링크 -"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -78154,6 +78270,16 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
+  "1628610": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [],
+    "patch_descriptions": [],
+    "patch_sources": [],
+    "source_site_urls": {}
+  },
   "1629200": {
     "type": "official",
     "sources": [
@@ -81150,6 +81276,24 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "1783560": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 저무"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/1783560"
+    }
   },
   "1787320": {
     "type": "official",
@@ -91615,6 +91759,16 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
+  "2463220": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [],
+    "patch_descriptions": [],
+    "patch_sources": [],
+    "source_site_urls": {}
+  },
   "2463620": {
     "type": "user",
     "sources": [
@@ -91736,6 +91890,24 @@
     ],
     "source_site_urls": {
       "quasarplay": "https://store.steampowered.com/app/2472770/?curator_clanid=30894603"
+    }
+  },
+  "2474030": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "데모판 한글화 제작자 : 에디"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/2474030"
     }
   },
   "2475300": {
@@ -93851,6 +94023,24 @@
       "steamapp": "https://steamapp.net/app/2632800"
     }
   },
+  "2633500": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 색종이"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/2633500"
+    }
+  },
   "2634560": {
     "type": "user",
     "sources": [
@@ -94054,18 +94244,23 @@
   "2646320": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한글 패치 - Pixel4a\n유저 한글 패치 - 타바노\n유저 한글 패치 - koko"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/2646320",
       "quasarplay": "https://store.steampowered.com/app/2646320/?curator_clanid=30894603"
     }
   },
@@ -99388,6 +99583,24 @@
       "quasarplay": "https://store.steampowered.com/app/3074110/?curator_clanid=42788178"
     }
   },
+  "3074840": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 레트로겜보이"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3074840"
+    }
+  },
   "3077020": {
     "type": "official",
     "sources": [
@@ -100292,18 +100505,23 @@
   "3151270": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : koori",
       "유저 한글 패치 - koori"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3151270",
       "quasarplay": "https://store.steampowered.com/app/3151270/?curator_clanid=30894603"
     }
   },
@@ -100515,18 +100733,23 @@
   "3176560": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 막셋",
       "유저 한글 패치 - 막셋 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3176560",
       "quasarplay": "https://store.steampowered.com/app/3176560/?curator_clanid=42788178"
     }
   },
@@ -100897,6 +101120,24 @@
     ],
     "source_site_urls": {
       "stove": "https://store.onstove.com/ko/games/4319"
+    }
+  },
+  "3211490": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 동화약품"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3211490"
     }
   },
   "3214400": {
@@ -101601,18 +101842,23 @@
   "3278760": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 아강",
       "유저 한글 패치 - fuseson4"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3278760",
       "quasarplay": "https://store.steampowered.com/app/3278760/?curator_clanid=42788178"
     }
   },
@@ -102544,6 +102790,16 @@
     "source_site_urls": {
       "quasarplay": "https://store.steampowered.com/app/3376760/?curator_clanid=42788178"
     }
+  },
+  "3376990": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [],
+    "patch_descriptions": [],
+    "patch_sources": [],
+    "source_site_urls": {}
   },
   "3380520": {
     "type": "user",
@@ -104234,6 +104490,24 @@
       "quasarplay": "https://store.steampowered.com/app/3676260/?curator_clanid=30894603"
     }
   },
+  "3676850": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바라미"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3676850"
+    }
+  },
   "3689520": {
     "type": "user",
     "sources": [
@@ -104544,6 +104818,16 @@
       "quasarplay": "https://store.steampowered.com/app/3740360/?curator_clanid=30894603"
     }
   },
+  "3741860": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [],
+    "patch_descriptions": [],
+    "patch_sources": [],
+    "source_site_urls": {}
+  },
   "3751730": {
     "type": "user",
     "sources": [
@@ -104583,6 +104867,24 @@
     ],
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/3755860"
+    }
+  },
+  "3757210": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 바나나우유"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3757210"
     }
   },
   "3776410": {
@@ -105013,6 +105315,24 @@
       "quasarplay": "https://store.steampowered.com/app/3898290/?curator_clanid=30894603"
     }
   },
+  "3904990": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 희망의가위"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3904990"
+    }
+  },
   "3906770": {
     "type": "user",
     "sources": [
@@ -105116,6 +105436,24 @@
     ],
     "source_site_urls": {
       "quasarplay": "https://store.steampowered.com/app/3929740/?curator_clanid=30894603"
+    }
+  },
+  "3942480": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : sus2040"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3942480"
     }
   },
   "3947480": {
@@ -105510,7 +105848,7 @@
     }
   },
   "_meta": {
-    "generated_at": "2026-01-21T21:10:23.270Z",
-    "total": 7058
+    "generated_at": "2026-01-23T21:06:20.949Z",
+    "total": 7076
   }
 }
