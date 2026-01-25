@@ -62851,7 +62851,7 @@
     ],
     "patch_descriptions": [
       "크레딧 Hora 시나리오 번역 (공통, 케이스케, 모토미, 시키) 나이트하르트 @668glass 패치 제작, 이미지/무비 편집, 라이너노트, 시나리오 번역(린, ???), 콘솔판 연출 추가",
-      "제작자 : togainu20th",
+      "제작자 : togainu20th 링크가 안 되면 아래 배포처에서 찾으시면 됩니다",
       "유저 한글 패치 - Hora, 나이트하르트 님 외"
     ],
     "patch_sources": [
@@ -89592,6 +89592,24 @@
       "quasarplay": "https://store.steampowered.com/app/2304970/?curator_clanid=42788178"
     }
   },
+  "2305640": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/2305640"
+    }
+  },
   "2306030": {
     "type": "user",
     "sources": [
@@ -94252,7 +94270,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "",
+      "제작자 : Pixel4a",
       "유저 한글 패치 - Pixel4a\n유저 한글 패치 - 타바노\n유저 한글 패치 - koko"
     ],
     "patch_sources": [
@@ -105848,7 +105866,7 @@
     }
   },
   "_meta": {
-    "generated_at": "2026-01-23T21:06:20.949Z",
-    "total": 7076
+    "generated_at": "2026-01-25T21:05:35.878Z",
+    "total": 7077
   }
 }
