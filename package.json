@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "scrape:steamapp": "node scrapers/steamapp.js",
-    "scrape:quasarplay": "node scrapers/quasarplay.js",
     "scrape:directg": "node scrapers/directg.js",
     "scrape:stove": "node scrapers/stove.js",
     "scrape:curator": "python scrapers/steam_curator_dump.py --quasarplay",
-    "scrape:all": "npm run scrape:steamapp && npm run scrape:quasarplay && npm run scrape:directg && npm run scrape:stove && npm run scrape:curator",
+    "scrape:all": "npm run scrape:steamapp && npm run scrape:directg && npm run scrape:stove && npm run scrape:curator",
     "scrape:merge": "npm run merge",
     "merge": "node scripts/merge.js",
     "resolve-links": "node scripts/resolve-links.js",
@@ -27,10 +26,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
-    "node-fetch": "^3.3.2",
-    "puppeteer": "^24.34.0",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.0",
