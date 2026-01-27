@@ -57,7 +57,7 @@ jobs:
         if: github.event.inputs.scraper == 'all' || github.event.inputs.scraper == 'quasarplay_curator' || github.event_name == 'schedule'
         uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: '3.14'
 
       - name: Install Python dependencies
         if: github.event.inputs.scraper == 'all' || github.event.inputs.scraper == 'quasarplay_curator' || github.event_name == 'schedule'
