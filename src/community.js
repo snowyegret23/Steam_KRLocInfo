@@ -8,7 +8,7 @@
  * @param {string} pathname - URL pathname
  * @returns {string|null} appId or null if not found
  */
-export function extractAppId(pathname) {
+function extractAppId(pathname) {
   const match = pathname.match(/\/app\/(\d+)/);
   return match ? match[1] : null;
 }
@@ -18,7 +18,7 @@ export function extractAppId(pathname) {
  * @param {string} appId - Steam app ID
  * @returns {string} Steam store URL
  */
-export function generateStoreUrl(appId) {
+function generateStoreUrl(appId) {
   return `https://store.steampowered.com/app/${appId}`;
 }
 
@@ -27,7 +27,7 @@ export function generateStoreUrl(appId) {
  * @param {Element} container - Container element
  * @returns {boolean} true if link exists
  */
-export function hasExistingStoreLink(container) {
+function hasExistingStoreLink(container) {
   if (container.querySelector('.kosteam-store-link')) return true;
   if (container.querySelector('a[href*="https://store.steampowered.com/app/"]')) return true;
   return false;
@@ -40,7 +40,7 @@ export function hasExistingStoreLink(container) {
  * @param {string} [text='상점으로 이동'] - Link text
  * @returns {HTMLAnchorElement} Store link element
  */
-export function createStoreLinkElement(storeUrl, appId, text = '상점으로 이동') {
+function createStoreLinkElement(storeUrl, appId, text = '상점으로 이동') {
   const link = document.createElement('a');
   link.href = storeUrl;
   link.className = 'btnv6_blue_hoverfade btn_medium kosteam-store-link';
@@ -58,7 +58,7 @@ export function createStoreLinkElement(storeUrl, appId, text = '상점으로 이
  * @param {Element} container - Container element
  * @param {HTMLAnchorElement} link - Link element to inject
  */
-export function injectLink(container, link) {
+function injectLink(container, link) {
   container.append(document.createTextNode(' '));
   container.append(link);
 }
@@ -69,7 +69,7 @@ export function injectLink(container, link) {
  * @param {string} pathname - URL pathname
  * @returns {boolean} true if injection succeeded or link already exists
  */
-export function injectStoreLink(doc, pathname) {
+function injectStoreLink(doc, pathname) {
   const appId = extractAppId(pathname);
   if (!appId) return false;
 
@@ -91,7 +91,7 @@ export function injectStoreLink(doc, pathname) {
  * @param {string} pathname - URL pathname
  * @param {number} [timeout=5000] - Observer timeout in ms
  */
-export function initWithObserver(doc, pathname, timeout = 5000) {
+function initWithObserver(doc, pathname, timeout = 5000) {
   if (injectStoreLink(doc, pathname)) return;
 
   const observer = new MutationObserver(() => {
