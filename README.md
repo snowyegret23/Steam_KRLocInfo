@@ -2,7 +2,8 @@
 
 Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필터를 우회하는 브라우저 확장 프로그램
 
-[![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnnc) [![Firefox](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ko/firefox/addon/kosteam/)
+[![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnnc) 
+[![Firefox](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ko/firefox/addon/kosteam/)  
 
 ## 주요 기능
 
@@ -22,7 +23,11 @@ Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필
 
 - '선택항목만 남기기'로 결제 후 '복원'을 누르면 삭제된 항목 복원
 - 장바구니 항목을 찜 목록에 추가 / JSON으로 내보내기 (백업 기능)
-- 기능 오류 시 새로고침 권장 (스팀 API 불안정성 이슈)
+- 기능 오류 시 새로고침 권장 (Steam API 불안정성 이슈)
+
+### Steam 커뮤니티에서 상점으로 이동
+
+- Steam 커뮤니티 페이지에 '상점 페이지' 버튼이 누락된 경우, '상점으로 이동' 버튼을 표시
 
 ## 사용 방법
 
@@ -44,18 +49,24 @@ Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필
 
 | 라벨                                                                         | 의미                                        |
 | ------------------------------------------------------------------------------ | --------------------------------------------- |
-| ![#4c9a2a](https://placehold.co/15x15/4c9a2a/4c9a2a.png) 공식 한국어         | Steam 공식 한국어 지원                  |
-| ![#4c9a2a](https://placehold.co/15x15/4c9a2a/4c9a2a.png) 공식(추가정보 존재) | 공식 지원 + 추가정보 있음                 |
+| ![#4c9a2a](https://placehold.co/15x15/4c9a2a/4c9a2a.png) 공식 한국어         | Steam 공식 한국어 지원                    |
+| ![#4c9a2a](https://placehold.co/15x15/4c9a2a/4c9a2a.png) 공식(추가정보 존재) | 공식 지원 + 추가정보 있음                  |
 | ![#38C198](https://placehold.co/15x15/38C198/38C198.png) 공식지원 추정       | 공식적으로 한국어를 지원할 것으로 추정      |
-| ![#B921FF](https://placehold.co/15x15/B921FF/B921FF.png) 유저패치            | 커뮤니티 한글패치 존재                   |
-| ![#0C7CED](https://placehold.co/15x15/0C7CED/0C7CED.png) 다이렉트 게임즈     | 다이렉트 게임즈에서 한국어 버전 스팀키 판매  |
+| ![#B921FF](https://placehold.co/15x15/B921FF/B921FF.png) 유저패치            | 커뮤니티 한글패치 존재                    |
+| ![#0C7CED](https://placehold.co/15x15/0C7CED/0C7CED.png) 다이렉트 게임즈     | 다이렉트 게임즈에서 한국어 버전 스팀키 판매 |
 | ![#FF8126](https://placehold.co/15x15/FF8126/FF8126.png) 스토브              | 스토브에서 한국어 버전 게임 별도 판매      |
 | ![#e74c3c](https://placehold.co/15x15/e74c3c/e74c3c.png) 한국어 없음         | 데이터베이스에 등록된 한국어 패치 정보 없음 |
+
+## 설치
+
+- [Chrome 웹 스토어](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnnc) : Chrome, Edge 등
+- [Firefox 웹 스토어](https://addons.mozilla.org/ko/firefox/addon/kosteam/) : 모바일 가능
+- [Steam 클라이언트](https://github.com/snowyegret23/KOSTEAM/issues/24) : Extendium 플러그인 기반
 
 ## 데이터 출처
 
 - [스팀앱](https://steamapp.net)
-- [퀘이사존](https://store.steampowered.com/curator/30894603), [퀘이사플레이](https://store.steampowered.com/curator/42788178) 스팀 큐레이터
+- [퀘이사존](https://store.steampowered.com/curator/30894603), [퀘이사플레이](https://store.steampowered.com/curator/42788178) Steam 큐레이터
 - [다이렉트 게임즈](https://directg.net)
 - [스토브](https://store.onstove.com)
 
