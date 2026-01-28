@@ -10535,7 +10535,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "",
+      "추가 패치 파일",
       "Koyo12204 님 제작",
       "제작자 : 제로"
     ]
@@ -41523,9 +41523,11 @@
     "patch_type": "user",
     "patch_links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : Nasher",
       "제작자 : ingleeman",
       ""
     ]
@@ -57041,12 +57043,12 @@
     "game_title": "Terraria",
     "steam_link": "https://store.steampowered.com/app/105600",
     "source_site_url": "https://steamapp.net/app/105600",
-    "patch_type": "user",
+    "patch_type": "official",
     "patch_links": [
       "exist"
     ],
     "patch_descriptions": [
-      ""
+      "(이제 공식 한글화 되어서 유저 패치를 안 해도 됩니다)"
     ]
   },
   {
@@ -65363,7 +65365,7 @@
   },
   {
     "app_id": "4570",
-    "game_title": "Warhammer® 40,000: Dawn of War® - Game of the Year Edition",
+    "game_title": "Warhammer 40,000: Dawn of War - Anniversary Edition",
     "steam_link": "https://store.steampowered.com/app/4570",
     "source_site_url": "https://steamapp.net/app/4570",
     "patch_type": "user",
@@ -68284,6 +68286,251 @@
     ],
     "patch_descriptions": [
       "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "2933290",
+    "game_title": "[Nightmare Files] Clap Clap",
+    "steam_link": "https://store.steampowered.com/app/2933290",
+    "source_site_url": "https://steamapp.net/app/2933290",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "745960",
+    "game_title": "A Sky Full of Stars 仰望夜空的星辰",
+    "steam_link": "https://store.steampowered.com/app/745960",
+    "source_site_url": "https://steamapp.net/app/745960",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "프로그래밍 - 게지네 영상 - unicord 번역&이미지 - 오리목뼈 검수 - Hikari"
+    ]
+  },
+  {
+    "app_id": "1502990",
+    "game_title": "Atelier Lydie & Suelle: The Alchemists and the Mysterious Paintings DX",
+    "steam_link": "https://store.steampowered.com/app/1502990",
+    "source_site_url": "https://steamapp.net/app/1502990",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 아갤러"
+    ]
+  },
+  {
+    "app_id": "3834480",
+    "game_title": "Bite Night: Dine or Die",
+    "steam_link": "https://store.steampowered.com/app/3834480",
+    "source_site_url": "https://steamapp.net/app/3834480",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "1552550",
+    "game_title": "Castlevania Advance Collection",
+    "steam_link": "https://store.steampowered.com/app/1552550",
+    "source_site_url": "https://steamapp.net/app/1552550",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "802880",
+    "game_title": "Muv-Luv (マブラヴ)",
+    "steam_link": "https://store.steampowered.com/app/802880",
+    "source_site_url": "https://steamapp.net/app/802880",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : shylock"
+    ]
+  },
+  {
+    "app_id": "449830",
+    "game_title": "Muv-Luv",
+    "steam_link": "https://store.steampowered.com/app/449830",
+    "source_site_url": "https://steamapp.net/app/449830",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : shylock"
+    ]
+  },
+  {
+    "app_id": "326480",
+    "game_title": "If My Heart Had Wings",
+    "steam_link": "https://store.steampowered.com/app/326480",
+    "source_site_url": "https://steamapp.net/app/326480",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한글패치 이식 - SinY H신 대체 이벤트 번역 및 검수 - SinY <기존 한글패치 제작> 프로그래밍 - 게지네 영상 - unicord 이미지 - 도리진 번역 - SinY, 토비사와, 라떼는맛이야 검수 - SinY, 토비사와, 라떼는맛이야, Tonightisthis, Hikari"
+    ]
+  },
+  {
+    "app_id": "1406990",
+    "game_title": "NEKOPARA Vol. 4",
+    "steam_link": "https://store.steampowered.com/app/1406990",
+    "source_site_url": "https://steamapp.net/app/1406990",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "번역 와들 이미지 커트 앵글 프로그래밍 게지네"
+    ]
+  },
+  {
+    "app_id": "1106940",
+    "game_title": "How to Raise a Wolf Girl",
+    "steam_link": "https://store.steampowered.com/app/1106940",
+    "source_site_url": "https://steamapp.net/app/1106940",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 게지네"
+    ]
+  },
+  {
+    "app_id": "330830",
+    "game_title": "Tales from the Borderlands",
+    "steam_link": "https://store.steampowered.com/app/330830",
+    "source_site_url": "https://steamapp.net/app/330830",
+    "patch_type": "user",
+    "patch_links": [
+      "exist",
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : Team AI-Hater",
+      "구버전 전용 - 에피소드 1만 번"
+    ]
+  },
+  {
+    "app_id": "2737580",
+    "game_title": "The Lancaster Leak - Entity Exam",
+    "steam_link": "https://store.steampowered.com/app/2737580",
+    "source_site_url": "https://steamapp.net/app/2737580",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 막셋"
+    ]
+  },
+  {
+    "app_id": "1265930",
+    "game_title": "Life is Strange: Before the Storm Remastered",
+    "steam_link": "https://store.steampowered.com/app/1265930",
+    "source_site_url": "https://steamapp.net/app/1265930",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : k3ith33"
+    ]
+  },
+  {
+    "app_id": "63610",
+    "game_title": "Riven: The Sequel to MYST",
+    "steam_link": "https://store.steampowered.com/app/63610",
+    "source_site_url": "https://steamapp.net/app/63610",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : mumu"
+    ]
+  },
+  {
+    "app_id": "925930",
+    "game_title": "Myst III: Exile",
+    "steam_link": "https://store.steampowered.com/app/925930",
+    "source_site_url": "https://steamapp.net/app/925930",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : mumu"
+    ]
+  },
+  {
+    "app_id": "2616460",
+    "game_title": "Dungeon Keeper™ 2",
+    "steam_link": "https://store.steampowered.com/app/2616460",
+    "source_site_url": "https://steamapp.net/app/2616460",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : mumu"
+    ]
+  },
+  {
+    "app_id": "1455630",
+    "game_title": "THE GAME OF LIFE 2",
+    "steam_link": "https://store.steampowered.com/app/1455630",
+    "source_site_url": "https://steamapp.net/app/1455630",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 아레이아드"
+    ]
+  },
+  {
+    "app_id": "2529750",
+    "game_title": "Raining City: Millions Recollections",
+    "steam_link": "https://store.steampowered.com/app/2529750",
+    "source_site_url": "https://steamapp.net/app/2529750",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "1962430",
+    "game_title": "Monochrome Mobius: Rights and Wrongs Forgotten",
+    "steam_link": "https://store.steampowered.com/app/1962430",
+    "source_site_url": "https://steamapp.net/app/1962430",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 레트로겜보이"
     ]
   }
 ]

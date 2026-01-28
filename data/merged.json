@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-01-25T21:05:35.878Z",
-    "total_with_steam_link": 7077,
+    "generated_at": "2026-01-28T21:10:15.291Z",
+    "total_with_steam_link": 7088,
     "total_without_steam_link": 21,
     "sources": [
       "steamapp",
@@ -7746,27 +7746,6 @@
       ]
     },
     {
-      "app_id": "2737580",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/2737580/The_Lancaster_Leak__Entity_Exam/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한글 패치 - 막셋 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/2737580/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
       "app_id": "3126330",
       "game_title": "",
       "steam_link": "https://store.steampowered.com/app/3126330/Kiosk/",
@@ -7782,48 +7761,6 @@
       ],
       "source_site_urls": {
         "quasarplay": "https://store.steampowered.com/app/3126330/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "2933290",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/2933290/Nightmare_Files_Clap_Clap/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한글 패치 - 으잌㉪ 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/2933290/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "1552550",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/1552550/Castlevania_Advance_Collection/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "한글 패치 방법 안내 글"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/1552550/?curator_clanid=42788178"
       },
       "sources": [
         "quasarplay"
@@ -10127,27 +10064,6 @@
       ]
     },
     {
-      "app_id": "1265930",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/1265930/Life_is_Strange_Before_the_Storm_Remastered/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "리마스터 컬렉션 대응 패치 - k3ith33 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/1265930/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
       "app_id": "393610",
       "game_title": "",
       "steam_link": "https://store.steampowered.com/app/393610/ROOT/",
@@ -10163,69 +10079,6 @@
       ],
       "source_site_urls": {
         "quasarplay": "https://store.steampowered.com/app/393610/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "745960",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/745960/A_Sky_Full_of_Stars/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "프로그래밍 - 게지네,\n영상 - unicord,\n번역&이미지 - 오리목뼈,\n검수 - Hikari 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/745960/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "1406990",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/1406990/NEKOPARA_Vol_4/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - 번역: 와들,\n이미지: 커트 앵글,\n프로그래밍: 게지네 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/1406990/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "1106940",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/1106940/How_to_Raise_a_Wolf_Girl/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - 게지네 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/1106940/?curator_clanid=42788178"
       },
       "sources": [
         "quasarplay"
@@ -10457,21 +10310,6 @@
       ],
       "source_site_urls": {
         "quasarplay": "https://store.steampowered.com/app/8000/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "330830",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/330830/Tales_from_the_Borderlands/",
-      "patch_type": "official",
-      "patch_links": [],
-      "patch_descriptions": [],
-      "patch_sources": [],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/330830/?curator_clanid=42788178"
       },
       "sources": [
         "quasarplay"
@@ -10876,6 +10714,32 @@
       "source_site_urls": {},
       "sources": [
         "steamapp"
+      ]
+    },
+    {
+      "app_id": "2933290",
+      "game_title": "[Nightmare Files] Clap Clap",
+      "steam_link": "https://store.steampowered.com/app/2933290",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 으잌",
+        "유저 한글 패치 - 으잌㉪ 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/2933290",
+        "quasarplay": "https://store.steampowered.com/app/2933290/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
       ]
     },
     {
@@ -12240,6 +12104,32 @@
       "source_site_urls": {
         "steamapp": "https://steamapp.net/app/1055540",
         "quasarplay": "https://store.steampowered.com/app/1055540/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "745960",
+      "game_title": "A Sky Full of Stars 仰望夜空的星辰",
+      "steam_link": "https://store.steampowered.com/app/745960",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "프로그래밍 - 게지네 영상 - unicord 번역&이미지 - 오리목뼈 검수 - Hikari",
+        "프로그래밍 - 게지네,\n영상 - unicord,\n번역&이미지 - 오리목뼈,\n검수 - Hikari 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/745960",
+        "quasarplay": "https://store.steampowered.com/app/745960/?curator_clanid=42788178"
       },
       "sources": [
         "steamapp",
@@ -17691,6 +17581,27 @@
       ]
     },
     {
+      "app_id": "1502990",
+      "game_title": "Atelier Lydie & Suelle: The Alchemists and the Mysterious Paintings DX",
+      "steam_link": "https://store.steampowered.com/app/1502990",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 아갤러"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1502990"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "936190",
       "game_title": "Atelier Meruru ~The Apprentice of Arland~ DX - メルルのアトリエ ～アーランドの錬金術士３～ DX",
       "steam_link": "https://store.steampowered.com/app/936190",
@@ -19623,10 +19534,10 @@
         "exist"
       ],
       "patch_descriptions": [
-        "",
+        "추가 패치 파일",
         "Koyo12204 님 제작",
         "제작자 : 제로",
-        "유저 한글 패치 - 자올\n유저 한글 패치 - 제로"
+        "유저 한글 패치 - 자올\n유저 한글 패치 - ingleeman"
       ],
       "patch_sources": [
         "steamapp",
@@ -21600,6 +21511,27 @@
       "sources": [
         "steamapp",
         "quasarplay"
+      ]
+    },
+    {
+      "app_id": "3834480",
+      "game_title": "Bite Night: Dine or Die",
+      "steam_link": "https://store.steampowered.com/app/3834480",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 으잌"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/3834480"
+      },
+      "sources": [
+        "steamapp"
       ]
     },
     {
@@ -25886,6 +25818,32 @@
       "source_site_urls": {},
       "sources": [
         "steamapp"
+      ]
+    },
+    {
+      "app_id": "1552550",
+      "game_title": "Castlevania Advance Collection",
+      "steam_link": "https://store.steampowered.com/app/1552550",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "",
+        "한글 패치 방법 안내 글"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1552550",
+        "quasarplay": "https://store.steampowered.com/app/1552550/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
       ]
     },
     {
@@ -31785,7 +31743,7 @@
       ],
       "patch_descriptions": [
         "mumu 님 제작",
-        "유저 한국어 패치 - mumu 님,\n최초 패치 제작: monSTAR 님"
+        "유저 한글 패치 - mumu"
       ],
       "patch_sources": [
         "steamapp",
@@ -36860,7 +36818,7 @@
       "patch_descriptions": [
         "제작자 : Neidhardt",
         "제작자 : togainu20th",
-        "유저 한글 패치 링크 -"
+        "유저 한글 패치 - togainu20th\n유저 한글 패치 링크"
       ],
       "patch_sources": [
         "steamapp",
@@ -37915,6 +37873,27 @@
       "patch_descriptions": [],
       "patch_sources": [],
       "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "2616460",
+      "game_title": "Dungeon Keeper™ 2",
+      "steam_link": "https://store.steampowered.com/app/2616460",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : mumu"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/2616460"
+      },
       "sources": [
         "steamapp"
       ]
@@ -43859,7 +43838,7 @@
       "patch_descriptions": [
         "초벌 번역: Bashir, GartistN, sund0416, 264 검수: 264, 미리칸 기술 지원, 교정: 미리칸 이전 버전 다운로드 방법 링크2 참고",
         "이전 버전 다운로드 방법",
-        "유저 한국어 패치 - Team.SM"
+        "유저 한글 - Team.SM,\n패치 방법"
       ],
       "patch_sources": [
         "steamapp",
@@ -45654,7 +45633,7 @@
       ],
       "patch_descriptions": [
         "mumu 님 제작",
-        "유저 한국어 패치 - mumu 님"
+        "유저 한국어 패치 - mumu"
       ],
       "patch_sources": [
         "steamapp",
@@ -48264,7 +48243,7 @@
       "patch_descriptions": [
         "mumu님 제작",
         "폰트 개선판 번역 개선",
-        "유저 한국어 패치 - 추리소년 님"
+        "유저 한글 패치 - mumu\n유저 한글 패치 - 추리소년"
       ],
       "patch_sources": [
         "steamapp",
@@ -53064,6 +53043,32 @@
       ]
     },
     {
+      "app_id": "1106940",
+      "game_title": "How to Raise a Wolf Girl",
+      "steam_link": "https://store.steampowered.com/app/1106940",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 게지네",
+        "유저 한국어 패치 - 게지네 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1106940",
+        "quasarplay": "https://store.steampowered.com/app/1106940/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
       "app_id": "360170",
       "game_title": "How to Survive 2",
       "steam_link": "https://store.steampowered.com/app/360170",
@@ -54096,6 +54101,27 @@
       "patch_descriptions": [],
       "patch_sources": [],
       "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "326480",
+      "game_title": "If My Heart Had Wings",
+      "steam_link": "https://store.steampowered.com/app/326480",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한글패치 이식 - SinY H신 대체 이벤트 번역 및 검수 - SinY <기존 한글패치 제작> 프로그래밍 - 게지네 영상 - unicord 이미지 - 도리진 번역 - SinY, 토비사와, 라떼는맛이야 검수 - SinY, 토비사와, 라떼는맛이야, Tonightisthis, Hikari"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/326480"
+      },
       "sources": [
         "steamapp"
       ]
@@ -60654,6 +60680,32 @@
       ]
     },
     {
+      "app_id": "1265930",
+      "game_title": "Life is Strange: Before the Storm Remastered",
+      "steam_link": "https://store.steampowered.com/app/1265930",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : k3ith33",
+        "리마스터 컬렉션 대응 패치 - k3ith33 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1265930",
+        "quasarplay": "https://store.steampowered.com/app/1265930/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
       "app_id": "936790",
       "game_title": "Life is Strange: True Colors",
       "steam_link": "https://store.steampowered.com/app/936790",
@@ -66897,6 +66949,27 @@
       ]
     },
     {
+      "app_id": "1962430",
+      "game_title": "Monochrome Mobius: Rights and Wrongs Forgotten",
+      "steam_link": "https://store.steampowered.com/app/1962430",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 레트로겜보이"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1962430"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "1183420",
       "game_title": "Monochrome World",
       "steam_link": "https://store.steampowered.com/app/1183420",
@@ -68292,6 +68365,48 @@
       ]
     },
     {
+      "app_id": "449830",
+      "game_title": "Muv-Luv",
+      "steam_link": "https://store.steampowered.com/app/449830",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : shylock"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/449830"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "802880",
+      "game_title": "Muv-Luv (マブラヴ)",
+      "steam_link": "https://store.steampowered.com/app/802880",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : shylock"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/802880"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "520940",
       "game_title": "MX vs ATV All Out",
       "steam_link": "https://store.steampowered.com/app/520940",
@@ -68607,6 +68722,27 @@
       ]
     },
     {
+      "app_id": "925930",
+      "game_title": "Myst III: Exile",
+      "steam_link": "https://store.steampowered.com/app/925930",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : mumu"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/925930"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "63660",
       "game_title": "Myst: Masterpiece Edition",
       "steam_link": "https://store.steampowered.com/app/63660",
@@ -68617,7 +68753,7 @@
       ],
       "patch_descriptions": [
         "mumu 님 제작",
-        "유저 한국어 패치 - mumu 님"
+        "유저 한글 패치 - mumu"
       ],
       "patch_sources": [
         "steamapp",
@@ -69792,6 +69928,32 @@
       ]
     },
     {
+      "app_id": "1406990",
+      "game_title": "NEKOPARA Vol. 4",
+      "steam_link": "https://store.steampowered.com/app/1406990",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "번역 와들 이미지 커트 앵글 프로그래밍 게지네",
+        "유저 한국어 패치 - 번역: 와들,\n이미지: 커트 앵글,\n프로그래밍: 게지네 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1406990",
+        "quasarplay": "https://store.steampowered.com/app/1406990/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
       "app_id": "886820",
       "game_title": "Nelke & the Legendary Alchemists ~Ateliers of the New World~ / ネルケと伝説の錬金術士たち ～新たな大地のアトリエ～",
       "steam_link": "https://store.steampowered.com/app/886820",
@@ -70070,14 +70232,17 @@
       "patch_links": [
         "exist",
         "exist",
+        "exist",
         "exist"
       ],
       "patch_descriptions": [
+        "제작자 : Nasher",
         "제작자 : ingleeman",
         "",
-        "유저 한글 패치 - ingleeman\n유저 한글 패치 - gleeman"
+        "한글 패치 \n한글 패치\n한글 패치"
       ],
       "patch_sources": [
+        "steamapp",
         "steamapp",
         "steamapp",
         "quasarplay"
@@ -75015,7 +75180,7 @@
       ],
       "patch_descriptions": [
         "",
-        "유저 한국어 패치 -"
+        "유저 한글 패치 링크"
       ],
       "patch_sources": [
         "steamapp",
@@ -75041,7 +75206,7 @@
       ],
       "patch_descriptions": [
         "한국어화: YellowPanda 번역: YellowPanda 이미지 한국어화: 로제카",
-        "① 유저 한국어 패치 - 로제카 님,\n \n② 유저 한국어 패치 - stillbabo2 님"
+        "유저 한글 패치 - 로제카\n유저 한글 패치 - stillbabo2"
       ],
       "patch_sources": [
         "steamapp",
@@ -79491,6 +79656,19 @@
       ]
     },
     {
+      "app_id": "2529750",
+      "game_title": "Raining City: Millions Recollections",
+      "steam_link": "https://store.steampowered.com/app/2529750",
+      "patch_type": "official",
+      "patch_links": [],
+      "patch_descriptions": [],
+      "patch_sources": [],
+      "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "755240",
       "game_title": "Raining Coins",
       "steam_link": "https://store.steampowered.com/app/755240",
@@ -79897,7 +80075,7 @@
       ],
       "patch_descriptions": [
         "mumu 님 제작",
-        "유저 한국어 패치 - mumu 님"
+        "유저 한글 패치 - mumu"
       ],
       "patch_sources": [
         "steamapp",
@@ -81820,6 +81998,27 @@
       "patch_descriptions": [],
       "patch_sources": [],
       "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "63610",
+      "game_title": "Riven: The Sequel to MYST",
+      "steam_link": "https://store.steampowered.com/app/63610",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : mumu"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/63610"
+      },
       "sources": [
         "steamapp"
       ]
@@ -86900,7 +87099,7 @@
       ],
       "patch_descriptions": [
         "",
-        "유저 한국어 패치 - 아모건 님"
+        "유저 한국어 패치 - 아강"
       ],
       "patch_sources": [
         "steamapp",
@@ -95110,7 +95309,7 @@
       "patch_descriptions": [
         "제작 기여: 체리(Hora)번역, 익명A(패치제작), 익명B (OP,ED악곡번역)",
         "Neidhardt: 패치 제작, 이미지, OP무비, 라이너노트 번역 Hora: 전체 스토리 번역, 검수, 테스트 익명: 검수, 테스트 きた: OP가사 번역",
-        "유저 한글 패치 - Neidhardt, Hora, きた 님"
+        "유저 한글 패치 - 체리(Hora) 외\n유저 한글 패치 - Neidhardt, Hora, きた"
       ],
       "patch_sources": [
         "steamapp",
@@ -95871,6 +96070,35 @@
       "source_site_urls": {},
       "sources": [
         "steamapp"
+      ]
+    },
+    {
+      "app_id": "330830",
+      "game_title": "Tales from the Borderlands",
+      "steam_link": "https://store.steampowered.com/app/330830",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : Team AI-Hater",
+        "구버전 전용 - 에피소드 1만 번",
+        "유저 한글 패치 - Team AI-Hater\n유저 한글 패치 - 팀 에코"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/330830",
+        "quasarplay": "https://store.steampowered.com/app/330830/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
       ]
     },
     {
@@ -96747,13 +96975,13 @@
       "app_id": "105600",
       "game_title": "Terraria",
       "steam_link": "https://store.steampowered.com/app/105600",
-      "patch_type": "user",
+      "patch_type": "official",
       "patch_links": [
         "exist",
         "exist"
       ],
       "patch_descriptions": [
-        "",
+        "(이제 공식 한글화 되어서 유저 패치를 안 해도 됩니다)",
         "유저 한국어 패치 - 팀 아이유 더 베스트"
       ],
       "patch_sources": [
@@ -97033,7 +97261,7 @@
       ],
       "patch_descriptions": [
         "mumu 님 제작",
-        "유저 한국어 패치 - mumu 님"
+        "유저 한국어 패치 - mumu"
       ],
       "patch_sources": [
         "steamapp",
@@ -99423,6 +99651,27 @@
       ]
     },
     {
+      "app_id": "1455630",
+      "game_title": "THE GAME OF LIFE 2",
+      "steam_link": "https://store.steampowered.com/app/1455630",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 아레이아드"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1455630"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "1458300",
       "game_title": "The Gap",
       "steam_link": "https://store.steampowered.com/app/1458300",
@@ -99722,7 +99971,7 @@
       ],
       "patch_descriptions": [
         "제작자 : 아강",
-        "유저 한글 패치 - fuseson4"
+        "유저 한글 패치 - fuseson4\n유저 한글 패치 - 아강"
       ],
       "patch_sources": [
         "steamapp",
@@ -99748,7 +99997,7 @@
       ],
       "patch_descriptions": [
         "",
-        "유저 한글 패치 - fuseson4"
+        "유저 한글 패치 - fuseson4\n유저 한글 패치 - 아강"
       ],
       "patch_sources": [
         "steamapp",
@@ -100410,6 +100659,32 @@
       "source_site_urls": {
         "steamapp": "https://steamapp.net/app/2519560",
         "quasarplay": "https://store.steampowered.com/app/2519560/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "2737580",
+      "game_title": "The Lancaster Leak - Entity Exam",
+      "steam_link": "https://store.steampowered.com/app/2737580",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 막셋",
+        "유저 한글 패치 - 막셋 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/2737580",
+        "quasarplay": "https://store.steampowered.com/app/2737580/?curator_clanid=42788178"
       },
       "sources": [
         "steamapp",
@@ -105198,7 +105473,7 @@
       "patch_descriptions": [
         "크레딧 Hora 시나리오 번역 (공통, 케이스케, 모토미, 시키) 나이트하르트 @668glass 패치 제작, 이미지/무비 편집, 라이너노트, 시나리오 번역(린, ???), 콘솔판 연출 추가",
         "제작자 : togainu20th 링크가 안 되면 아래 배포처에서 찾으시면 됩니다",
-        "유저 한글 패치 - Hora, 나이트하르트 님 외"
+        "유저 한글 패치 - Hora, 나이트하르트 등\n유저 한글 패치 - togainu20th"
       ],
       "patch_sources": [
         "steamapp",
@@ -111374,6 +111649,27 @@
       ]
     },
     {
+      "app_id": "4570",
+      "game_title": "Warhammer 40,000: Dawn of War - Anniversary Edition",
+      "steam_link": "https://store.steampowered.com/app/4570",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/4570"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "15620",
       "game_title": "Warhammer 40,000: Dawn of War II",
       "steam_link": "https://store.steampowered.com/app/15620",
@@ -111669,27 +111965,6 @@
       ],
       "source_site_urls": {
         "steamapp": "https://steamapp.net/app/4580"
-      },
-      "sources": [
-        "steamapp"
-      ]
-    },
-    {
-      "app_id": "4570",
-      "game_title": "Warhammer® 40,000: Dawn of War® - Game of the Year Edition",
-      "steam_link": "https://store.steampowered.com/app/4570",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        ""
-      ],
-      "patch_sources": [
-        "steamapp"
-      ],
-      "source_site_urls": {
-        "steamapp": "https://steamapp.net/app/4570"
       },
       "sources": [
         "steamapp"
