@@ -27,8 +27,7 @@ def normalize_base_url(raw: str) -> str:
             break
         s = s.replace("\\/", "/")
     s = s.replace("\\", "")
-    s = re.sub(r"^(https?:)/*", r"\1//", s)
-    s = s.strip()
+    s = re.sub(r"^(https?:)/*", r"\1//", s).strip()
     if not s.endswith("/"):
         s += "/"
     return s
@@ -39,20 +38,47 @@ def sanitize_review_text(text: str):
     url_pattern = re.compile(r'https?://[^\s"\'<>]+')
     urls = url_pattern.findall(text)
     cleaned = url_pattern.sub("", text)
-    cleaned = re.sub(r"링크\\s*:", "", cleaned)
+    cleaned = re.sub(r"링크\s*:", "", cleaned)
     cleaned = re.sub(r"\n+", "\n", cleaned).strip()
     cleaned = re.sub(r"[,\\s]+$", "", cleaned)
     return cleaned, len(urls) > 0, len(urls)
 
+def to_abs_steam_url(href: str) -> str:
+    if not href:
+        return ""
+    h = href.strip()
+    if h.startswith("http://") or h.startswith("https://"):
+        return h.split("?")[0]
+    if h.startswith("/"):
+        return ("https://store.steampowered.com" + h).split("?")[0]
+    return h.split("?")[0]
+
+def is_date_like(text: str) -> bool:
+    t = (text or "").strip()
+    if not t:
+        return False
+    if len(t) > 32:
+        return False
+    months = r"(January|February|March|April|May|June|July|August|September|October|November|December)"
+    if re.match(rf"^\d{{1,2}}\s+{months}(,\s*\d{{4}})?$", t):
+        return True
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", t):
+        return True
+    if re.match(r"^\d{4}\.\d{1,2}\.\d{1,2}\.?$", t):
+        return True
+    if re.match(r"^\d{4}년\s*\d{1,2}월\s*\d{1,2}일$", t):
+        return True
+    return False
+
 class SteamCuratorDumper:
     BASE_URL = "https://store.steampowered.com/curator"
-    BATCH_SIZE = 50
-    DELAY = 0.3
 
-    def __init__(self, curator_id: int, verbose: bool = True, sort: str = "recent"):
+    def __init__(self, curator_id: int, verbose: bool = True, sort: str = "recent", batch_size: int = 50, delay: float = 0.3):
         self.curator_id = curator_id
         self.verbose = verbose
         self.sort = sort
+        self.batch_size = int(batch_size)
+        self.delay = float(delay)
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -70,11 +96,11 @@ class SteamCuratorDumper:
             print(message)
 
     def _prime_and_get_base(self) -> str:
-        if self._curator_base_url:
+        if self._curator_base_url and self._filtered_url:
             return self._curator_base_url
-        r = self.session.get(self._curator_page_url, timeout=20)
-        html = r.text
-        m = re.search(r'g_strCuratorBaseURL\\s*=\\s*"([^"]+)"', html)
+        r = self.session.get(self._curator_page_url, timeout=25)
+        html = r.text or ""
+        m = re.search(r'g_strCuratorBaseURL\s*=\s*"([^"]+)"', html)
         base = None
         if m:
             base = normalize_base_url(m.group(1))
@@ -96,7 +122,7 @@ class SteamCuratorDumper:
     def get_curator_info(self) -> dict:
         url = self._curator_page_url
         try:
-            r = self.session.get(url, timeout=20)
+            r = self.session.get(url, timeout=25)
             soup = BeautifulSoup(r.text, "html.parser")
             name_elem = soup.find("h1", class_="curator_name") or soup.find("h1")
             if name_elem:
@@ -104,9 +130,10 @@ class SteamCuratorDumper:
             follower_elem = soup.find(class_=re.compile(r"follower|follow_count|num_followers|followers"))
             followers = 0
             if follower_elem:
-                match = re.search(r"[\\d,]+", follower_elem.get_text())
-                if match:
-                    followers = int(match.group().replace(",", ""))
+                m = re.search(r"[\d,]+", follower_elem.get_text())
+                if m:
+                    digits = re.sub(r"[^0-9]", "", m.group(0))
+                    followers = int(digits) if digits else 0
             return {
                 "curator_id": self.curator_id,
                 "curator_name": self.curator_name,
@@ -130,11 +157,19 @@ class SteamCuratorDumper:
             "reset": "false",
         }
 
-    def get_total_count(self) -> int:
+    def _fetch_filtered(self, start: int, count: int) -> dict:
         self._prime_and_get_base()
+        headers = {
+            "Referer": self._curator_page_url,
+            "X-Requested-With": "XMLHttpRequest",
+            "Accept": "*/*",
+        }
+        r = self.session.get(self._filtered_url, params=self._filtered_params(start, count), headers=headers, timeout=25)
+        return r.json()
+
+    def get_total_count(self) -> int:
         try:
-            r = self.session.get(self._filtered_url, params=self._filtered_params(0, 1), timeout=20)
-            data = r.json()
+            data = self._fetch_filtered(0, 1)
             total = int(data.get("total_count", 0) or 0)
             self.total_count = total
             return total
@@ -152,8 +187,7 @@ class SteamCuratorDumper:
         self.log(f"총 {total}개의 리뷰를 가져옵니다...")
         while start < total:
             try:
-                r = self.session.get(self._filtered_url, params=self._filtered_params(start, self.BATCH_SIZE), timeout=20)
-                data = r.json()
+                data = self._fetch_filtered(start, self.batch_size)
                 if not data.get("success"):
                     self.log(f"API 요청 실패: start={start}")
                     break
@@ -163,55 +197,118 @@ class SteamCuratorDumper:
                 reviews = self._parse_reviews_html(html)
                 all_reviews.extend(reviews)
                 fetched = len(reviews)
-                start += self.BATCH_SIZE
+                start += self.batch_size
                 progress = min(start, total)
                 self.log(f"진행: {progress}/{total} ({len(all_reviews)} 게임 수집됨)")
                 if progress_callback:
                     progress_callback(progress, total)
                 if fetched <= 0:
                     break
-                time.sleep(self.DELAY)
+                time.sleep(self.delay)
             except Exception as e:
                 self.log(f"오류 발생 (start={start}): {e}")
-                start += self.BATCH_SIZE
+                start += self.batch_size
                 continue
-        unique_reviews = self._remove_duplicates(all_reviews)
-        self.log(f"\\n완료! {len(unique_reviews)}개의 고유 게임 수집됨")
-        return unique_reviews
+        unique = self._remove_duplicates(all_reviews)
+        self.log(f"\n완료! {len(unique)}개의 고유 게임 수집됨")
+        return unique
+
+    def _pick_best_review_text(self, container) -> str:
+        candidates = []
+        selectors = [
+            r"recommendation_desc",
+            r"recommendation_desc_text",
+            r"curator_review",
+            r"curator_review_desc",
+            r"blurb",
+            r"desc",
+        ]
+        for pat in selectors:
+            elem = container.find(class_=re.compile(pat)) if getattr(container, "find", None) else None
+            if elem:
+                txt = elem.get_text("\n", strip=True)
+                if txt:
+                    candidates.append(txt)
+        if not candidates:
+            for elem in container.find_all(["div", "span", "p"], limit=60):
+                cls = elem.get("class", [])
+                cls_str = " ".join(cls) if isinstance(cls, list) else str(cls)
+                if any(k in cls_str for k in ["date", "posted", "time", "timestamp"]):
+                    continue
+                txt = elem.get_text("\n", strip=True)
+                if txt and len(txt) >= 8:
+                    candidates.append(txt)
+        best = ""
+        for txt in candidates:
+            if is_date_like(txt):
+                continue
+            if len(txt) > len(best):
+                best = txt
+        return best
 
     def _parse_reviews_html(self, html: str) -> list:
-        reviews = []
         soup = BeautifulSoup(html, "html.parser")
-        recommendations = soup.find_all("div", class_="recommendation")
-        if not recommendations:
-            recommendations = soup.find_all("div", class_=re.compile(r"curator.*recommendation"))
-        for rec in recommendations:
-            game_data = {}
-            link = rec.find("a", href=re.compile(r"/app/\\d+"))
-            if link:
-                href = link.get("href", "")
-                game_data["url"] = href.split("?")[0]
-                app_match = re.search(r"/app/(\\d+)", href)
-                if app_match:
-                    game_data["appid"] = app_match.group(1)
-                    game_data["curator_url"] = f"https://store.steampowered.com/app/{game_data['appid']}/?curator_clanid={self.curator_id}"
-            desc_elem = rec.find(class_=re.compile(r"recommendation_desc|desc|blurb"))
-            raw_review = desc_elem.get_text("\n", strip=True) if desc_elem else ""
+        results = []
+        seen = set()
+
+        app_links = soup.find_all("a", href=re.compile(r"/app/\d+"))
+        for link in app_links:
+            href = link.get("href", "")
+            m = re.search(r"/app/(\d+)", href)
+            if not m:
+                continue
+            appid = m.group(1)
+            if appid in seen:
+                continue
+
+            container = link
+            for _ in range(14):
+                parent = getattr(container, "parent", None)
+                if not parent:
+                    break
+                if getattr(parent, "name", None) == "div":
+                    cls = parent.get("class", [])
+                    cls_str = " ".join(cls) if isinstance(cls, list) else str(cls)
+                    if ("recommend" in cls_str) or ("curator" in cls_str):
+                        container = parent
+                        break
+                container = parent
+
+            raw_review = self._pick_best_review_text(container) if container else ""
             clean_review, has_url, url_count = sanitize_review_text(raw_review)
-            game_data["review"] = clean_review
-            game_data["review_has_url"] = has_url
-            game_data["review_url_count"] = url_count
-            rec_class = rec.get("class", [])
-            rec_class_str = " ".join(rec_class) if isinstance(rec_class, list) else str(rec_class)
-            if "not_recommended" in rec_class_str or "negative" in rec_class_str:
-                game_data["type"] = "not_recommended"
-            elif "informational" in rec_class_str:
-                game_data["type"] = "informational"
+
+            cls_acc = []
+            cur = container
+            for _ in range(10):
+                if not cur:
+                    break
+                c = cur.get("class", [])
+                if isinstance(c, list):
+                    cls_acc.extend(c)
+                cur = getattr(cur, "parent", None)
+            cls_str = " ".join(cls_acc)
+            if "not_recommended" in cls_str or "negative" in cls_str:
+                rec_type = "not_recommended"
+            elif "informational" in cls_str:
+                rec_type = "informational"
             else:
-                game_data["type"] = "recommended"
-            if game_data.get("appid"):
-                reviews.append(game_data)
-        return reviews
+                rec_type = "recommended"
+
+            url = to_abs_steam_url(href) or f"https://store.steampowered.com/app/{appid}"
+            curator_url = f"https://store.steampowered.com/app/{appid}/?curator_clanid={self.curator_id}"
+
+            results.append({
+                "appid": appid,
+                "url": url,
+                "curator_url": curator_url,
+                "review": clean_review,
+                "review_has_url": has_url,
+                "review_url_count": url_count,
+                "type": rec_type,
+            })
+            seen.add(appid)
+
+        return results
 
     def _remove_duplicates(self, reviews: list) -> list:
         seen = set()
@@ -232,31 +329,38 @@ class SteamCuratorDumper:
             "exported_at": datetime.now().isoformat(),
             "games": reviews,
         }
+        Path(output_file).parent.mkdir(parents=True, exist_ok=True)
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         self.log(f"JSON 파일 저장됨: {output_file}")
 
     def export_csv(self, reviews: list, output_file: str):
+        Path(output_file).parent.mkdir(parents=True, exist_ok=True)
         with open(output_file, "w", encoding="utf-8-sig", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=["appid", "url", "curator_url", "review", "review_has_url", "review_url_count", "type"])
+            writer = csv.DictWriter(
+                f,
+                fieldnames=["appid", "url", "curator_url", "review", "review_has_url", "review_url_count", "type"],
+            )
             writer.writeheader()
             writer.writerows(reviews)
         self.log(f"CSV 파일 저장됨: {output_file}")
 
     def export_txt(self, reviews: list, output_file: str):
+        Path(output_file).parent.mkdir(parents=True, exist_ok=True)
         with open(output_file, "w", encoding="utf-8") as f:
             for review in reviews:
                 f.write(f"{review.get('url', '')}\n")
         self.log(f"TXT 파일 저장됨: {output_file}")
 
     def export_appids(self, reviews: list, output_file: str):
+        Path(output_file).parent.mkdir(parents=True, exist_ok=True)
         with open(output_file, "w", encoding="utf-8") as f:
             for review in reviews:
                 f.write(f"{review.get('appid', '')}\n")
         self.log(f"AppID 파일 저장됨: {output_file}")
 
 def extract_curator_id(input_str: str) -> Optional[int]:
-    m = re.search(r"curator/(\\d+)", input_str)
+    m = re.search(r"curator/(\d+)", input_str)
     if m:
         return int(m.group(1))
     if input_str.isdigit():
@@ -269,12 +373,12 @@ def run_quasarplay_dump(sort: str):
     print("퀘이사플레이 큐레이터 덤프")
     print("=" * 60)
     for _, config in QUASARPLAY_CURATORS.items():
-        print(f"\\n[{config['name']}] 덤프 시작...")
+        print(f"\n[{config['name']}] 덤프 시작...")
         print(f"  큐레이터 ID: {config['id']}")
         dumper = SteamCuratorDumper(config["id"], verbose=True, sort=sort)
         info = dumper.get_curator_info()
-        if info.get("followers"):
-            print(f"  팔로워: {info['followers']:,}명")
+        if info.get("followers") is not None:
+            print(f"  팔로워: {info.get('followers', 0):,}명")
         reviews = dumper.fetch_reviews()
         if reviews:
             output_path = DATA_DIR / config["output"]
@@ -282,7 +386,7 @@ def run_quasarplay_dump(sort: str):
             print(f"  저장됨: {output_path} ({len(reviews)}개 게임)")
         else:
             print(f"  경고: {config['name']} 리뷰를 가져오지 못했습니다.")
-    print("\\n" + "=" * 60)
+    print("\n" + "=" * 60)
     print("퀘이사플레이 큐레이터 덤프 완료!")
     print("=" * 60)
 
@@ -323,12 +427,11 @@ def main():
     print()
 
     dumper = SteamCuratorDumper(curator_id, verbose=not args.quiet, sort=args.sort)
-
     info = dumper.get_curator_info()
     if info.get("curator_name"):
         print(f"큐레이터: {info['curator_name']}")
-    if info.get("followers"):
-        print(f"팔로워: {info['followers']:,}명")
+    if info.get("followers") is not None:
+        print(f"팔로워: {info.get('followers', 0):,}명")
     print()
 
     reviews = dumper.fetch_reviews()
