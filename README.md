@@ -29,6 +29,12 @@ Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필
 
 - Steam 커뮤니티 페이지에 '상점 페이지' 버튼이 누락된 경우, '상점으로 이동' 버튼을 표시
 
+## 설치
+
+- [Chrome 웹 스토어](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnnc) : Chrome, Edge 등
+- [Firefox 웹 스토어](https://addons.mozilla.org/ko/firefox/addon/kosteam/) : 모바일 가능
+- [Steam 클라이언트](https://github.com/snowyegret23/KOSTEAM/issues/24) : Extendium 플러그인 기반
+
 ## 사용 방법
 
 ### 팝업 메뉴
@@ -56,12 +62,6 @@ Steam 상점 페이지에서 한국어 패치 정보를 표시하고, 언어 필
 | ![#0C7CED](https://placehold.co/15x15/0C7CED/0C7CED.png) 다이렉트 게임즈     | 다이렉트 게임즈에서 한국어 버전 스팀키 판매 |
 | ![#FF8126](https://placehold.co/15x15/FF8126/FF8126.png) 스토브              | 스토브에서 한국어 버전 게임 별도 판매      |
 | ![#e74c3c](https://placehold.co/15x15/e74c3c/e74c3c.png) 한국어 없음         | 데이터베이스에 등록된 한국어 패치 정보 없음 |
-
-## 설치
-
-- [Chrome 웹 스토어](https://chromewebstore.google.com/detail/cbcganplchikpgchgppklcblpjibhnnc) : Chrome, Edge 등
-- [Firefox 웹 스토어](https://addons.mozilla.org/ko/firefox/addon/kosteam/) : 모바일 가능
-- [Steam 클라이언트](https://github.com/snowyegret23/KOSTEAM/issues/24) : Extendium 플러그인 기반
 
 ## 데이터 출처
 
