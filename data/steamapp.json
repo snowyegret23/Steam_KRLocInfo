@@ -51114,7 +51114,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      ""
+      "제작자 : eaubita"
     ]
   },
   {
@@ -53988,9 +53988,11 @@
     "source_site_url": "https://steamapp.net/app/32470",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "팀 C-3P0 제작",
       "팀 C-3P0 제작"
     ]
   },
@@ -57045,9 +57047,11 @@
     "source_site_url": "https://steamapp.net/app/105600",
     "patch_type": "official",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "공식 번역 개선 패치 제작자 : farnic, ansayo",
       "(이제 공식 한글화 되어서 유저 패치를 안 해도 됩니다)"
     ]
   },
@@ -67997,12 +68001,12 @@
     "game_title": "利用規約に同意したい",
     "steam_link": "https://store.steampowered.com/app/3757210",
     "source_site_url": "https://steamapp.net/app/3757210",
-    "patch_type": "user",
+    "patch_type": "official",
     "patch_links": [
       "exist"
     ],
     "patch_descriptions": [
-      "제작자 : 바나나우유"
+      "제작자 : 바나나우유 (이제 공식 한글화 되어서 유저 패치를 안 해도 됩니다)"
     ]
   },
   {
@@ -68531,6 +68535,227 @@
     ],
     "patch_descriptions": [
       "제작자 : 레트로겜보이"
+    ]
+  },
+  {
+    "app_id": "3030980",
+    "game_title": "イツカノヨル",
+    "steam_link": "https://store.steampowered.com/app/3030980",
+    "source_site_url": "https://steamapp.net/app/3030980",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 서리너테"
+    ]
+  },
+  {
+    "app_id": "3766920",
+    "game_title": "Cry Of Monster",
+    "steam_link": "https://store.steampowered.com/app/3766920",
+    "source_site_url": "https://steamapp.net/app/3766920",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우"
+    ]
+  },
+  {
+    "app_id": "3454610",
+    "game_title": "Poco",
+    "steam_link": "https://store.steampowered.com/app/3454610",
+    "source_site_url": "https://steamapp.net/app/3454610",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "3919190",
+    "game_title": "Obey the Voice™",
+    "steam_link": "https://store.steampowered.com/app/3919190",
+    "source_site_url": "https://steamapp.net/app/3919190",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 으잌"
+    ]
+  },
+  {
+    "app_id": "3807550",
+    "game_title": "Mycopsychosys: Remastered",
+    "steam_link": "https://store.steampowered.com/app/3807550",
+    "source_site_url": "https://steamapp.net/app/3807550",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : MuteJack"
+    ]
+  },
+  {
+    "app_id": "559610",
+    "game_title": "Love Ribbon",
+    "steam_link": "https://store.steampowered.com/app/559610",
+    "source_site_url": "https://steamapp.net/app/559610",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : modi"
+    ]
+  },
+  {
+    "app_id": "2416100",
+    "game_title": "Goodnight Universe",
+    "steam_link": "https://store.steampowered.com/app/2416100",
+    "source_site_url": "https://steamapp.net/app/2416100",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : BENBENNBEN"
+    ]
+  },
+  {
+    "app_id": "2446680",
+    "game_title": "Drive Me to Hell",
+    "steam_link": "https://store.steampowered.com/app/2446680",
+    "source_site_url": "https://steamapp.net/app/2446680",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우"
+    ]
+  },
+  {
+    "app_id": "2960250",
+    "game_title": "Tempus Triad",
+    "steam_link": "https://store.steampowered.com/app/2960250",
+    "source_site_url": "https://steamapp.net/app/2960250",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우 데모판 한글화"
+    ]
+  },
+  {
+    "app_id": "3255330",
+    "game_title": "Parasomnia: No REM",
+    "steam_link": "https://store.steampowered.com/app/3255330",
+    "source_site_url": "https://steamapp.net/app/3255330",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우 데모판 한글화"
+    ]
+  },
+  {
+    "app_id": "3895310",
+    "game_title": "Till Checkout Do Us Part",
+    "steam_link": "https://store.steampowered.com/app/3895310",
+    "source_site_url": "https://steamapp.net/app/3895310",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우 데모판 한글화"
+    ]
+  },
+  {
+    "app_id": "4042150",
+    "game_title": "Secret Lab Cleaner",
+    "steam_link": "https://store.steampowered.com/app/4042150",
+    "source_site_url": "https://steamapp.net/app/4042150",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우 데모판 한글화"
+    ]
+  },
+  {
+    "app_id": "3869680",
+    "game_title": "Silent Still 2",
+    "steam_link": "https://store.steampowered.com/app/3869680",
+    "source_site_url": "https://steamapp.net/app/3869680",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우"
+    ]
+  },
+  {
+    "app_id": "4028600",
+    "game_title": "TERPENIE",
+    "steam_link": "https://store.steampowered.com/app/4028600",
+    "source_site_url": "https://steamapp.net/app/4028600",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 코스노우"
+    ]
+  },
+  {
+    "app_id": "419460",
+    "game_title": "That Dragon, Cancer",
+    "steam_link": "https://store.steampowered.com/app/419460",
+    "source_site_url": "https://steamapp.net/app/419460",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한글 패치 제작: 바람 번역단 - LSW"
+    ]
+  },
+  {
+    "app_id": "286160",
+    "game_title": "Tabletop Simulator",
+    "steam_link": "https://store.steampowered.com/app/286160",
+    "source_site_url": "https://steamapp.net/app/286160",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : fried raccoon 북극곰이지만 마녀의 저주로 토끼가 된 스카피님이 함께해주셨습니다."
+    ]
+  },
+  {
+    "app_id": "3187880",
+    "game_title": "The Fable: Manga Build Roguelike",
+    "steam_link": "https://store.steampowered.com/app/3187880",
+    "source_site_url": "https://steamapp.net/app/3187880",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : eaubita"
     ]
   }
 ]
