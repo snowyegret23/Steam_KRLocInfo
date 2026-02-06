@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-02-04T21:11:37.638Z",
+    "generated_at": "2026-02-06T21:09:58.197Z",
     "total_with_steam_link": 7103,
-    "total_without_steam_link": 21,
+    "total_without_steam_link": 22,
     "sources": [
       "steamapp",
       "quasarzone",
@@ -128042,6 +128042,25 @@
       ],
       "source_site_urls": {
         "stove": "https://store.onstove.com/ko/games/102720"
+      },
+      "sources": [
+        "stove"
+      ]
+    },
+    {
+      "game_title": "메너스 (Menace)",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "stove"
+      ],
+      "source_site_urls": {
+        "stove": "https://store.onstove.com/ko/games/103881"
       },
       "sources": [
         "stove"
