@@ -3690,11 +3690,11 @@
     "stove_url": "https://store.onstove.com/ko/games/102720"
   },
   {
-    "app_id": null,
+    "app_id": "2432860",
     "stove_game_no": "13999",
     "stove_product_no": "103881",
     "game_title": "메너스 (Menace)",
-    "steam_link": "",
+    "steam_link": "https://store.steampowered.com/app/2432860",
     "patch_type": "official",
     "patch_links": [
       "exist"
