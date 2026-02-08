@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-02-06T21:09:58.197Z",
-    "total_with_steam_link": 7103,
-    "total_without_steam_link": 22,
+    "generated_at": "2026-02-08T21:08:14.717Z",
+    "total_with_steam_link": 7110,
+    "total_without_steam_link": 21,
     "sources": [
       "steamapp",
       "quasarzone",
@@ -10127,90 +10127,6 @@
       ]
     },
     {
-      "app_id": "230190",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/230190/War_for_the_Overworld/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - pb 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/230190/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "201271",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/201271/A_Total_War_Saga_FALL_OF_THE_SAMURAI/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - JTS 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/201271/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "244450",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/244450/Men_of_War_Assault_Squad_2/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - JAS 39 Gripen,Tamerlane 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/244450/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "34330",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/201270/Total_War_SHOGUN_2/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - JDY 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/201270/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
       "app_id": "7000",
       "game_title": "",
       "steam_link": "https://store.steampowered.com/app/7000/Tomb_Raider_Legend/",
@@ -12134,6 +12050,32 @@
       "source_site_urls": {},
       "sources": [
         "steamapp"
+      ]
+    },
+    {
+      "app_id": "201271",
+      "game_title": "A Total War Saga: FALL OF THE SAMURAI",
+      "steam_link": "https://store.steampowered.com/app/201271",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "",
+        "유저 한국어 패치 - JTS 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/201271",
+        "quasarplay": "https://store.steampowered.com/app/201271/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
       ]
     },
     {
@@ -21070,13 +21012,19 @@
       "patch_type": "user",
       "patch_links": [
         "exist",
+        "exist",
+        "exist",
         "exist"
       ],
       "patch_descriptions": [
         "",
+        "일본어 기반",
+        "영어 기반 (폰트 깨짐. 버전 롤백 필요)",
         "유저 한국어 패치 - 팀 프로메테우스, 촌닭투 님"
       ],
       "patch_sources": [
+        "steamapp",
+        "steamapp",
         "steamapp",
         "quasarplay"
       ],
@@ -21149,14 +21097,17 @@
       "patch_links": [
         "exist",
         "exist",
+        "exist",
         "exist"
       ],
       "patch_descriptions": [
+        "제작자 : wannie",
         "",
         "유저 한글 패치 - 촌닭투\n오류 리팩 파일 - 패킹왕자",
         ""
       ],
       "patch_sources": [
+        "steamapp",
         "steamapp",
         "quasarplay",
         "directg"
@@ -21194,6 +21145,27 @@
       "patch_descriptions": [],
       "patch_sources": [],
       "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "222480",
+      "game_title": "BIOHAZARD REVELATIONS",
+      "steam_link": "https://store.steampowered.com/app/222480",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/222480"
+      },
       "sources": [
         "steamapp"
       ]
@@ -29951,6 +29923,27 @@
       ],
       "source_site_urls": {
         "steamapp": "https://steamapp.net/app/683730"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "1388770",
+      "game_title": "Cruelty Squad",
+      "steam_link": "https://store.steampowered.com/app/1388770",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 히키스"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1388770"
       },
       "sources": [
         "steamapp"
@@ -65112,6 +65105,32 @@
       ]
     },
     {
+      "app_id": "244450",
+      "game_title": "Men of War: Assault Squad 2",
+      "steam_link": "https://store.steampowered.com/app/244450",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "▶ 제작자 명단 JAS 39 Gripen (번역 총괄, 기획, 폰트 제작) Tamerlane (번역 보조, 이미지 편집)",
+        "유저 한국어 패치 - JAS 39 Gripen,Tamerlane 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/244450",
+        "quasarplay": "https://store.steampowered.com/app/244450/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
       "app_id": "759460",
       "game_title": "Meow Go",
       "steam_link": "https://store.steampowered.com/app/759460",
@@ -91125,14 +91144,20 @@
       "patch_links": [
         "exist",
         "exist",
+        "exist",
+        "exist",
         "exist"
       ],
       "patch_descriptions": [
         "제작자 : 우리집드래곤뽀삐 Spirit Island - Jagged Earth 한글화",
+        "제작자 : 루_퍼 DLC 한글화",
         "제작자 : rkrkrr0101 DLC Spirit Island - Jagged Earth 한글화",
+        "",
         "유저 한글 패치 - 우리집드래곤뽀삐\n유저 한글 패치 - rkrkrr0101"
       ],
       "patch_sources": [
+        "steamapp",
+        "steamapp",
         "steamapp",
         "steamapp",
         "quasarplay"
@@ -106536,74 +106561,22 @@
       ]
     },
     {
-      "app_id": "10500",
-      "game_title": "Total War: EMPIRE – Definitive Edition",
-      "steam_link": "https://store.steampowered.com/app/10500",
-      "patch_type": "user",
-      "patch_links": [
-        "exist",
-        "exist"
-      ],
-      "patch_descriptions": [
-        "THIS IS TOTAL WAR 카페",
-        "유저 한국어 패치 - 다음 토탈워 카페"
-      ],
-      "patch_sources": [
-        "steamapp",
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "steamapp": "https://steamapp.net/app/10500",
-        "quasarplay": "https://store.steampowered.com/app/10500/?curator_clanid=42788178"
-      },
-      "sources": [
-        "steamapp",
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "4700",
-      "game_title": "Total War: MEDIEVAL II – Definitive Edition",
-      "steam_link": "https://store.steampowered.com/app/4700",
-      "patch_type": "user",
-      "patch_links": [
-        "exist",
-        "exist",
-        "exist"
-      ],
-      "patch_descriptions": [
-        "THIS IS TOTAL WAR 카페",
-        "",
-        "유저 한국어 패치 - 다음 토탈워 카페"
-      ],
-      "patch_sources": [
-        "steamapp",
-        "steamapp",
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "steamapp": "https://steamapp.net/app/4700",
-        "quasarplay": "https://store.steampowered.com/app/4700/?curator_clanid=42788178"
-      },
-      "sources": [
-        "steamapp",
-        "quasarplay"
-      ]
-    },
-    {
       "app_id": "34030",
       "game_title": "Total War: NAPOLEON – Definitive Edition",
       "steam_link": "https://store.steampowered.com/app/34030",
       "patch_type": "user",
       "patch_links": [
         "exist",
+        "exist",
         "exist"
       ],
       "patch_descriptions": [
+        "제작자 : 힛총통",
         "THIS IS TOTAL WAR 카페",
         "유저 한국어 패치 - 토탈 워: 코리아 카페 비타튼튼 님"
       ],
       "patch_sources": [
+        "steamapp",
         "steamapp",
         "quasarplay"
       ],
@@ -106617,78 +106590,25 @@
       ]
     },
     {
-      "app_id": "779340",
-      "game_title": "Total War: THREE KINGDOMS",
-      "steam_link": "https://store.steampowered.com/app/779340",
-      "patch_type": "official",
-      "patch_links": [],
-      "patch_descriptions": [],
-      "patch_sources": [],
-      "source_site_urls": {},
-      "sources": [
-        "steamapp"
-      ]
-    },
-    {
-      "app_id": "364360",
-      "game_title": "Total War: WARHAMMER",
-      "steam_link": "https://store.steampowered.com/app/364360",
-      "patch_type": "official",
-      "patch_links": [],
-      "patch_descriptions": [],
-      "patch_sources": [],
-      "source_site_urls": {},
-      "sources": [
-        "steamapp"
-      ]
-    },
-    {
-      "app_id": "594570",
-      "game_title": "Total War: WARHAMMER II",
-      "steam_link": "https://store.steampowered.com/app/594570",
-      "patch_type": "official",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "한국어 개선 패치 (Snori 님 제작)"
-      ],
-      "patch_sources": [
-        "steamapp"
-      ],
-      "source_site_urls": {
-        "steamapp": "https://steamapp.net/app/594570"
-      },
-      "sources": [
-        "steamapp"
-      ]
-    },
-    {
-      "app_id": "214950",
-      "game_title": "Total War™: ROME II - Emperor Edition",
-      "steam_link": "https://store.steampowered.com/app/214950",
+      "app_id": "34330",
+      "game_title": "Total War: SHOGUN 2",
+      "steam_link": "https://store.steampowered.com/app/34330",
       "patch_type": "user",
       "patch_links": [
         "exist",
-        "exist",
-        "exist",
         "exist"
       ],
       "patch_descriptions": [
-        "팀 토탈워 한글화 제작",
-        "토탈 워 마이너 갤러리 (최신 수정 버전)",
         "",
-        "유저 한국어 패치 - NES9777, demites, Inquisitor 님,\n \n유저 한국어 패치 2 - 토탈 워 마이너 갤러리 ㅇㅇ님"
+        "유저 한국어 패치 - JDY 님"
       ],
       "patch_sources": [
-        "steamapp",
-        "steamapp",
         "steamapp",
         "quasarplay"
       ],
       "source_site_urls": {
-        "steamapp": "https://steamapp.net/app/214950",
-        "quasarplay": "https://store.steampowered.com/app/214950/?curator_clanid=42788178"
+        "steamapp": "https://steamapp.net/app/34330",
+        "quasarplay": "https://store.steampowered.com/app/201270/?curator_clanid=42788178"
       },
       "sources": [
         "steamapp",
@@ -111811,6 +111731,35 @@
       "source_site_urls": {},
       "sources": [
         "steamapp"
+      ]
+    },
+    {
+      "app_id": "230190",
+      "game_title": "War for the Overworld",
+      "steam_link": "https://store.steampowered.com/app/230190",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : Besixdouze",
+        "제작자 : pb",
+        "유저 한국어 패치 - pb 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/230190",
+        "quasarplay": "https://store.steampowered.com/app/230190/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
       ]
     },
     {
@@ -118700,6 +118649,27 @@
       ]
     },
     {
+      "app_id": "2432860",
+      "game_title": "메너스 (Menace)",
+      "steam_link": "https://store.steampowered.com/app/2432860",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "stove"
+      ],
+      "source_site_urls": {
+        "stove": "https://store.onstove.com/ko/games/103881"
+      },
+      "sources": [
+        "stove"
+      ]
+    },
+    {
       "app_id": "1184810",
       "game_title": "메인프레임 수비대",
       "steam_link": "https://store.steampowered.com/app/1184810",
@@ -122581,6 +122551,258 @@
       "patch_descriptions": [],
       "patch_sources": [],
       "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "1099410",
+      "game_title": "토탈워 사가: 트로이",
+      "steam_link": "https://store.steampowered.com/app/1099410",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어 개선 모드 제작자 : MCJA"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1099410"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "885970",
+      "game_title": "토탈워: 로마 리마스터",
+      "steam_link": "https://store.steampowered.com/app/885970",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 마노마노"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/885970"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "214950",
+      "game_title": "토탈워: 로마2 - 엠퍼러 에디션",
+      "steam_link": "https://store.steampowered.com/app/214950",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist",
+        "exist",
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : HongSamMild",
+        "팀 토탈워 한글화 제작",
+        "토탈 워 마이너 갤러리 (최신 수정 버전)",
+        "",
+        "유저 한국어 패치 - NES9777, demites, Inquisitor 님,\n \n유저 한국어 패치 2 - 토탈 워 마이너 갤러리 ㅇㅇ님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp",
+        "steamapp",
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/214950",
+        "quasarplay": "https://store.steampowered.com/app/214950/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "4700",
+      "game_title": "토탈워: 미디블2 - 데피니티브 에디션",
+      "steam_link": "https://store.steampowered.com/app/4700",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist",
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 쌍꼬리새",
+        "THIS IS TOTAL WAR 카페",
+        "",
+        "유저 한국어 패치 - 다음 토탈워 카페"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp",
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/4700",
+        "quasarplay": "https://store.steampowered.com/app/4700/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "779340",
+      "game_title": "토탈워: 삼국",
+      "steam_link": "https://store.steampowered.com/app/779340",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어 개선 모드 제작자 : St.DoctorCowbell"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/779340"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "10500",
+      "game_title": "토탈워: 엠파이어 - 데피니티브 에디션",
+      "steam_link": "https://store.steampowered.com/app/10500",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 대취",
+        "THIS IS TOTAL WAR 카페",
+        "유저 한국어 패치 - 다음 토탈워 카페"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/10500",
+        "quasarplay": "https://store.steampowered.com/app/10500/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "364360",
+      "game_title": "토탈워: 워해머",
+      "steam_link": "https://store.steampowered.com/app/364360",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어 개선 모드 제작자 : Snori"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/364360"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "594570",
+      "game_title": "토탈워: 워해머 2",
+      "steam_link": "https://store.steampowered.com/app/594570",
+      "patch_type": "official",
+      "patch_links": [
+        "exist",
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어 개선 모드 제작자 : Screamingrock , St.DoctorCowbell",
+        "제작자 : jinwook0817",
+        "한국어 개선 패치 (Snori 님 제작)"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp",
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/594570"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "1142710",
+      "game_title": "토탈워: 워해머 3",
+      "steam_link": "https://store.steampowered.com/app/1142710",
+      "patch_type": "official",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어 개선 모드 제작자 : St.DoctorCowbell",
+        "음차 번역 모드 제작자 : Redeemer"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/1142710"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "2951630",
+      "game_title": "토탈워: 파라오 왕조",
+      "steam_link": "https://store.steampowered.com/app/2951630",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어 개선 모드 제작자 : St.DoctorCowbell"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/2951630"
+      },
       "sources": [
         "steamapp"
       ]
@@ -128042,25 +128264,6 @@
       ],
       "source_site_urls": {
         "stove": "https://store.onstove.com/ko/games/102720"
-      },
-      "sources": [
-        "stove"
-      ]
-    },
-    {
-      "game_title": "메너스 (Menace)",
-      "patch_type": "official",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        ""
-      ],
-      "patch_sources": [
-        "stove"
-      ],
-      "source_site_urls": {
-        "stove": "https://store.onstove.com/ko/games/103881"
       },
       "sources": [
         "stove"

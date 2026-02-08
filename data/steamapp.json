@@ -11496,10 +11496,14 @@
     "source_site_url": "https://steamapp.net/app/21690",
     "patch_type": "user",
     "patch_links": [
+      "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
-      ""
+      "",
+      "일본어 기반",
+      "영어 기반 (폰트 깨짐. 버전 롤백 필요)"
     ]
   },
   {
@@ -11543,9 +11547,11 @@
     "patch_type": "user",
     "patch_links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : wannie",
       "",
       ""
     ]
@@ -28760,9 +28766,11 @@
     "source_site_url": "https://steamapp.net/app/12210",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       ""
     ]
   },
@@ -53527,11 +53535,15 @@
     "patch_type": "user",
     "patch_links": [
       "exist",
+      "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
       "제작자 : 우리집드래곤뽀삐 Spirit Island - Jagged Earth 한글화",
-      "제작자 : rkrkrr0101 DLC Spirit Island - Jagged Earth 한글화"
+      "제작자 : 루_퍼 DLC 한글화",
+      "제작자 : rkrkrr0101 DLC Spirit Island - Jagged Earth 한글화",
+      ""
     ]
   },
   {
@@ -61948,28 +61960,32 @@
   },
   {
     "app_id": "10500",
-    "game_title": "Total War: EMPIRE – Definitive Edition",
+    "game_title": "토탈워: 엠파이어 - 데피니티브 에디션",
     "steam_link": "https://store.steampowered.com/app/10500",
     "source_site_url": "https://steamapp.net/app/10500",
-    "patch_type": "user",
-    "patch_links": [
-      "exist"
-    ],
-    "patch_descriptions": [
-      "THIS IS TOTAL WAR 카페"
-    ]
-  },
-  {
-    "app_id": "4700",
-    "game_title": "Total War: MEDIEVAL II – Definitive Edition",
-    "steam_link": "https://store.steampowered.com/app/4700",
-    "source_site_url": "https://steamapp.net/app/4700",
     "patch_type": "user",
     "patch_links": [
       "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 대취",
+      "THIS IS TOTAL WAR 카페"
+    ]
+  },
+  {
+    "app_id": "4700",
+    "game_title": "토탈워: 미디블2 - 데피니티브 에디션",
+    "steam_link": "https://store.steampowered.com/app/4700",
+    "source_site_url": "https://steamapp.net/app/4700",
+    "patch_type": "user",
+    "patch_links": [
+      "exist",
+      "exist",
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 쌍꼬리새",
       "THIS IS TOTAL WAR 카페",
       ""
     ]
@@ -61981,55 +61997,71 @@
     "source_site_url": "https://steamapp.net/app/34030",
     "patch_type": "user",
     "patch_links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 힛총통",
       "THIS IS TOTAL WAR 카페"
     ]
   },
   {
     "app_id": "779340",
-    "game_title": "Total War: THREE KINGDOMS",
+    "game_title": "토탈워: 삼국",
     "steam_link": "https://store.steampowered.com/app/779340",
     "source_site_url": "https://steamapp.net/app/779340",
-    "patch_type": "official",
-    "patch_links": [],
-    "patch_descriptions": []
-  },
-  {
-    "app_id": "364360",
-    "game_title": "Total War: WARHAMMER",
-    "steam_link": "https://store.steampowered.com/app/364360",
-    "source_site_url": "https://steamapp.net/app/364360",
-    "patch_type": "official",
-    "patch_links": [],
-    "patch_descriptions": []
-  },
-  {
-    "app_id": "594570",
-    "game_title": "Total War: WARHAMMER II",
-    "steam_link": "https://store.steampowered.com/app/594570",
-    "source_site_url": "https://steamapp.net/app/594570",
     "patch_type": "official",
     "patch_links": [
       "exist"
     ],
     "patch_descriptions": [
+      "한국어 개선 모드 제작자 : St.DoctorCowbell"
+    ]
+  },
+  {
+    "app_id": "364360",
+    "game_title": "토탈워: 워해머",
+    "steam_link": "https://store.steampowered.com/app/364360",
+    "source_site_url": "https://steamapp.net/app/364360",
+    "patch_type": "official",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : Snori"
+    ]
+  },
+  {
+    "app_id": "594570",
+    "game_title": "토탈워: 워해머 2",
+    "steam_link": "https://store.steampowered.com/app/594570",
+    "source_site_url": "https://steamapp.net/app/594570",
+    "patch_type": "official",
+    "patch_links": [
+      "exist",
+      "exist",
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : Screamingrock , St.DoctorCowbell",
+      "제작자 : jinwook0817",
       "한국어 개선 패치 (Snori 님 제작)"
     ]
   },
   {
     "app_id": "214950",
-    "game_title": "Total War™: ROME II - Emperor Edition",
+    "game_title": "토탈워: 로마2 - 엠퍼러 에디션",
     "steam_link": "https://store.steampowered.com/app/214950",
     "source_site_url": "https://steamapp.net/app/214950",
     "patch_type": "user",
     "patch_links": [
       "exist",
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : HongSamMild",
       "팀 토탈워 한글화 제작",
       "토탈 워 마이너 갤러리 (최신 수정 버전)",
       ""
@@ -68756,6 +68788,140 @@
     ],
     "patch_descriptions": [
       "제작자 : eaubita"
+    ]
+  },
+  {
+    "app_id": "1099410",
+    "game_title": "토탈워 사가: 트로이",
+    "steam_link": "https://store.steampowered.com/app/1099410",
+    "source_site_url": "https://steamapp.net/app/1099410",
+    "patch_type": "official",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : MCJA"
+    ]
+  },
+  {
+    "app_id": "885970",
+    "game_title": "토탈워: 로마 리마스터",
+    "steam_link": "https://store.steampowered.com/app/885970",
+    "source_site_url": "https://steamapp.net/app/885970",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 마노마노"
+    ]
+  },
+  {
+    "app_id": "1142710",
+    "game_title": "토탈워: 워해머 3",
+    "steam_link": "https://store.steampowered.com/app/1142710",
+    "source_site_url": "https://steamapp.net/app/1142710",
+    "patch_type": "official",
+    "patch_links": [
+      "exist",
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : St.DoctorCowbell",
+      "음차 번역 모드 제작자 : Redeemer"
+    ]
+  },
+  {
+    "app_id": "2951630",
+    "game_title": "토탈워: 파라오 왕조",
+    "steam_link": "https://store.steampowered.com/app/2951630",
+    "source_site_url": "https://steamapp.net/app/2951630",
+    "patch_type": "official",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : St.DoctorCowbell"
+    ]
+  },
+  {
+    "app_id": "201271",
+    "game_title": "A Total War Saga: FALL OF THE SAMURAI",
+    "steam_link": "https://store.steampowered.com/app/201271",
+    "source_site_url": "https://steamapp.net/app/201271",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "222480",
+    "game_title": "BIOHAZARD REVELATIONS",
+    "steam_link": "https://store.steampowered.com/app/222480",
+    "source_site_url": "https://steamapp.net/app/222480",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "1388770",
+    "game_title": "Cruelty Squad",
+    "steam_link": "https://store.steampowered.com/app/1388770",
+    "source_site_url": "https://steamapp.net/app/1388770",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 히키스"
+    ]
+  },
+  {
+    "app_id": "244450",
+    "game_title": "Men of War: Assault Squad 2",
+    "steam_link": "https://store.steampowered.com/app/244450",
+    "source_site_url": "https://steamapp.net/app/244450",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "▶ 제작자 명단 JAS 39 Gripen (번역 총괄, 기획, 폰트 제작) Tamerlane (번역 보조, 이미지 편집)"
+    ]
+  },
+  {
+    "app_id": "34330",
+    "game_title": "Total War: SHOGUN 2",
+    "steam_link": "https://store.steampowered.com/app/34330",
+    "source_site_url": "https://steamapp.net/app/34330",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "230190",
+    "game_title": "War for the Overworld",
+    "steam_link": "https://store.steampowered.com/app/230190",
+    "source_site_url": "https://steamapp.net/app/230190",
+    "patch_type": "user",
+    "patch_links": [
+      "exist",
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : Besixdouze",
+      "제작자 : pb"
     ]
   }
 ]

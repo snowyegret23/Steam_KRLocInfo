@@ -807,14 +807,17 @@
     "links": [
       "exist",
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 쌍꼬리새",
       "THIS IS TOTAL WAR 카페",
       "",
       "유저 한국어 패치 - 다음 토탈워 카페"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "steamapp",
       "quasarplay"
@@ -1566,13 +1569,16 @@
     ],
     "links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 대취",
       "THIS IS TOTAL WAR 카페",
       "유저 한국어 패치 - 다음 토탈워 카페"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -2529,13 +2535,19 @@
     ],
     "links": [
       "exist",
+      "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
       "",
+      "일본어 기반",
+      "영어 기반 (폰트 깨짐. 버전 롤백 필요)",
       "유저 한국어 패치 - 팀 프로메테우스, 촌닭투 님"
     ],
     "patch_sources": [
+      "steamapp",
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -3528,13 +3540,16 @@
     ],
     "links": [
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 힛총통",
       "THIS IS TOTAL WAR 카페",
       "유저 한국어 패치 - 토탈 워: 코리아 카페 비타튼튼 님"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay"
     ],
@@ -3564,18 +3579,23 @@
   "34330": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치 - JDY 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/34330",
       "quasarplay": "https://store.steampowered.com/app/201270/?curator_clanid=42788178"
     }
   },
@@ -6245,18 +6265,23 @@
   "201271": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치 - JTS 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/201271",
       "quasarplay": "https://store.steampowered.com/app/201271/?curator_clanid=42788178"
     }
   },
@@ -7764,15 +7789,18 @@
       "exist",
       "exist",
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : HongSamMild",
       "팀 토탈워 한글화 제작",
       "토탈 워 마이너 갤러리 (최신 수정 버전)",
       "",
       "유저 한국어 패치 - NES9777, demites, Inquisitor 님,\n \n유저 한국어 패치 2 - 토탈 워 마이너 갤러리 ㅇㅇ님"
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "steamapp",
       "steamapp",
@@ -8485,6 +8513,24 @@
       "quasarplay": "https://store.steampowered.com/app/222440/?curator_clanid=42788178"
     }
   },
+  "222480": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/222480"
+    }
+  },
   "222730": {
     "type": "user",
     "sources": [
@@ -9114,18 +9160,26 @@
   "230190": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : Besixdouze",
+      "제작자 : pb",
       "유저 한국어 패치 - pb 님"
     ],
     "patch_sources": [
+      "steamapp",
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/230190",
       "quasarplay": "https://store.steampowered.com/app/230190/?curator_clanid=42788178"
     }
   },
@@ -10669,18 +10723,23 @@
   "244450": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "▶ 제작자 명단 JAS 39 Gripen (번역 총괄, 기획, 폰트 제작) Tamerlane (번역 보조, 이미지 편집)",
       "유저 한국어 패치 - JAS 39 Gripen,Tamerlane 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/244450",
       "quasarplay": "https://store.steampowered.com/app/244450/?curator_clanid=42788178"
     }
   },
@@ -15134,14 +15193,17 @@
     "links": [
       "exist",
       "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : wannie",
       "",
       "유저 한글 패치 - 촌닭투\n오류 리팩 파일 - 패킹왕자",
       ""
     ],
     "patch_sources": [
+      "steamapp",
       "steamapp",
       "quasarplay",
       "directg"
@@ -19929,10 +19991,18 @@
     "sources": [
       "steamapp"
     ],
-    "links": [],
-    "patch_descriptions": [],
-    "patch_sources": [],
-    "source_site_urls": {}
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : Snori"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/364360"
+    }
   },
   "364380": {
     "type": "official",
@@ -34868,12 +34938,18 @@
       "steamapp"
     ],
     "links": [
+      "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "한국어 개선 모드 제작자 : Screamingrock , St.DoctorCowbell",
+      "제작자 : jinwook0817",
       "한국어 개선 패치 (Snori 님 제작)"
     ],
     "patch_sources": [
+      "steamapp",
+      "steamapp",
       "steamapp"
     ],
     "source_site_urls": {
@@ -44799,10 +44875,18 @@
     "sources": [
       "steamapp"
     ],
-    "links": [],
-    "patch_descriptions": [],
-    "patch_sources": [],
-    "source_site_urls": {}
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : St.DoctorCowbell"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/779340"
+    }
   },
   "779610": {
     "type": "official",
@@ -49627,6 +49711,24 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "885970": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 마노마노"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/885970"
+    }
   },
   "886060": {
     "type": "official",
@@ -59251,6 +59353,24 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
+  "1099410": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : MCJA"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/1099410"
+    }
+  },
   "1099500": {
     "type": "official",
     "sources": [
@@ -61307,6 +61427,27 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "1142710": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist",
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : St.DoctorCowbell",
+      "음차 번역 모드 제작자 : Redeemer"
+    ],
+    "patch_sources": [
+      "steamapp",
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/1142710"
+    }
   },
   "1143810": {
     "type": "user",
@@ -65902,14 +66043,20 @@
     "links": [
       "exist",
       "exist",
+      "exist",
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
       "제작자 : 우리집드래곤뽀삐 Spirit Island - Jagged Earth 한글화",
+      "제작자 : 루_퍼 DLC 한글화",
       "제작자 : rkrkrr0101 DLC Spirit Island - Jagged Earth 한글화",
+      "",
       "유저 한글 패치 - 우리집드래곤뽀삐\n유저 한글 패치 - rkrkrr0101"
     ],
     "patch_sources": [
+      "steamapp",
+      "steamapp",
       "steamapp",
       "steamapp",
       "quasarplay"
@@ -71593,6 +71740,24 @@
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/1388590",
       "quasarplay": "https://store.steampowered.com/app/1388590/?curator_clanid=42788178"
+    }
+  },
+  "1388770": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 히키스"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/1388770"
     }
   },
   "1388880": {
@@ -91696,6 +91861,24 @@
       "quasarplay": "https://store.steampowered.com/app/2432110/?curator_clanid=42788178"
     }
   },
+  "2432860": {
+    "type": "official",
+    "sources": [
+      "stove"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ],
+    "patch_sources": [
+      "stove"
+    ],
+    "source_site_urls": {
+      "stove": "https://store.onstove.com/ko/games/103881"
+    }
+  },
   "2435710": {
     "type": "official",
     "sources": [
@@ -98284,6 +98467,24 @@
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/2951520",
       "quasarplay": "https://store.steampowered.com/app/2951520/?curator_clanid=42788178"
+    }
+  },
+  "2951630": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어 개선 모드 제작자 : St.DoctorCowbell"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/2951630"
     }
   },
   "2951770": {
@@ -106496,7 +106697,7 @@
     }
   },
   "_meta": {
-    "generated_at": "2026-02-06T21:09:58.197Z",
-    "total": 7103
+    "generated_at": "2026-02-08T21:08:14.717Z",
+    "total": 7110
   }
 }
