@@ -35283,7 +35283,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "부타네코님 블로그 (제작: 촌닭 투)"
+      ""
     ]
   },
   {
@@ -57437,9 +57437,13 @@
     "game_title": "The Binding of Isaac: Rebirth",
     "steam_link": "https://store.steampowered.com/app/250900",
     "source_site_url": "https://steamapp.net/app/250900",
-    "patch_type": "official",
-    "patch_links": [],
-    "patch_descriptions": []
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 이강현"
+    ]
   },
   {
     "app_id": "1189290",
@@ -68922,6 +68926,128 @@
     "patch_descriptions": [
       "제작자 : Besixdouze",
       "제작자 : pb"
+    ]
+  },
+  {
+    "app_id": "4327530",
+    "game_title": "ギルド探求団へようこそ！",
+    "steam_link": "https://store.steampowered.com/app/4327530",
+    "source_site_url": "https://steamapp.net/app/4327530",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : Pixel4a"
+    ]
+  },
+  {
+    "app_id": "3205380",
+    "game_title": "오믈렛에 넣을까요?",
+    "steam_link": "https://store.steampowered.com/app/3205380",
+    "source_site_url": "https://steamapp.net/app/3205380",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "3353470",
+    "game_title": "The Binding of Isaac: Repentance+",
+    "steam_link": "https://store.steampowered.com/app/3353470",
+    "source_site_url": "https://steamapp.net/app/3353470",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : sawalk"
+    ]
+  },
+  {
+    "app_id": "1426300",
+    "game_title": "The Binding of Isaac: Repentance",
+    "steam_link": "https://store.steampowered.com/app/1426300",
+    "source_site_url": "https://steamapp.net/app/1426300",
+    "patch_type": "official",
+    "patch_links": [],
+    "patch_descriptions": []
+  },
+  {
+    "app_id": "401920",
+    "game_title": "The Binding of Isaac: Afterbirth",
+    "steam_link": "https://store.steampowered.com/app/401920",
+    "source_site_url": "https://steamapp.net/app/401920",
+    "patch_type": "official",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어로 플레이 시 플레이에 지장이 가는 버그 존재"
+    ]
+  },
+  {
+    "app_id": "3575980",
+    "game_title": "Fantasy Maiden Wars - DREAM OF THE STRAY DREAMER -",
+    "steam_link": "https://store.steampowered.com/app/3575980",
+    "source_site_url": "https://steamapp.net/app/3575980",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "339800",
+    "game_title": "HuniePop",
+    "steam_link": "https://store.steampowered.com/app/339800",
+    "source_site_url": "https://steamapp.net/app/339800",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 레트로겜보이"
+    ]
+  },
+  {
+    "app_id": "8140",
+    "game_title": "Tomb Raider: Underworld",
+    "steam_link": "https://store.steampowered.com/app/8140",
+    "source_site_url": "https://steamapp.net/app/8140",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "8000",
+    "game_title": "Tomb Raider: Anniversary",
+    "steam_link": "https://store.steampowered.com/app/8000",
+    "source_site_url": "https://steamapp.net/app/8000",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ]
+  },
+  {
+    "app_id": "7000",
+    "game_title": "Tomb Raider: Legend",
+    "steam_link": "https://store.steampowered.com/app/7000",
+    "source_site_url": "https://steamapp.net/app/7000",
+    "patch_type": "user",
+    "patch_links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
     ]
   }
 ]

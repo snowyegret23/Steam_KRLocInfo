@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-02-08T21:08:14.717Z",
-    "total_with_steam_link": 7110,
-    "total_without_steam_link": 21,
+    "generated_at": "2026-02-11T21:14:12.394Z",
+    "total_with_steam_link": 7117,
+    "total_without_steam_link": 23,
     "sources": [
       "steamapp",
       "quasarzone",
@@ -10121,69 +10121,6 @@
       ],
       "source_site_urls": {
         "quasarplay": "https://store.steampowered.com/app/1250650/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "7000",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/7000/Tomb_Raider_Legend/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - 촌닭투, 흑이슬 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/7000/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "8140",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/8140/Tomb_Raider_Underworld/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - 촌닭투, 흑이슬 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/8140/?curator_clanid=42788178"
-      },
-      "sources": [
-        "quasarplay"
-      ]
-    },
-    {
-      "app_id": "8000",
-      "game_title": "",
-      "steam_link": "https://store.steampowered.com/app/8000/Tomb_Raider_Anniversary/",
-      "patch_type": "user",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        "유저 한국어 패치 - 촌닭투 님"
-      ],
-      "patch_sources": [
-        "quasarplay"
-      ],
-      "source_site_urls": {
-        "quasarplay": "https://store.steampowered.com/app/8000/?curator_clanid=42788178"
       },
       "sources": [
         "quasarplay"
@@ -42301,6 +42238,27 @@
       ]
     },
     {
+      "app_id": "3575980",
+      "game_title": "Fantasy Maiden Wars - DREAM OF THE STRAY DREAMER -",
+      "steam_link": "https://store.steampowered.com/app/3575980",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/3575980"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "862490",
       "game_title": "Fantasy Raiders",
       "steam_link": "https://store.steampowered.com/app/862490",
@@ -53260,6 +53218,27 @@
       ]
     },
     {
+      "app_id": "339800",
+      "game_title": "HuniePop",
+      "steam_link": "https://store.steampowered.com/app/339800",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : 레트로겜보이"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/339800"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "3026770",
       "game_title": "Hunt Me",
       "steam_link": "https://store.steampowered.com/app/3026770",
@@ -59350,7 +59329,7 @@
         "exist"
       ],
       "patch_descriptions": [
-        "부타네코님 블로그 (제작: 촌닭 투)",
+        "",
         "유저 한국어 패치 - 촌닭투 님"
       ],
       "patch_sources": [
@@ -97979,6 +97958,27 @@
       ]
     },
     {
+      "app_id": "401920",
+      "game_title": "The Binding of Isaac: Afterbirth",
+      "steam_link": "https://store.steampowered.com/app/401920",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "한국어로 플레이 시 플레이에 지장이 가는 버그 존재"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/401920"
+      },
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "570660",
       "game_title": "The Binding of Isaac: Afterbirth+",
       "steam_link": "https://store.steampowered.com/app/570660",
@@ -98003,22 +98003,60 @@
       "app_id": "250900",
       "game_title": "The Binding of Isaac: Rebirth",
       "steam_link": "https://store.steampowered.com/app/250900",
-      "patch_type": "official",
+      "patch_type": "user",
       "patch_links": [
+        "exist",
         "exist"
       ],
       "patch_descriptions": [
+        "제작자 : 이강현",
         "유저 한국어 패치 - Team.SM"
       ],
       "patch_sources": [
+        "steamapp",
         "quasarplay"
       ],
       "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/250900",
         "quasarplay": "https://store.steampowered.com/app/250900/?curator_clanid=42788178"
       },
       "sources": [
         "steamapp",
         "quasarplay"
+      ]
+    },
+    {
+      "app_id": "1426300",
+      "game_title": "The Binding of Isaac: Repentance",
+      "steam_link": "https://store.steampowered.com/app/1426300",
+      "patch_type": "official",
+      "patch_links": [],
+      "patch_descriptions": [],
+      "patch_sources": [],
+      "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "3353470",
+      "game_title": "The Binding of Isaac: Repentance+",
+      "steam_link": "https://store.steampowered.com/app/3353470",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : sawalk"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/3353470"
+      },
+      "sources": [
+        "steamapp"
       ]
     },
     {
@@ -106221,6 +106259,84 @@
       "source_site_urls": {},
       "sources": [
         "steamapp"
+      ]
+    },
+    {
+      "app_id": "8000",
+      "game_title": "Tomb Raider: Anniversary",
+      "steam_link": "https://store.steampowered.com/app/8000",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "",
+        "유저 한국어 패치 - 촌닭투 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/8000",
+        "quasarplay": "https://store.steampowered.com/app/8000/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "7000",
+      "game_title": "Tomb Raider: Legend",
+      "steam_link": "https://store.steampowered.com/app/7000",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "",
+        "유저 한국어 패치 - 촌닭투, 흑이슬 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/7000",
+        "quasarplay": "https://store.steampowered.com/app/7000/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
+      ]
+    },
+    {
+      "app_id": "8140",
+      "game_title": "Tomb Raider: Underworld",
+      "steam_link": "https://store.steampowered.com/app/8140",
+      "patch_type": "user",
+      "patch_links": [
+        "exist",
+        "exist"
+      ],
+      "patch_descriptions": [
+        "",
+        "유저 한국어 패치 - 촌닭투, 흑이슬 님"
+      ],
+      "patch_sources": [
+        "steamapp",
+        "quasarplay"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/8140",
+        "quasarplay": "https://store.steampowered.com/app/8140/?curator_clanid=42788178"
+      },
+      "sources": [
+        "steamapp",
+        "quasarplay"
       ]
     },
     {
@@ -120830,6 +120946,19 @@
       ]
     },
     {
+      "app_id": "3205380",
+      "game_title": "오믈렛에 넣을까요?",
+      "steam_link": "https://store.steampowered.com/app/3205380",
+      "patch_type": "official",
+      "patch_links": [],
+      "patch_descriptions": [],
+      "patch_sources": [],
+      "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
       "app_id": "999200",
       "game_title": "오펜드론 전사 (Offendron Warrior)",
       "steam_link": "https://store.steampowered.com/app/999200",
@@ -124238,6 +124367,27 @@
       "patch_descriptions": [],
       "patch_sources": [],
       "source_site_urls": {},
+      "sources": [
+        "steamapp"
+      ]
+    },
+    {
+      "app_id": "4327530",
+      "game_title": "ギルド探求団へようこそ！",
+      "steam_link": "https://store.steampowered.com/app/4327530",
+      "patch_type": "user",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        "제작자 : Pixel4a"
+      ],
+      "patch_sources": [
+        "steamapp"
+      ],
+      "source_site_urls": {
+        "steamapp": "https://steamapp.net/app/4327530"
+      },
       "sources": [
         "steamapp"
       ]
@@ -128300,6 +128450,25 @@
       ]
     },
     {
+      "game_title": "요령 마을: 요령사의 길 (Yaoling: Mythical Journey)",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "stove"
+      ],
+      "source_site_urls": {
+        "stove": "https://store.onstove.com/ko/games/103977"
+      },
+      "sources": [
+        "stove"
+      ]
+    },
+    {
       "game_title": "이블 위딘 번들",
       "patch_type": "official",
       "patch_links": [
@@ -128381,6 +128550,25 @@
       ],
       "source_site_urls": {
         "stove": "https://store.onstove.com/ko/games/1217"
+      },
+      "sources": [
+        "stove"
+      ]
+    },
+    {
+      "game_title": "황천마작 (Demonic Mahjong)",
+      "patch_type": "official",
+      "patch_links": [
+        "exist"
+      ],
+      "patch_descriptions": [
+        ""
+      ],
+      "patch_sources": [
+        "stove"
+      ],
+      "source_site_urls": {
+        "stove": "https://store.onstove.com/ko/games/103040"
       },
       "sources": [
         "stove"

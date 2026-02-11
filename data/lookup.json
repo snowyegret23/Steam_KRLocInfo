@@ -1092,18 +1092,23 @@
   "7000": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치 - 촌닭투, 흑이슬 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/7000",
       "quasarplay": "https://store.steampowered.com/app/7000/?curator_clanid=42788178"
     }
   },
@@ -1192,36 +1197,46 @@
   "8000": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치 - 촌닭투 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/8000",
       "quasarplay": "https://store.steampowered.com/app/8000/?curator_clanid=42788178"
     }
   },
   "8140": {
     "type": "user",
     "sources": [
+      "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "",
       "유저 한국어 패치 - 촌닭투, 흑이슬 님"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/8140",
       "quasarplay": "https://store.steampowered.com/app/8140/?curator_clanid=42788178"
     }
   },
@@ -11249,21 +11264,25 @@
     }
   },
   "250900": {
-    "type": "official",
+    "type": "user",
     "sources": [
       "steamapp",
       "quasarplay"
     ],
     "links": [
+      "exist",
       "exist"
     ],
     "patch_descriptions": [
+      "제작자 : 이강현",
       "유저 한국어 패치 - Team.SM"
     ],
     "patch_sources": [
+      "steamapp",
       "quasarplay"
     ],
     "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/250900",
       "quasarplay": "https://store.steampowered.com/app/250900/?curator_clanid=42788178"
     }
   },
@@ -14410,7 +14429,7 @@
       "exist"
     ],
     "patch_descriptions": [
-      "부타네코님 블로그 (제작: 촌닭 투)",
+      "",
       "유저 한국어 패치 - 촌닭투 님"
     ],
     "patch_sources": [
@@ -17966,6 +17985,24 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "339800": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : 레트로겜보이"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/339800"
+    }
   },
   "340170": {
     "type": "official",
@@ -23036,6 +23073,24 @@
     "patch_descriptions": [],
     "patch_sources": [],
     "source_site_urls": {}
+  },
+  "401920": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "한국어로 플레이 시 플레이에 지장이 가는 버그 존재"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/401920"
+    }
   },
   "402180": {
     "type": "user",
@@ -73148,6 +73203,16 @@
     "patch_sources": [],
     "source_site_urls": {}
   },
+  "1426300": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [],
+    "patch_descriptions": [],
+    "patch_sources": [],
+    "source_site_urls": {}
+  },
   "1426450": {
     "type": "user",
     "sources": [
@@ -101684,6 +101749,16 @@
       "quasarplay": "https://store.steampowered.com/app/3204960/?curator_clanid=30894603"
     }
   },
+  "3205380": {
+    "type": "official",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [],
+    "patch_descriptions": [],
+    "patch_sources": [],
+    "source_site_urls": {}
+  },
   "3206200": {
     "type": "user",
     "sources": [
@@ -103165,6 +103240,24 @@
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/3352470",
       "quasarplay": "https://store.steampowered.com/app/3352470/?curator_clanid=42788178"
+    }
+  },
+  "3353470": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : sawalk"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3353470"
     }
   },
   "3357250": {
@@ -104842,6 +104935,24 @@
     ],
     "source_site_urls": {
       "quasarplay": "https://store.steampowered.com/app/3575300/?curator_clanid=30894603"
+    }
+  },
+  "3575980": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      ""
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/3575980"
     }
   },
   "3586420": {
@@ -106696,8 +106807,26 @@
       "quasarplay": "https://store.steampowered.com/app/4192250/?curator_clanid=30894603"
     }
   },
+  "4327530": {
+    "type": "user",
+    "sources": [
+      "steamapp"
+    ],
+    "links": [
+      "exist"
+    ],
+    "patch_descriptions": [
+      "제작자 : Pixel4a"
+    ],
+    "patch_sources": [
+      "steamapp"
+    ],
+    "source_site_urls": {
+      "steamapp": "https://steamapp.net/app/4327530"
+    }
+  },
   "_meta": {
-    "generated_at": "2026-02-08T21:08:14.717Z",
-    "total": 7110
+    "generated_at": "2026-02-11T21:14:12.394Z",
+    "total": 7117
   }
 }
