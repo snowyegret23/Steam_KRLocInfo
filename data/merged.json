@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-02-11T21:14:12.394Z",
+    "generated_at": "2026-02-12T02:58:09.943Z",
     "total_with_steam_link": 7117,
-    "total_without_steam_link": 23,
+    "total_without_steam_link": 21,
     "sources": [
       "steamapp",
       "quasarzone",
@@ -115321,8 +115321,9 @@
       "app_id": "2816950",
       "game_title": "Yaoling: Mythical Journey",
       "steam_link": "https://store.steampowered.com/app/2816950",
-      "patch_type": "user",
+      "patch_type": "official",
       "patch_links": [
+        "exist",
         "exist",
         "exist",
         "exist"
@@ -115330,20 +115331,24 @@
       "patch_descriptions": [
         "",
         "제작자 : 천지회",
-        "유저 한글 패치"
+        "유저 한글 패치",
+        ""
       ],
       "patch_sources": [
         "steamapp",
         "steamapp",
-        "quasarplay"
+        "quasarplay",
+        "stove"
       ],
       "source_site_urls": {
         "steamapp": "https://steamapp.net/app/2816950",
-        "quasarplay": "https://store.steampowered.com/app/2816950/?curator_clanid=42788178"
+        "quasarplay": "https://store.steampowered.com/app/2816950/?curator_clanid=42788178",
+        "stove": "https://store.onstove.com/ko/games/103977"
       },
       "sources": [
         "steamapp",
-        "quasarplay"
+        "quasarplay",
+        "stove"
       ]
     },
     {
@@ -126396,26 +126401,31 @@
       "app_id": "3444020",
       "game_title": "我在地府打麻将 - Demonic Mahjong",
       "steam_link": "https://store.steampowered.com/app/3444020",
-      "patch_type": "user",
+      "patch_type": "official",
       "patch_links": [
+        "exist",
         "exist",
         "exist"
       ],
       "patch_descriptions": [
         "제작자 : Pixel4a",
-        "유저 한글 패치 - Pixel4a"
+        "유저 한글 패치 - Pixel4a",
+        ""
       ],
       "patch_sources": [
         "steamapp",
-        "quasarplay"
+        "quasarplay",
+        "stove"
       ],
       "source_site_urls": {
         "steamapp": "https://steamapp.net/app/3444020",
-        "quasarplay": "https://store.steampowered.com/app/3444020/?curator_clanid=30894603"
+        "quasarplay": "https://store.steampowered.com/app/3444020/?curator_clanid=30894603",
+        "stove": "https://store.onstove.com/ko/games/103040"
       },
       "sources": [
         "steamapp",
-        "quasarplay"
+        "quasarplay",
+        "stove"
       ]
     },
     {
@@ -128450,25 +128460,6 @@
       ]
     },
     {
-      "game_title": "요령 마을: 요령사의 길 (Yaoling: Mythical Journey)",
-      "patch_type": "official",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        ""
-      ],
-      "patch_sources": [
-        "stove"
-      ],
-      "source_site_urls": {
-        "stove": "https://store.onstove.com/ko/games/103977"
-      },
-      "sources": [
-        "stove"
-      ]
-    },
-    {
       "game_title": "이블 위딘 번들",
       "patch_type": "official",
       "patch_links": [
@@ -128550,25 +128541,6 @@
       ],
       "source_site_urls": {
         "stove": "https://store.onstove.com/ko/games/1217"
-      },
-      "sources": [
-        "stove"
-      ]
-    },
-    {
-      "game_title": "황천마작 (Demonic Mahjong)",
-      "patch_type": "official",
-      "patch_links": [
-        "exist"
-      ],
-      "patch_descriptions": [
-        ""
-      ],
-      "patch_sources": [
-        "stove"
-      ],
-      "source_site_urls": {
-        "stove": "https://store.onstove.com/ko/games/103040"
       },
       "sources": [
         "stove"

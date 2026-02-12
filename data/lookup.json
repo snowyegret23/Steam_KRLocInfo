@@ -96935,12 +96935,14 @@
     "source_site_urls": {}
   },
   "2816950": {
-    "type": "user",
+    "type": "official",
     "sources": [
       "steamapp",
-      "quasarplay"
+      "quasarplay",
+      "stove"
     ],
     "links": [
+      "exist",
       "exist",
       "exist",
       "exist"
@@ -96948,16 +96950,19 @@
     "patch_descriptions": [
       "",
       "제작자 : 천지회",
-      "유저 한글 패치"
+      "유저 한글 패치",
+      ""
     ],
     "patch_sources": [
       "steamapp",
       "steamapp",
-      "quasarplay"
+      "quasarplay",
+      "stove"
     ],
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/2816950",
-      "quasarplay": "https://store.steampowered.com/app/2816950/?curator_clanid=42788178"
+      "quasarplay": "https://store.steampowered.com/app/2816950/?curator_clanid=42788178",
+      "stove": "https://store.onstove.com/ko/games/103977"
     }
   },
   "2818150": {
@@ -104109,26 +104114,31 @@
     }
   },
   "3444020": {
-    "type": "user",
+    "type": "official",
     "sources": [
       "steamapp",
-      "quasarplay"
+      "quasarplay",
+      "stove"
     ],
     "links": [
+      "exist",
       "exist",
       "exist"
     ],
     "patch_descriptions": [
       "제작자 : Pixel4a",
-      "유저 한글 패치 - Pixel4a"
+      "유저 한글 패치 - Pixel4a",
+      ""
     ],
     "patch_sources": [
       "steamapp",
-      "quasarplay"
+      "quasarplay",
+      "stove"
     ],
     "source_site_urls": {
       "steamapp": "https://steamapp.net/app/3444020",
-      "quasarplay": "https://store.steampowered.com/app/3444020/?curator_clanid=30894603"
+      "quasarplay": "https://store.steampowered.com/app/3444020/?curator_clanid=30894603",
+      "stove": "https://store.onstove.com/ko/games/103040"
     }
   },
   "3445830": {
@@ -106826,7 +106836,7 @@
     }
   },
   "_meta": {
-    "generated_at": "2026-02-11T21:14:12.394Z",
+    "generated_at": "2026-02-12T02:58:09.943Z",
     "total": 7117
   }
 }
