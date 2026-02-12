@@ -3705,11 +3705,11 @@
     "stove_url": "https://store.onstove.com/ko/games/103881"
   },
   {
-    "app_id": null,
+    "app_id": "2816950",
     "stove_game_no": "14097",
     "stove_product_no": "103977",
     "game_title": "요령 마을: 요령사의 길 (Yaoling: Mythical Journey)",
-    "steam_link": "",
+    "steam_link": "https://store.steampowered.com/app/2816950",
     "patch_type": "official",
     "patch_links": [
       "exist"
@@ -3720,11 +3720,11 @@
     "stove_url": "https://store.onstove.com/ko/games/103977"
   },
   {
-    "app_id": null,
+    "app_id": "3444020",
     "stove_game_no": "13142",
     "stove_product_no": "103040",
     "game_title": "황천마작 (Demonic Mahjong)",
-    "steam_link": "",
+    "steam_link": "https://store.steampowered.com/app/3444020",
     "patch_type": "official",
     "patch_links": [
       "exist"
